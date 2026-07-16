@@ -1,0 +1,3495 @@
+{
+  "updated": "2026-06-29",
+  "brands": [
+    {
+      "id": "fereks",
+      "name": "FEREKS",
+      "url": "https://fereks.ru/",
+      "description": "Российский производитель. Входит в IEK Group. Промышленные, уличные, офисные, архитектурные светильники."
+    },
+    {
+      "id": "ledel",
+      "name": "LEDEL",
+      "url": "https://ledel.ru/",
+      "description": "Российский производитель светодиодных светильников. Входит в группу компаний IEK вместе с FEREKS. Специализация: уличное, промышленное и коммерческое освещение."
+    },
+    {
+      "id": "luxcore",
+      "name": "LUXCORE",
+      "url": "https://luxcore.ru/",
+      "description": "Российский производитель LED-светильников для промышленных объектов повышенной сложности."
+    },
+    {
+      "id": "aruna",
+      "name": "ARUNA LED",
+      "url": "https://aruna-led.ru/",
+      "description": "Российский производитель архитектурных, промышленных и уличных LED-светильников."
+    },
+    {
+      "id": "plg",
+      "name": "PLG",
+      "url": "https://www.plgled.ru/",
+      "description": "Российский производитель, г. Ульяновск. Офисные, промышленные, уличные и линейные светильники."
+    }
+  ],
+  "series": [
+    {
+      "id": "fereks-fwl",
+      "brand": "FEREKS",
+      "series": "FWL",
+      "category": "architectural",
+      "category_name": "Архитектурное освещение",
+      "power_min": 12,
+      "power_max": 96,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - косинусная 120˚",
+        "C120 - прозрачный",
+        "C120-F15",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚",
+        "F30 - концентрированная 30˚",
+        "Г60",
+        "К15"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 113,
+      "description": "Архитектурный прожектор для подсветки фасадов и декоративного освещения.",
+      "tags": []
+    },
+    {
+      "id": "fereks-fdbb",
+      "brand": "FEREKS",
+      "series": "FDBB",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 17,
+      "power_max": 17,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20",
+        "IP65"
+      ],
+      "kss": [
+        "C110 - косинусная 110˚",
+        "C110 - матовый",
+        "Д"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fdl",
+      "brand": "FEREKS",
+      "series": "FDL",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 22,
+      "power_max": 130,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP54"
+      ],
+      "kss": [
+        "C110 - косинусная 110˚",
+        "C110 - матовый",
+        "VW-специальная",
+        "Д",
+        "Д120 - прозрачный"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 31,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fhl",
+      "brand": "FEREKS",
+      "series": "FHL",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 43,
+      "power_max": 120,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP54"
+      ],
+      "kss": [
+        "C110 - косинусная 110˚",
+        "C120 - косинусная 120˚",
+        "C90 - микропризма"
+      ],
+      "color_temp": [
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 4,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fll",
+      "brand": "FEREKS",
+      "series": "FLL",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 40,
+      "power_max": 40,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40"
+      ],
+      "kss": [
+        "C110 - матовый",
+        "C90 - микропризма",
+        "Д"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 9,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-flt",
+      "brand": "FEREKS",
+      "series": "FLT",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 11,
+      "power_max": 60,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40"
+      ],
+      "kss": [
+        "C110 - косинусная 110˚",
+        "C110 - матовый",
+        "C90 - микропризма",
+        "Д"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 42,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-дво",
+      "brand": "FEREKS",
+      "series": "ДВО",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 18,
+      "power_max": 56,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20",
+        "IP65"
+      ],
+      "kss": [
+        "Г60",
+        "Д",
+        "Д110 - косинусная 110˚",
+        "Д110 - матовый",
+        "Д120 - прозрачный",
+        "Д90 - косинусная 90˚",
+        "К15",
+        "К40 - концентрированная 40˚"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 49,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-дсб",
+      "brand": "FEREKS",
+      "series": "ДСБ",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 14,
+      "power_max": 40,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20",
+        "IP40"
+      ],
+      "kss": [
+        "Д",
+        "Д110 - косинусная 110˚",
+        "Д110 - матовый"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 39,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ссв",
+      "brand": "FEREKS",
+      "series": "ССВ",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 14,
+      "power_max": 42,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20",
+        "IP40",
+        "IP54"
+      ],
+      "kss": [
+        "Д",
+        "Д110 - косинусная 110˚",
+        "Д110 - матовый",
+        "Д90 - косинусная 90˚",
+        "Д90 - микропризма"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 168,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-fbl",
+      "brand": "FEREKS",
+      "series": "Ex-FBL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 35,
+      "power_max": 52,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 8,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-ffl",
+      "brand": "FEREKS",
+      "series": "Ex-FFL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 300,
+      "power_max": 300,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "F30 - концентрированная 30˚"
+      ],
+      "color_temp": [
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 1,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-fhb",
+      "brand": "FEREKS",
+      "series": "Ex-FHB",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 70,
+      "power_max": 230,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C110 - матовый",
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚",
+        "F30 - концентрированная 30˚"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 32,
+      "description": "Взрывозащищённый подвесной светильник. Маркировка Ex. Применение: нефтегазовые объекты, химические производства, взрывоопасные зоны.",
+      "tags": [
+        "нефтегаз",
+        "химия",
+        "взрывоопасная зона"
+      ]
+    },
+    {
+      "id": "fereks-ex-fpl",
+      "brand": "FEREKS",
+      "series": "Ex-FPL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 12,
+      "power_max": 82,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C110 - матовый",
+        "Д"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 12,
+      "description": "Взрывозащищённый линейный светильник для освещения производственных помещений с классом взрывоопасности.",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-fsl",
+      "brand": "FEREKS",
+      "series": "Ex-FSL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 35,
+      "power_max": 52,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F30 - концентрированная 30˚",
+        "W - широкая осевая",
+        "WL - широкая боковая"
+      ],
+      "color_temp": [
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 11,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-ftn",
+      "brand": "FEREKS",
+      "series": "Ex-FTN",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 27,
+      "power_max": 60,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "S-специальная"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 8,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-fwl",
+      "brand": "FEREKS",
+      "series": "Ex-FWL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 14,
+      "power_max": 53,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚"
+      ],
+      "color_temp": [
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 7,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-дву",
+      "brand": "FEREKS",
+      "series": "Ex-ДВУ",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 78,
+      "power_max": 130,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Д120 - прозрачный"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 5,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-дку",
+      "brand": "FEREKS",
+      "series": "Ex-ДКУ",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 68,
+      "power_max": 200,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Г60",
+        "Д120 - прозрачный",
+        "К30 - концентрированная 30˚",
+        "Ш2-широкая боковая",
+        "Ш3-широкая осевая"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 14,
+      "description": "Взрывозащищённый консольный светильник для наружного освещения взрывоопасных зон.",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-дпп",
+      "brand": "FEREKS",
+      "series": "Ex-ДПП",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 68,
+      "power_max": 260,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Г60",
+        "Д120 - косинусная 120˚",
+        "Д120 - прозрачный",
+        "К30 - концентрированная 30˚",
+        "Ш2-широкая боковая"
+      ],
+      "color_temp": [
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 21,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ex-дсо",
+      "brand": "FEREKS",
+      "series": "Ex-ДСО",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 24,
+      "power_max": 65,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Д110 - матовый",
+        "Д120 - косинусная 120˚",
+        "Д120 - прозрачный"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": true,
+      "sku_count": 14,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fa",
+      "brand": "FEREKS",
+      "series": "FA",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 20,
+      "power_max": 20,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "С"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 11,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fbl",
+      "brand": "FEREKS",
+      "series": "FBL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 35,
+      "power_max": 52,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - косинусная 120˚",
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚",
+        "F30 - концентрированная 30˚",
+        "WL - широкая боковая",
+        "Г60",
+        "К15",
+        "Ш3-широкая осевая",
+        "Ш4-широкая осевая"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 25,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ffe",
+      "brand": "FEREKS",
+      "series": "FFE",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 100,
+      "power_max": 100,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚",
+        "F30 - концентрированная 30˚",
+        "WA - широкая осевая",
+        "WL - широкая боковая"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 11,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-ffl",
+      "brand": "FEREKS",
+      "series": "FFL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 230,
+      "power_max": 1200,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "A-ассиметричная",
+        "A1-ассиметричная",
+        "C110 - косинусная 110˚",
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚",
+        "F30 - концентрированная 30˚",
+        "WL - широкая боковая",
+        "Г60",
+        "К15",
+        "Ш3-широкая осевая"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 66,
+      "description": "Прожектор светодиодный для освещения больших площадей и высоких объектов. Применение: стадионы, открытые склады, промышленные площадки.",
+      "tags": [
+        "стадион",
+        "открытая площадка"
+      ]
+    },
+    {
+      "id": "fereks-ffl-sport",
+      "brand": "FEREKS",
+      "series": "FFL-sport",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 230,
+      "power_max": 1200,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚",
+        "F30 - концентрированная 30˚",
+        "Г60",
+        "К15"
+      ],
+      "color_temp": [
+        "5000",
+        "5700"
+      ],
+      "explproof": false,
+      "sku_count": 17,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fhb",
+      "brand": "FEREKS",
+      "series": "FHB",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 70,
+      "power_max": 920,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP65",
+        "IP66"
+      ],
+      "kss": [
+        "C110 - косинусная 110˚",
+        "C110 - матовый",
+        "C120 - косинусная 120˚",
+        "C120 - прозрачный",
+        "C90 - косинусная 90˚",
+        "C90 - микропризма",
+        "D60 - глубокая 60˚",
+        "F15 - концентрированная 15˚",
+        "F30 - концентрированная 30˚",
+        "Г60",
+        "Г85",
+        "Д90-прозрачный рассеиватель+линзы",
+        "К15"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "5700"
+      ],
+      "explproof": false,
+      "sku_count": 243,
+      "description": "Подвесной промышленный светильник для высоких пролётов. Замена ДРЛ/ДНаТ/ЖСП. Применение: цеха, склады, производственные помещения с высотой потолка от 6 м.",
+      "tags": [
+        "цех",
+        "склад",
+        "производство"
+      ]
+    },
+    {
+      "id": "fereks-fhb-для-высоких-температур",
+      "brand": "FEREKS",
+      "series": "FHB для высоких температур",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 120,
+      "power_max": 190,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "F40-концентрированная 40˚"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fpl",
+      "brand": "FEREKS",
+      "series": "FPL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 12,
+      "power_max": 82,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP65",
+        "IP66"
+      ],
+      "kss": [
+        "C110 - косинусная 110˚",
+        "C110 - матовый",
+        "Д"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 39,
+      "description": "Линейный промышленный светильник. Применение: освещение длинных пролётов, конвейерных линий, железнодорожных объектов.",
+      "tags": []
+    },
+    {
+      "id": "fereks-fwl-gp",
+      "brand": "FEREKS",
+      "series": "FWL GP",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 100,
+      "power_max": 100,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "К15-Ш"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 4,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "ledel-lfl",
+      "brand": "LEDEL",
+      "series": "LFL",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 460,
+      "power_max": 480,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "F20 - концентрированная 20˚",
+        "F40-концентрированная 40˚"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 7,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "ledel-lfl-sport",
+      "brand": "LEDEL",
+      "series": "LFL-sport",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 460,
+      "power_max": 460,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "F20 - концентрированная 20˚",
+        "К40 - концентрированная 40˚"
+      ],
+      "color_temp": [
+        "5700"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-wheel",
+      "brand": "FEREKS",
+      "series": "Wheel",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 100,
+      "power_max": 230,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "D60 - глубокая 60˚",
+        "Г60"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 255,
+      "description": "Современный подвесной промышленный светильник круглой формы. Высокая эффективность (лм/Вт). Применение: склады, цеха, логистические комплексы.",
+      "tags": [
+        "склад",
+        "логистика",
+        "производство"
+      ]
+    },
+    {
+      "id": "fereks-дву",
+      "brand": "FEREKS",
+      "series": "ДВУ",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 78,
+      "power_max": 130,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Д110 - матовый",
+        "Д120 - прозрачный"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 9,
+      "description": "Светильник для АЗС и навесов. Монтаж в потолок навеса. Применение: автозаправочные станции, крытые парковки.",
+      "tags": []
+    },
+    {
+      "id": "fereks-дпп",
+      "brand": "FEREKS",
+      "series": "ДПП",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 68,
+      "power_max": 260,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Г60",
+        "Д110 - косинусная 110˚",
+        "Д110 - матовый",
+        "Д120 - косинусная 120˚",
+        "Д120 - прозрачный",
+        "К15",
+        "К30 - концентрированная 30˚",
+        "Ш2-широкая боковая",
+        "Ш3-широкая осевая",
+        "Ш4-широкая осевая"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 136,
+      "description": "Прожектор промышленный подвесной. Применение: открытые площадки, склады открытого хранения, промышленные территории.",
+      "tags": [
+        "открытая площадка",
+        "склад"
+      ]
+    },
+    {
+      "id": "fereks-дсо",
+      "brand": "FEREKS",
+      "series": "ДСО",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 12,
+      "power_max": 100,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP65",
+        "IP66"
+      ],
+      "kss": [
+        "25х100",
+        "Д",
+        "Д110 - косинусная 110˚",
+        "Д110 - матовый",
+        "Д120 - косинусная 120˚",
+        "Д120 - прозрачный",
+        "Д90 - косинусная 90˚",
+        "Д90 - микропризма"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 319,
+      "description": "Универсальный промышленный светильник накладного/подвесного монтажа. Широкий диапазон мощностей. Применение: производственные и складские помещения.",
+      "tags": [
+        "производство",
+        "склад"
+      ]
+    },
+    {
+      "id": "fereks-дсо-2.0",
+      "brand": "FEREKS",
+      "series": "ДСО 2.0",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 20,
+      "power_max": 35,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP66"
+      ],
+      "kss": [
+        "Д",
+        "Д110 - матовый"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 6,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-сск",
+      "brand": "FEREKS",
+      "series": "ССК",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 26,
+      "power_max": 35,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д110 - матовый",
+        "Д120 - прозрачный"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 15,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-alf-a2",
+      "brand": "FEREKS",
+      "series": "ALF-A2",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 50,
+      "power_max": 65,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "W5 - широкая боковая",
+        "WA - широкая осевая"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 4,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-alf-a3",
+      "brand": "FEREKS",
+      "series": "ALF-A3",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 80,
+      "power_max": 145,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "W5 - широкая боковая"
+      ],
+      "color_temp": [
+        "2700",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-alf-c1",
+      "brand": "FEREKS",
+      "series": "ALF-C1",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 22,
+      "power_max": 35,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Ш4-широкая осевая"
+      ],
+      "color_temp": [
+        "2700",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-alf-e1",
+      "brand": "FEREKS",
+      "series": "ALF-E1",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 85,
+      "power_max": 190,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "W - широкая осевая",
+        "W5 - широкая боковая",
+        "WL - широкая боковая"
+      ],
+      "color_temp": [
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 9,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-alf-g1",
+      "brand": "FEREKS",
+      "series": "ALF-G1",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 38,
+      "power_max": 58,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "WA - широкая осевая"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-amg",
+      "brand": "FEREKS",
+      "series": "AMG",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 90,
+      "power_max": 220,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "W - широкая осевая",
+        "W5 - широкая боковая",
+        "W6 - широкая боковая",
+        "WA - широкая осевая",
+        "WL - широкая боковая"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 21,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-atr",
+      "brand": "FEREKS",
+      "series": "ATR",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 85,
+      "power_max": 150,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "W5 - широкая боковая",
+        "WA - широкая осевая",
+        "WL - широкая боковая",
+        "Ш2-широкая боковая",
+        "Ш5-широкая боковая"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-blr",
+      "brand": "FEREKS",
+      "series": "BLR",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 58,
+      "power_max": 90,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "WA - широкая осевая"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fla",
+      "brand": "FEREKS",
+      "series": "FLA",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 38,
+      "power_max": 180,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "W - широкая осевая",
+        "W5 - широкая боковая",
+        "W6 - широкая боковая",
+        "WA - широкая осевая",
+        "WL - широкая боковая",
+        "Г60",
+        "Ш2-широкая боковая",
+        "Ш3-широкая осевая",
+        "Ш4-широкая осевая",
+        "Ш5-широкая боковая"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 90,
+      "description": "Консольный уличный светильник нового поколения. Высокая эффективность, широкий типоряд мощностей.",
+      "tags": [
+        "дорога",
+        "улица",
+        "территория предприятия"
+      ]
+    },
+    {
+      "id": "fereks-fsl",
+      "brand": "FEREKS",
+      "series": "FSL",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 33,
+      "power_max": 80,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C120 - прозрачный",
+        "F30 - концентрированная 30˚",
+        "W - широкая осевая",
+        "W5 - широкая боковая",
+        "WA - широкая осевая",
+        "WL - широкая боковая",
+        "Г60",
+        "К15",
+        "Ш2-широкая боковая",
+        "Ш3-широкая осевая",
+        "Ш4-широкая осевая"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 42,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-дку",
+      "brand": "FEREKS",
+      "series": "ДКУ",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 68,
+      "power_max": 260,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "F30 - концентрированная 30˚",
+        "Г60",
+        "Д110 - матовый",
+        "Д120 - прозрачный",
+        "К15",
+        "К30 - концентрированная 30˚",
+        "Ш",
+        "Ш2-широкая боковая",
+        "Ш2Ш3 - широкая боковая/широкая осевая",
+        "Ш3-широкая осевая",
+        "Ш4-широкая осевая"
+      ],
+      "color_temp": [
+        "2700",
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 156,
+      "description": "Консольный уличный светильник. Применение: дороги, улицы, парковки, территории предприятий.",
+      "tags": [
+        "дорога",
+        "улица",
+        "парковка"
+      ]
+    },
+    {
+      "id": "fereks-alf-f1",
+      "brand": "FEREKS",
+      "series": "ALF-F1",
+      "category": "park",
+      "category_name": "Парковое освещение",
+      "power_min": 40,
+      "power_max": 40,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "С"
+      ],
+      "color_temp": [
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 1,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-alf-f2",
+      "brand": "FEREKS",
+      "series": "ALF-F2",
+      "category": "park",
+      "category_name": "Парковое освещение",
+      "power_min": 40,
+      "power_max": 40,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "С"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "fereks-fsp",
+      "brand": "FEREKS",
+      "series": "FSP",
+      "category": "park",
+      "category_name": "Парковое освещение",
+      "power_min": 20,
+      "power_max": 80,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IР44/IР66"
+      ],
+      "kss": [
+        "W5 - широкая боковая",
+        "W6 - широкая боковая",
+        "WA - широкая осевая",
+        "Ш4-широкая осевая",
+        "Ш6 - широкая боковая"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 90,
+      "description": "Парковый/садовый светильник. Применение: аллеи, скверы, территории предприятий.",
+      "tags": []
+    },
+    {
+      "id": "fereks-дту",
+      "brand": "FEREKS",
+      "series": "ДТУ",
+      "category": "park",
+      "category_name": "Парковое освещение",
+      "power_min": 40,
+      "power_max": 56,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C110 - матовый",
+        "S-специальная",
+        "Д110 - матовый",
+        "С"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 16,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "luxcore-primum-s",
+      "brand": "LUXCORE",
+      "series": "Primum-S",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 110,
+      "power_max": 150,
+      "lm_min": 15950,
+      "lm_max": 24000,
+      "kss": [
+        "120",
+        "60",
+        "90"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "ip": [
+        "IP65"
+      ],
+      "explproof": false,
+      "sku_count": 200,
+      "price_from": 13892,
+      "description": "Промышленный подвесной светильник среднего ряда. Применение: склады, производственные помещения, логистические центры.",
+      "tags": [
+        "склад",
+        "производство",
+        "логистика"
+      ]
+    },
+    {
+      "id": "luxcore-primum-m",
+      "brand": "LUXCORE",
+      "series": "Primum-M",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 160,
+      "power_max": 230,
+      "lm_min": 23200,
+      "lm_max": 36800,
+      "kss": [
+        "120",
+        "60",
+        "90"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "ip": [
+        "IP65"
+      ],
+      "explproof": false,
+      "sku_count": 320,
+      "price_from": 17218,
+      "description": "Промышленный подвесной светильник для объектов с высотой потолка 8–14 м. Повышенная мощность и световой поток.",
+      "tags": [
+        "производство",
+        "цех"
+      ]
+    },
+    {
+      "id": "luxcore-primum-l",
+      "brand": "LUXCORE",
+      "series": "Primum-L",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 240,
+      "power_max": 300,
+      "lm_min": 34800,
+      "lm_max": 48000,
+      "kss": [
+        "120",
+        "60",
+        "90"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "ip": [
+        "IP65"
+      ],
+      "explproof": false,
+      "sku_count": 280,
+      "price_from": 25653,
+      "description": "Мощный промышленный светильник для высоких пролётов от 14 м. Применение: металлургия, судостроение, крупные производственные цеха.",
+      "tags": [
+        "металлургия",
+        "судостроение",
+        "крупный цех"
+      ]
+    },
+    {
+      "id": "luxcore-linkor",
+      "brand": "LUXCORE",
+      "series": "Linkor",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 38,
+      "power_max": 90,
+      "lm_min": 4560,
+      "lm_max": 14850,
+      "kss": [
+        "110",
+        "120",
+        "90"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "ip": [
+        "IP65"
+      ],
+      "explproof": false,
+      "sku_count": 180,
+      "price_from": 6087,
+      "description": "Линейный светильник для освещения длинных пролётов. Применение: конвейерные линии, железнодорожные объекты, тоннели.",
+      "tags": [
+        "конвейер",
+        "ж/д объект",
+        "тоннель"
+      ]
+    },
+    {
+      "id": "luxcore-luxyard",
+      "brand": "LUXCORE",
+      "series": "LuxYard",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 60,
+      "power_max": 120,
+      "lm_min": 9600,
+      "lm_max": 19200,
+      "kss": [
+        "WA ш/осевая",
+        "WL ш/боковая"
+      ],
+      "color_temp": [
+        "5000"
+      ],
+      "ip": [
+        "IP65"
+      ],
+      "explproof": false,
+      "sku_count": 6,
+      "price_from": 11956,
+      "description": "Консольный уличный светильник для территорий предприятий, парковок и дорог.",
+      "tags": [
+        "дорога",
+        "территория предприятия",
+        "парковка"
+      ]
+    },
+    {
+      "id": "aruna-",
+      "brand": "ARUNA LED",
+      "series": "Монохром АХП",
+      "category": "architectural",
+      "category_name": "Архитектурное освещение",
+      "power_min": 2,
+      "power_max": 180,
+      "lm_min": 3,
+      "lm_max": 9360,
+      "ip": [
+        "IP65",
+        "IP66",
+        "IP67"
+      ],
+      "kss": [
+        "10°",
+        "120°",
+        "12°",
+        "15°"
+      ],
+      "color_temp": [
+        "2700",
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 4462,
+      "description": "Архитектурные прожекторы ARUNA серии ARSLIM. Узкий угол, IP66, питание 12-24V DC. Применение: архитектурная подсветка фасадов.",
+      "tags": []
+    },
+    {
+      "id": "aruna-",
+      "brand": "ARUNA LED",
+      "series": "Монохром управляемый",
+      "category": "architectural",
+      "category_name": "Архитектурное освещение",
+      "power_min": 6,
+      "power_max": 36,
+      "lm_min": 420,
+      "lm_max": 2340,
+      "ip": [
+        "IP66",
+        "IP67"
+      ],
+      "kss": [
+        "10°",
+        "15°",
+        "20°",
+        "60°"
+      ],
+      "color_temp": [],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Светильники ARUNA серии Монохром управляемый.",
+      "tags": []
+    },
+    {
+      "id": "aruna-",
+      "brand": "ARUNA LED",
+      "series": "Цветное управляемое",
+      "category": "architectural",
+      "category_name": "Архитектурное освещение",
+      "power_min": 2,
+      "power_max": 86,
+      "lm_min": 70,
+      "lm_max": 900,
+      "ip": [
+        "IP66",
+        "IP67"
+      ],
+      "kss": [
+        "10°",
+        "120°",
+        "15°",
+        "20°"
+      ],
+      "color_temp": [],
+      "explproof": false,
+      "sku_count": 17,
+      "description": "Светильники ARUNA серии Цветное управляемое.",
+      "tags": []
+    },
+    {
+      "id": "aruna-lace",
+      "brand": "ARUNA LED",
+      "series": "LACE  монохром",
+      "category": "architectural",
+      "category_name": "Архитектурное освещение",
+      "power_min": 10,
+      "power_max": 10,
+      "lm_min": 260,
+      "lm_max": 290,
+      "ip": [
+        "IP67"
+      ],
+      "kss": [
+        "120°"
+      ],
+      "color_temp": [
+        "3000",
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "Линейные LED-системы ARUNA LACE монохромные. Гибкие решения для акцентного и контурного освещения.",
+      "tags": []
+    },
+    {
+      "id": "aruna-lace",
+      "brand": "ARUNA LED",
+      "series": "LACE цветное управляемое",
+      "category": "architectural",
+      "category_name": "Архитектурное освещение",
+      "power_min": 15,
+      "power_max": 15,
+      "lm_min": 120,
+      "lm_max": 120,
+      "ip": [
+        "IP67"
+      ],
+      "kss": [
+        "120°"
+      ],
+      "color_temp": [],
+      "explproof": false,
+      "sku_count": 1,
+      "description": "Светильники ARUNA серии LACE цветное управляемое.",
+      "tags": []
+    },
+    {
+      "id": "aruna-",
+      "brand": "ARUNA LED",
+      "series": "Уличное",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 30,
+      "power_max": 200,
+      "lm_min": 4650,
+      "lm_max": 34000,
+      "ip": [
+        "IP65",
+        "IP66"
+      ],
+      "kss": [
+        "D",
+        "SH"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 129,
+      "description": "Уличные светильники ARUNA серии STREET. IP65, IK08, КСС D и SH. Применение: дороги, территории предприятий, парковки.",
+      "tags": []
+    },
+    {
+      "id": "aruna-",
+      "brand": "ARUNA LED",
+      "series": "Промышленное",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 15,
+      "power_max": 150,
+      "lm_min": 2100,
+      "lm_max": 24000,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "120°",
+        "15°",
+        "30°",
+        "60°"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 252,
+      "description": "Промышленные светильники ARUNA серии NEVIS. IP66, крепление поворотное или подвесное. Применение: производственные помещения, склады, цеха.",
+      "tags": []
+    },
+    {
+      "id": "aruna-",
+      "brand": "ARUNA LED",
+      "series": "Интерьерное",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 24,
+      "power_max": 60,
+      "lm_min": 2640,
+      "lm_max": 6600,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [
+        "D100",
+        "D120"
+      ],
+      "color_temp": [
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Линейные интерьерные светильники ARUNA серии INTER. IP20, для внутреннего освещения офисов, торговых и общественных пространств.",
+      "tags": []
+    },
+    {
+      "id": "plg-",
+      "brand": "PLG",
+      "series": "Квадратный светильник",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 595,
+      "power_max": 595,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 7,
+      "description": "Светильники PLG категории Квадратный светильник. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-u35",
+      "brand": "PLG",
+      "series": "Квадратный светильник с равномерной засветкой U35",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 595,
+      "power_max": 595,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 4,
+      "description": "Светильники PLG категории Квадратный светильник с равномерной засветкой U35. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-u",
+      "brand": "PLG",
+      "series": "Квадратный светильник с равномерной засветкой U",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 595,
+      "power_max": 595,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP54"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "Светильники PLG категории Квадратный светильник с равномерной засветкой U. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-1200-600",
+      "brand": "PLG",
+      "series": "Офисный светильник 1200*600",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 50,
+      "power_max": 78,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP54"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 5,
+      "description": "Светильники PLG категории Офисный светильник 1200*600. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-1200-600",
+      "brand": "PLG",
+      "series": "Офисный светильник с равномерной засветкой 1200*600",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 16,
+      "power_max": 750,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP54"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 57,
+      "description": "Светильники PLG категории Офисный светильник с равномерной засветкой 1200*600. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-120",
+      "brand": "PLG",
+      "series": "Линейное соединение = 120р.",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 20,
+      "power_max": 75,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 15,
+      "description": "Светильники PLG категории Линейное соединение = 120р.. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-",
+      "brand": "PLG",
+      "series": "Линейные светильники прямоугольного сечения (стандарт)",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 20,
+      "power_max": 750,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 20,
+      "description": "Светильники PLG категории Линейные светильники прямоугольного сечения (стандарт). Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-",
+      "brand": "PLG",
+      "series": "Линейные светильники сечения трапеция",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 20,
+      "power_max": 750,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 12,
+      "description": "Светильники PLG категории Линейные светильники сечения трапеция. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-track-line",
+      "brand": "PLG",
+      "series": "Акцентный светильник серии TRACK LINE",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 43,
+      "power_max": 61,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 3,
+      "description": "Светильники PLG категории Акцентный светильник серии TRACK LINE. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-3---------------------------track",
+      "brand": "PLG",
+      "series": "Акцентный 3-х фазный светильник серии TRACK",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 10,
+      "power_max": 58,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 14,
+      "description": "Светильники PLG категории Акцентный 3-х фазный светильник серии TRACK. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-",
+      "brand": "PLG",
+      "series": "Промышленный светильник (алюминиевый корпус)",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 35,
+      "power_max": 500,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 9,
+      "description": "Светильники PLG категории Промышленный светильник (алюминиевый корпус). Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-prom-r",
+      "brand": "PLG",
+      "series": "Круглый Промышленный светильник серии PROM R",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 10,
+      "power_max": 240,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 27,
+      "description": "Светильники PLG категории Круглый Промышленный светильник серии PROM R. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "plg-",
+      "brand": "PLG",
+      "series": "Светильники для подсобных и технических помещений ЖКХ",
+      "category": "other",
+      "category_name": "Прочее",
+      "power_min": 12,
+      "power_max": 500,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP40",
+        "IP65"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 18,
+      "description": "Светильники PLG категории Светильники для подсобных и технических помещений ЖКХ. Российский производитель, гарантия 5 лет.",
+      "tags": []
+    },
+    {
+      "id": "aruna-nevis",
+      "brand": "ARUNA LED",
+      "series": "NEVIS",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 15,
+      "power_max": 90,
+      "lm_min": 2100,
+      "lm_max": 12600,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 36,
+      "price_from": 5060,
+      "description": "Линейный промышленный светильник для промышленных объектов. IP66, широкий диапазон крепления. Применение: производство, склады, цеха.",
+      "tags": []
+    },
+    {
+      "id": "aruna-trivor",
+      "brand": "ARUNA LED",
+      "series": "TRIVOR",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 70,
+      "power_max": 150,
+      "lm_min": 11200,
+      "lm_max": 24000,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "C"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 216,
+      "price_from": 25960,
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "aruna-street",
+      "brand": "ARUNA LED",
+      "series": "STREET",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 30,
+      "power_max": 150,
+      "lm_min": 4800,
+      "lm_max": 24000,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "D",
+        "S"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 15,
+      "price_from": 9770,
+      "description": "Консольный уличный светильник для дорог и территорий. IP65, IK08, закалённое стекло. Применение: дороги, парковки, территории предприятий.",
+      "tags": []
+    },
+    {
+      "id": "aruna-ultar",
+      "brand": "ARUNA LED",
+      "series": "ULTAR",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 30,
+      "power_max": 200,
+      "lm_min": 4650,
+      "lm_max": 34000,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "S"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 114,
+      "price_from": 21050,
+      "description": "Уличный светильник повышенной защиты. IP66, IK08. Применение: промышленные территории с повышенными требованиями к защите.",
+      "tags": []
+    },
+    {
+      "id": "aruna-inter",
+      "brand": "ARUNA LED",
+      "series": "INTER",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 24,
+      "power_max": 60,
+      "lm_min": 2640,
+      "lm_max": 6600,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [
+        "D100",
+        "D120"
+      ],
+      "color_temp": [
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "price_from": 9690,
+      "description": "Линейный интерьерный светильник. IP20. Применение: офисы, торговые помещения, административные здания.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-of-595",
+      "brand": "PLG",
+      "series": "PLG OF 595",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 58,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 7,
+      "description": "Офисный встраиваемый светильник 595×595 мм. IP20. Применение: офисы, административные здания, торговые помещения.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-of",
+      "brand": "PLG",
+      "series": "PLG OF",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 180,
+      "power_max": 595,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 37,
+      "description": "Серия PLG OF от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-of-595-1200",
+      "brand": "PLG",
+      "series": "PLG OF 595-1200",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 50,
+      "power_max": 78,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 4,
+      "description": "Офисный встраиваемый светильник 595×595 мм. IP20. Применение: офисы, административные здания, торговые помещения.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-of-595-180",
+      "brand": "PLG",
+      "series": "PLG OF 595-180",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 16,
+      "power_max": 25,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 4,
+      "description": "Офисный встраиваемый светильник 595×595 мм. IP20. Применение: офисы, административные здания, торговые помещения.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-of-rail",
+      "brand": "PLG",
+      "series": "PLG OF RAIL",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 50,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Серия PLG OF RAIL от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-slim",
+      "brand": "PLG",
+      "series": "PLG Line Slim",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 1130,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 22,
+      "description": "Серия PLG Line Slim от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-750",
+      "brand": "PLG",
+      "series": "PLG Line 750",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 16,
+      "power_max": 144,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 4,
+      "description": "Серия PLG Line 750 от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-1000",
+      "brand": "PLG",
+      "series": "PLG Line 1000",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 21,
+      "power_max": 192,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 5,
+      "description": "Серия PLG Line 1000 от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-1130",
+      "brand": "PLG",
+      "series": "PLG Line 1130",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 24,
+      "power_max": 30,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "Серия PLG Line 1130 от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line",
+      "brand": "PLG",
+      "series": "PLG Line",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 53,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Серия PLG Line от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-288led",
+      "brand": "PLG",
+      "series": "PLG Line 288led",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 53,
+      "power_max": 75,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 3,
+      "description": "Серия PLG Line 288led от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-w",
+      "brand": "PLG",
+      "series": "PLG Line W",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 750,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 12,
+      "description": "Серия PLG Line W от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-lens",
+      "brand": "PLG",
+      "series": "PLG Line Lens",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 288,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Серия PLG Line Lens от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-track-line",
+      "brand": "PLG",
+      "series": "PLG TRACK LINE",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 43,
+      "power_max": 61,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 3,
+      "description": "Серия PLG TRACK LINE от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-track",
+      "brand": "PLG",
+      "series": "PLG TRACK",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 30,
+      "power_max": 45,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 3,
+      "description": "Серия PLG TRACK от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-of-dl",
+      "brand": "PLG",
+      "series": "PLG OF DL",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 10,
+      "power_max": 30,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 5,
+      "description": "Серия PLG OF DL от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-pr-line",
+      "brand": "PLG",
+      "series": "PLG PR LINE",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 58,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 7,
+      "description": "Промышленный светильник подвесного монтажа. Применение: цеха, склады, производственные помещения.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-prom-r",
+      "brand": "PLG",
+      "series": "PLG PROM R",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 70,
+      "power_max": 240,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "Промышленный светильник подвесного монтажа. Применение: цеха, склады, производственные помещения.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-street",
+      "brand": "PLG",
+      "series": "PLG Street",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 10,
+      "power_max": 200,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "4000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 9,
+      "description": "Серия PLG Street от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-street-pro",
+      "brand": "PLG",
+      "series": "PLG Street PRO",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 30,
+      "power_max": 165,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 7,
+      "description": "Серия PLG Street PRO от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-llo-305",
+      "brand": "PLG",
+      "series": "PLG LLO 305",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 18,
+      "power_max": 24,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 3,
+      "description": "Серия PLG LLO 305 от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-llo-380",
+      "brand": "PLG",
+      "series": "PLG LLO 380",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 24,
+      "power_max": 40,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "Серия PLG LLO 380 от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-of-sb",
+      "brand": "PLG",
+      "series": "PLG OF SB",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 9,
+      "power_max": 9,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "Серия PLG OF SB от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-line-med",
+      "brand": "PLG",
+      "series": "PLG Line Med",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 500,
+      "power_max": 500,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000",
+        "6500"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "Серия PLG Line Med от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "plg-plg-llo-line-em",
+      "brand": "PLG",
+      "series": "PLG LLO Line EM",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 180,
+      "power_max": 300,
+      "lm_min": null,
+      "lm_max": null,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [],
+      "color_temp": [
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 2,
+      "description": "Серия PLG LLO Line EM от производителя PLG. Применение: офисные светильники.",
+      "tags": []
+    },
+    {
+      "id": "ledel-street-x1",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "Street X1",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 50,
+      "power_max": 170,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Ш",
+        "Г",
+        "Д",
+        "К"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 12,
+      "description": "Консольный уличный светильник. Применение: автомобильные дороги, городские улицы, площади и парки."
+    },
+    {
+      "id": "ledel-street-x1-pro",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "Street X1 Pro",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 124,
+      "power_max": 250,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Ш",
+        "Г",
+        "Д",
+        "К"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Консольный уличный светильник повышенной мощности. Применение: автомобильные дороги, городские улицы, внешнее освещение прилегающих территорий."
+    },
+    {
+      "id": "ledel-street-x120",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "Street X1/2.0",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 50,
+      "power_max": 200,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Ш",
+        "Г",
+        "Д",
+        "К"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "Обновлённый консольный уличный светильник. Применение: дороги, улицы, территории предприятий."
+    },
+    {
+      "id": "ledel-l-industry-ii",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-industry II",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 60,
+      "power_max": 200,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120",
+        "Г70",
+        "К90"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 18,
+      "description": "Промышленный светильник с усиленной конвекцией. Применение: производственные помещения, цеха, склады."
+    },
+    {
+      "id": "ledel-l-industry-ii-pro",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-industry II Pro",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 100,
+      "power_max": 300,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120",
+        "Г70"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 12,
+      "description": "Промышленный светильник усиленной серии. Применение: высокопролётные производственные помещения."
+    },
+    {
+      "id": "ledel-l-industry-extreme",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-industry Extreme",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 80,
+      "power_max": 250,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Д120"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Высокотемпературный промышленный светильник. Применение: горячие цеха, металлургия, объекты с экстремальными условиями."
+    },
+    {
+      "id": "ledel-l-industry-turbine",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-industry Turbine",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 50,
+      "power_max": 200,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120",
+        "К60"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 16,
+      "description": "Профильный линейный промышленный светильник. Применение: производственные помещения, конвейерные линии."
+    },
+    {
+      "id": "ledel-l-industry-turbine-hb",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-industry Turbine HB",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 80,
+      "power_max": 300,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "Модульный профильный промышленный светильник. Применение: высокие пролёты, склады, производство."
+    },
+    {
+      "id": "ledel-l-industry-new",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-industry NEW",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 30,
+      "power_max": 150,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120",
+        "Г70",
+        "К90"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 20,
+      "description": "Линейный промышленный светильник нового поколения. Применение: производство, склады, АЗС."
+    },
+    {
+      "id": "ledel-l-pixel",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-pixel",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 40,
+      "power_max": 120,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Модульный промышленный светильник. Применение: производственные помещения."
+    },
+    {
+      "id": "ledel-l-lego-ii",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-lego II",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 50,
+      "power_max": 150,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120",
+        "Г70"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "Модульный профильный светильник. Применение: производственные и складские помещения."
+    },
+    {
+      "id": "ledel-l-banner-600",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-banner 600",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 100,
+      "power_max": 600,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 6,
+      "description": "Промышленный светильник с активным охлаждением для сверхмощных установок."
+    },
+    {
+      "id": "ledel-l-parking",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-parking",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 20,
+      "power_max": 60,
+      "ip": [
+        "IP54"
+      ],
+      "kss": [
+        "Д120"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 8,
+      "description": "Светильник для низких потолков и паркингов. Применение: подземные паркинги, тоннели, низкие помещения."
+    },
+    {
+      "id": "ledel-l-sub",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-sub",
+      "category": "industrial",
+      "category_name": "Промышленное освещение",
+      "power_min": 15,
+      "power_max": 50,
+      "ip": [
+        "IP65"
+      ],
+      "kss": [
+        "Д120"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 6,
+      "description": "Металлическая арктика для суровых условий. Применение: северные объекты, низкотемпературные среды."
+    },
+    {
+      "id": "ledel-l-fusion",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-fusion",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 80,
+      "ip": [
+        "IP20",
+        "IP40"
+      ],
+      "kss": [
+        "Д90",
+        "Д120"
+      ],
+      "color_temp": [
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 24,
+      "description": "Профильный линейный светильник для коммерческих объектов. Применение: офисы, торговые помещения, административные здания."
+    },
+    {
+      "id": "ledel-l-fusion-mg",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-fusion MG",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 20,
+      "power_max": 60,
+      "ip": [
+        "IP20"
+      ],
+      "kss": [
+        "Д90"
+      ],
+      "color_temp": [
+        "3000",
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 12,
+      "description": "Линейный светильник с микропризматическим рассеивателем. Применение: офисы, учебные учреждения."
+    },
+    {
+      "id": "ledel-l-trade-ii",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-trade II",
+      "category": "indoor",
+      "category_name": "Внутреннее освещение",
+      "power_min": 30,
+      "power_max": 100,
+      "ip": [
+        "IP20",
+        "IP40"
+      ],
+      "kss": [
+        "Д90",
+        "Д120",
+        "К40"
+      ],
+      "color_temp": [
+        "3000",
+        "4000"
+      ],
+      "explproof": false,
+      "sku_count": 20,
+      "description": "Трековый светильник для торговых помещений. Применение: магазины, торговые центры, галереи."
+    },
+    {
+      "id": "ledel-l-street",
+      "brand": "LEDEL",
+      "lm_min": null,
+      "lm_max": null,
+      "tags": [],
+      "series": "L-street",
+      "category": "outdoor",
+      "category_name": "Наружное освещение",
+      "power_min": 30,
+      "power_max": 80,
+      "ip": [
+        "IP66"
+      ],
+      "kss": [
+        "Ш",
+        "Г",
+        "Д"
+      ],
+      "color_temp": [
+        "4000",
+        "5000"
+      ],
+      "explproof": false,
+      "sku_count": 10,
+      "description": "Консольный профильный уличный светильник. Применение: городские улицы, дворовые территории, парковки."
+    }
+  ]
+}
