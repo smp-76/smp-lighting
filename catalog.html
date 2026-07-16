@@ -33,6 +33,23 @@ a{color:inherit}button,input,select{font:inherit}
 @media(max-width:1000px){.models-workspace{grid-template-columns:1fr}.model-passport{position:static;max-height:none}.models-list .table-wrap{max-height:48vh}}
 @media(max-width:560px){.models-workspace{gap:12px}.model-table{min-width:620px}.passport-head{padding:16px}.passport-groups{padding:6px 14px 14px}.passport-actions{padding:0 14px 14px}.passport-row{grid-template-columns:1fr;gap:2px}.model-passport{border-radius:10px}}
 
+
+/* Stage 3 repair: synchronized CAD panels and stable table header */
+@media (min-width:1001px){
+  .models-workspace{align-items:stretch;height:min(620px,58vh);min-height:440px}
+  .models-list{height:100%;min-height:0}
+  .models-list .table-wrap{height:100%;max-height:none;overflow:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+  .model-passport{position:relative;top:auto;height:100%;max-height:none;min-height:0;overflow:auto}
+}
+.model-table thead th{position:sticky;top:0;z-index:3;background:#eef3f8;box-shadow:0 1px 0 var(--line)}
+.model-table tbody tr.selected td{background:#e4efff!important}
+.model-table tbody tr.selected td:first-child{box-shadow:inset 4px 0 0 var(--blue)}
+@media (max-width:1000px){
+  .models-workspace{height:auto;min-height:0}
+  .models-list{height:auto}
+  .models-list .table-wrap{height:auto;max-height:48vh;overflow:auto}
+  .model-passport{height:auto;max-height:none}
+}
 </style>
 </head>
 <body>
@@ -45,9 +62,16 @@ a{color:inherit}button,input,select{font:inherit}
 let DATA=[];
 const $=id=>document.getElementById(id);const state={q:'',brand:'',section:'',powerMin:'',powerMax:'',kss:'',ip:'',quick:''};let activeSeries=null;let selectedModelKey=null;const compareIds=[];let modelState={q:'',power:'',kss:'',cri:'',cct:'',mounting:'',ip:'',sort:''};
 const uniq=(arr)=>[...new Set(arr.filter(v=>v!==null&&v!==undefined&&v!==''))].sort((a,b)=>String(a).localeCompare(String(b),'ru',{numeric:true}));
-function fill(id,items){const s=$(id);items.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;s.appendChild(o)})}
-fill('brand',uniq(DATA.map(x=>x.brand)));fill('section',uniq(DATA.map(x=>x.section)));fill('catalogKss',uniq(DATA.flatMap(x=>(x.models||[]).map(m=>m.kss))));fill('catalogIp',uniq(DATA.flatMap(x=>(x.models||[]).map(m=>m.ip))));
-$('seriesStat').textContent=DATA.length;$('brandStat').textContent=uniq(DATA.map(x=>x.brand)).length;$('modelStat').textContent=DATA.reduce((a,x)=>a+(x.models?.length||0),0).toLocaleString('ru-RU');
+function fill(id,items){const select=$(id);if(!select)return;const first=select.options[0]?select.options[0].cloneNode(true):null;select.innerHTML='';if(first)select.appendChild(first);items.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;select.appendChild(o)})}
+function hydrateCatalogControls(){
+  fill('brand',uniq(DATA.map(x=>x.brand)));
+  fill('section',uniq(DATA.map(x=>x.section)));
+  fill('catalogKss',uniq(DATA.flatMap(x=>(x.models||[]).map(m=>m.kss))));
+  fill('catalogIp',uniq(DATA.flatMap(x=>(x.models||[]).map(m=>m.ip))));
+  $('seriesStat').textContent=DATA.length.toLocaleString('ru-RU');
+  $('brandStat').textContent=uniq(DATA.map(x=>x.brand)).length.toLocaleString('ru-RU');
+  $('modelStat').textContent=DATA.reduce((a,x)=>a+(x.models?.length||0),0).toLocaleString('ru-RU');
+}
 function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function powerRange(x){const vals=(x.models||[]).map(m=>Number(m.power)).filter(Number.isFinite);if(!vals.length)return '—';const a=Math.min(...vals),b=Math.max(...vals);return a===b?a+' Вт':a+'–'+b+' Вт'}
 function seriesIPs(x){return uniq((x.models||[]).map(m=>m.ip)).slice(0,3).join(', ')||'—'}
@@ -99,12 +123,12 @@ const electric=detailGroup('Электрика',[
  detailRow('Напряжение',model.voltage),detailRow('Диапазон напряжения',model.voltage_range),
  detailRow('Класс защиты',model.protection_class),detailRow('Маркировка взрывозащиты',model.explosion_marking)
 ]);
-return `<aside class="model-passport"><div class="passport-head"><div class="passport-kicker">Характеристики модификации</div><div class="passport-title-row"><div class="passport-title">${esc(fmt(model.sku))}</div><button class="passport-copy" type="button" data-passport-copy="${esc(fmt(model.sku))}">Копировать</button></div><div class="passport-name">${esc(fmt(model.name))}</div></div><div class="passport-groups">${main}${construction}${electric}</div><div class="passport-actions">${model.url?`<a class="passport-link" href="${esc(model.url)}" target="_blank" rel="noopener">Открыть карточку производителя ↗</a>`:''}</div></aside>`}
+return `<aside class="model-passport"><div class="passport-head"><div class="passport-kicker">Характеристики модификации</div><div class="passport-title-row"><div class="passport-title">${esc(fmt(model.sku))}</div><button class="passport-copy" type="button" data-passport-copy="${esc(fmt(model.sku))}">Копировать</button></div><div class="passport-name">${esc(fmt(model.name))}</div></div><div class="passport-groups">${main}${construction}${electric}</div></aside>`}
 function renderModels(){const models=activeSeries?.models||[],q=modelState.q.trim().toLowerCase();let rows=models.filter(m=>{const sku=String(m.sku??m.name??'').toLowerCase();return(!q||sku.includes(q))&&Object.entries(modelState).every(([k,v])=>k==='q'||k==='sort'||!v||String(m[k])===String(v))});if(modelState.sort){const [field,dir]=modelState.sort.split('-');rows=[...rows].sort((a,b)=>{const av=numVal(a[field]),bv=numVal(b[field]);if(av===null&&bv===null)return 0;if(av===null)return 1;if(bv===null)return-1;return dir==='asc'?av-bv:bv-av})}const shown=rows.slice(0,500);if(shown.length&&!shown.some((m,i)=>modelKey(m,i)===selectedModelKey))selectedModelKey=modelKey(shown[0],0);if(!shown.length)selectedModelKey=null;const selected=shown.find((m,i)=>modelKey(m,i)===selectedModelKey)||shown[0]||null;$('modelResults').innerHTML=`<div class="model-count">Найдено модификаций: ${rows.length}${rows.length>500?' · показаны первые 500':''}</div>${shown.length?`<div class="models-workspace"><div class="models-list"><div class="table-wrap"><table class="model-table"><thead><tr><th>Артикул</th><th>Мощность</th><th>Световой поток</th><th>КСС</th><th>CCT</th><th>IP</th></tr></thead><tbody>${shown.map((m,i)=>{const key=modelKey(m,i),sel=key===selectedModelKey;return `<tr data-model-key="${esc(key)}" class="${sel?'selected':''}" tabindex="0"><td class="sku-cell" title="${esc(fmt(m.sku))}">${esc(fmt(m.sku))}</td><td>${esc(withUnit(m.power,'Вт'))}</td><td>${esc(withUnit(m.flux,'лм'))}</td><td>${esc(fmt(m.kss))}</td><td>${esc(withUnit(m.cct,'К'))}</td><td>${esc(fmt(m.ip))}</td></tr>`}).join('')}</tbody></table></div></div>${renderPassport(selected)}</div>`:`<div class="no-models">По выбранным характеристикам модификаций нет.</div>`}`;
 document.querySelectorAll('[data-model-key]').forEach(row=>{const choose=()=>{selectedModelKey=row.dataset.modelKey;renderModels()};row.onclick=choose;row.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose()}}});const copyBtn=document.querySelector('[data-passport-copy]');if(copyBtn)copyBtn.onclick=()=>copySku(copyBtn.dataset.passportCopy,copyBtn)}
 async function initCatalog(){
 if(location.pathname.endsWith('/series.html')||location.pathname.endsWith('series.html'))document.body.classList.add('series-page');
-try{const response=await fetch('catalog-data.json',{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);const payload=await response.json();DATA=Array.isArray(payload)?payload:(payload.series||[]);render();updateCompareBar();const initialSeries=new URLSearchParams(location.search).get('series');if(initialSeries&&DATA.some(x=>x.id===initialSeries))openSeries(initialSeries,false)}catch(error){console.error(error);$('grid').innerHTML='<div class="empty"><h3>Каталог не загрузился</h3><p>Обновите страницу. Если ошибка повторится, проверьте файл catalog-data.json.</p></div>';}
+try{const response=await fetch('catalog-data.json',{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);const payload=await response.json();DATA=Array.isArray(payload)?payload:(payload.series||[]);hydrateCatalogControls();render();updateCompareBar();const initialSeries=new URLSearchParams(location.search).get('series');if(initialSeries&&DATA.some(x=>x.id===initialSeries))openSeries(initialSeries,false)}catch(error){console.error(error);$('grid').innerHTML='<div class="empty"><h3>Каталог не загрузился</h3><p>Обновите страницу. Если ошибка повторится, проверьте файл catalog-data.json.</p></div>';}
 }
 window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('series');if(id&&DATA.some(x=>x.id===id))openSeries(id,false);else if($('modal').classList.contains('open')){$('modal').classList.remove('open');$('modal').setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');activeSeries=null}});
 initCatalog();
