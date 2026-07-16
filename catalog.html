@@ -90,13 +90,17 @@ a{color:inherit}button,input,select{font:inherit}
 let DATA=[];
 const $=id=>document.getElementById(id);const state={q:'',brand:'',section:'',powerMin:'',powerMax:'',kss:'',ip:'',quick:''};let activeSeries=null;let selectedModelKey=null;const compareIds=[];let modelState={q:'',power:'',kss:'',cri:'',cct:'',mounting:'',ip:'',sort:''};
 const uniq=(arr)=>[...new Set(arr.filter(v=>v!==null&&v!==undefined&&v!==''))].sort((a,b)=>String(a).localeCompare(String(b),'ru',{numeric:true}));
+function opticsGroup(v){const s=String(v??'').trim().toUpperCase().replace(/Ё/g,'Е');if(!s)return'Без оптики';if(/БЕЗ\s*(ОПТИК|ЛИНЗ)|РАССЕИВАТЕЛ|СТЕКЛО/.test(s))return'Без оптики';if(/[XХ×*\/]\s*\d|АСИМ|ASYM|А\d/.test(s))return'Асимметричная оптика';if(/Ш|W|WIDE|БОКОВ|ОСЕВ/.test(s))return'Широкая оптика';const nums=(s.match(/\d+(?:[.,]\d+)?/g)||[]).map(x=>parseFloat(x.replace(',','.')));if(nums.length>1)return'Специализированная оптика';if(nums.length===1){if(nums[0]<=30)return'Узкая оптика';if(nums[0]<=60)return'Средняя оптика';return'Широкая оптика'}return'Специализированная оптика'}
+const OPTICS_ORDER=['Узкая оптика','Средняя оптика','Широкая оптика','Асимметричная оптика','Специализированная оптика','Без оптики'];
+function fillOptics(id,vals){const s=$(id);if(!s)return;const first=s.options[0]?s.options[0].cloneNode(true):null;s.innerHTML='';if(first)s.appendChild(first);const groups={};uniq(vals).forEach(v=>(groups[opticsGroup(v)]??=[]).push(v));OPTICS_ORDER.forEach(g=>{if(!groups[g]?.length)return;const og=document.createElement('optgroup');og.label=g;groups[g].forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;og.appendChild(o)});s.appendChild(og)})}
+
 function uiIcon(name){const p={power:'<path d="M13 2 4.5 13H11l-1 9L19.5 11H13z"/>',flux:'<circle cx="12" cy="9" r="4"/><path d="M9 14h6M10 18h4M12 2v2"/>',shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'};return `<svg viewBox="0 0 24 24" aria-hidden="true">${p[name]||''}</svg>`}
 function updateBreadcrumb(series=null){const b=$('breadcrumbs');if(!b)return;if(series){b.innerHTML=`<a href="index.html">Главная</a><span>›</span><a href="catalog.html">Каталог</a><span>›</span><span>${esc(series.brand)}</span><span>›</span><span>${esc(series.series)}</span>`}else b.innerHTML='<a href="index.html">Главная</a><span>›</span><span>Каталог</span>'}
 function fill(id,items){const select=$(id);if(!select)return;const first=select.options[0]?select.options[0].cloneNode(true):null;select.innerHTML='';if(first)select.appendChild(first);items.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;select.appendChild(o)})}
 function hydrateCatalogControls(){
   fill('brand',uniq(DATA.map(x=>x.brand)));
   fill('section',uniq(DATA.map(x=>x.section)));
-  fill('catalogKss',uniq(DATA.flatMap(x=>(x.models||[]).map(m=>m.kss))));
+  fillOptics('catalogKss',DATA.flatMap(x=>(x.models||[]).map(m=>m.kss)));
   fill('catalogIp',uniq(DATA.flatMap(x=>(x.models||[]).map(m=>m.ip))));
   $('seriesStat').textContent=DATA.length.toLocaleString('ru-RU');
   $('brandStat').textContent=uniq(DATA.map(x=>x.brand)).length.toLocaleString('ru-RU');
