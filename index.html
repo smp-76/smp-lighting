@@ -582,7 +582,7 @@ footer p,.flinks a{color:#5F6B7A}
 <nav id="nav">
   <a href="#" class="nav-logo"><img id="logo-img" src="" alt="СМП-76"></a>
   <ul class="nl" id="navLinks">
-    <li><a href="#about">О компании</a></li>
+    <li><a href="#about">Опыт</a></li>
     <li><a href="#services">Услуги</a></li>
     <li><a href="catalog.html">Каталог</a></li>
     <li><a href="selection.html">Подбор оборудования</a></li>
@@ -852,20 +852,7 @@ footer p,.flinks a{color:#5F6B7A}
             <div class="fg"><label>Телефон</label><input type="tel" id="fp" name="phone" placeholder="+7 (___) ___-__-__"></div>
           </div>
           <div class="fg"><label>Email</label><input type="email" id="fe" name="email" placeholder="ivan@company.ru"></div>
-          <div class="fg">
-            <label>Тип объекта</label>
-            <select id="ft" name="type">
-              <option value="">Выберите...</option>
-              <option>Промышленное предприятие</option>
-              <option>Нефтегазовый объект</option>
-              <option>Склад / логистика</option>
-              <option>Дороги и трассы</option>
-              <option>Транспортная инфраструктура</option>
-              <option>Государственный объект</option>
-              <option>Другое</option>
-            </select>
-          </div>
-          <div class="fg"><label>Техническое задание, спецификация или описание объекта</label><textarea id="fc" name="message" placeholder="Укажите тип объекта, площадь или количество точек, особые требования (IP, Ex, КСС, мощность, высота потолка)..."></textarea></div>
+          <div class="fg"><label>Техническое задание, спецификация или описание объекта</label><textarea id="fc" name="message" placeholder="Укажите площадь или количество точек, особые требования (IP, Ex, КСС, мощность, высота потолка)..."></textarea></div>
           <div class="fg"><label>Прикрепить файл</label><input type="file" id="ff" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip,.rar"><small>PDF, DOCX, XLSX, DWG, ZIP или RAR · до 25 МБ</small></div>
           <button class="fsub" type="submit">Отправить запрос</button>
           <p class="fnote">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
@@ -1166,7 +1153,6 @@ async function submitForm(){
   const p=document.getElementById('fp').value.trim();
   if(!n||!p){alert('Заполните имя и телефон');return;}
   const e=document.getElementById('fe').value.trim();
-  const t=document.getElementById('ft').value;
   const c=document.getElementById('fc').value.trim();
   const fileInput=document.getElementById('ff');
   const file=fileInput.files&&fileInput.files[0];
@@ -1175,7 +1161,7 @@ async function submitForm(){
   const btn=form.querySelector('.fsub');
   btn.textContent='Отправляем...';btn.disabled=true;
   const data=new FormData();
-  data.append('name',n);data.append('phone',p);data.append('email',e);data.append('type',t);data.append('message',c);
+  data.append('name',n);data.append('phone',p);data.append('email',e);data.append('message',c);
   data.append('_subject','Новый запрос на расчёт с сайта СМП-76');
   if(file)data.append('attachment',file,file.name);
   try{
@@ -1204,7 +1190,7 @@ async function submitForm(){
     }
   }catch(err){
     const fileNote=file?'\nВыбранный файл: '+file.name+' — прикрепите его к письму вручную.':'';
-    window.location.href='mailto:svet@smp-76.ru?subject='+encodeURIComponent('Запрос с сайта')+'&body='+encodeURIComponent('Имя: '+n+'\nТел: '+p+'\nEmail: '+e+'\nТип: '+t+'\nКомментарий: '+c+fileNote);
+    window.location.href='mailto:svet@smp-76.ru?subject='+encodeURIComponent('Запрос с сайта')+'&body='+encodeURIComponent('Имя: '+n+'\nТел: '+p+'\nEmail: '+e+'\nКомментарий: '+c+fileNote);
     btn.textContent='Отправить запрос';btn.disabled=false;
   }
 }
