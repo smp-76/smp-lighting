@@ -865,14 +865,13 @@ footer p,.flinks a{color:#5F6B7A}
       </div>
       <div class="cform fu">
         <h3>Запрос на расчёт</h3>
-        <form id="cForm" enctype="multipart/form-data" onsubmit="event.preventDefault();submitForm()">
+        <form id="cForm" onsubmit="event.preventDefault();submitForm()">
           <div class="fgr">
             <div class="fg"><label>Имя</label><input type="text" id="fn" name="name" placeholder="Иван Иванов"></div>
             <div class="fg"><label>Телефон</label><input type="tel" id="fp" name="phone" placeholder="+7 (___) ___-__-__"></div>
           </div>
           <div class="fg"><label>Email</label><input type="email" id="fe" name="email" placeholder="ivan@company.ru"></div>
           <div class="fg"><label>Техническое задание, спецификация или описание объекта</label><textarea id="fc" name="message" placeholder="Укажите площадь или количество точек, особые требования (IP, Ex, КСС, мощность, высота потолка)..."></textarea></div>
-          <div class="fg"><label>Прикрепить файл</label><input type="file" id="ff" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.zip,.rar"><small>PDF, DOCX, XLSX, DWG, ZIP или RAR · до 25 МБ</small></div>
           <button class="fsub" type="submit">Отправить запрос</button>
           <p class="fnote">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
         </form>
@@ -1173,18 +1172,19 @@ async function submitForm(){
   if(!n||!p){alert('Заполните имя и телефон');return;}
   const e=document.getElementById('fe').value.trim();
   const c=document.getElementById('fc').value.trim();
-  const fileInput=document.getElementById('ff');
-  const file=fileInput.files&&fileInput.files[0];
-  const maxFileSize=25*1024*1024;
-  if(file&&file.size>maxFileSize){alert('Файл слишком большой. Максимальный размер — 25 МБ.');return;}
   const btn=form.querySelector('.fsub');
   btn.textContent='Отправляем...';btn.disabled=true;
   const data=new FormData();
-  data.append('name',n);data.append('phone',p);data.append('email',e);data.append('message',c);
-  data.append('_subject','Новый запрос на расчёт с сайта СМП-76');
-  if(file)data.append('attachment',file,file.name);
+  data.append('name',n);
+  data.append('phone',p);
+  data.append('email',e);
+  data.append('message',c);
+  data.append('source','Сайт SMP');
+  data.append('request_type','Запрос на расчёт');
+  data.append('page',window.location.href);
+  data.append('_subject','[САЙТ SMP] Новая заявка на расчёт');
   try{
-    const r=await fetch('https://formspree.io/f/xvgokwdq',{
+    const r=await fetch('https://formspree.io/f/xaqrdvrb',{
       method:'POST',
       headers:{'Accept':'application/json'},
       body:data
@@ -1196,20 +1196,24 @@ async function submitForm(){
       document.getElementById('fSuccess').style.display='block';
       form.reset();
     }else{
-      const errorCodes=Array.isArray(result?.errors)?result.errors.map(error=>error.code):[];
-      if(file&&errorCodes.includes('NO_FILE_UPLOADS')){
-        alert('Файл не отправлен: текущая форма Formspree не поддерживает вложения. Напишите на svet@smp-76.ru и приложите файл к письму.');
-      }else if(file&&errorCodes.includes('TOO_MANY_FILES')){
-        alert('Не удалось отправить вложение. Прикрепите один файл размером до 25 МБ.');
-      }else{
-        const message=Array.isArray(result?.errors)&&result.errors[0]?.message?result.errors[0].message:'Ошибка отправки. Напишите нам напрямую: svet@smp-76.ru';
-        alert(message);
-      }
+      const message=Array.isArray(result?.errors)&&result.errors[0]?.message
+        ?result.errors[0].message
+        :'Не удалось отправить заявку. Напишите нам напрямую: svet@smp-76.ru';
+      alert(message);
       btn.textContent='Отправить запрос';btn.disabled=false;
     }
   }catch(err){
-    const fileNote=file?'\nВыбранный файл: '+file.name+' — прикрепите его к письму вручную.':'';
-    window.location.href='mailto:svet@smp-76.ru?subject='+encodeURIComponent('Запрос с сайта')+'&body='+encodeURIComponent('Имя: '+n+'\nТел: '+p+'\nEmail: '+e+'\nКомментарий: '+c+fileNote);
+    const body=[
+      'Источник: сайт SMP',
+      'Тип обращения: запрос на расчёт',
+      'Страница: '+window.location.href,
+      '',
+      'Имя: '+n,
+      'Телефон: '+p,
+      'Email: '+e,
+      'Описание: '+c
+    ].join('\n');
+    window.location.href='mailto:svet@smp-76.ru?subject='+encodeURIComponent('[САЙТ SMP] Новая заявка на расчёт')+'&body='+encodeURIComponent(body);
     btn.textContent='Отправить запрос';btn.disabled=false;
   }
 }
