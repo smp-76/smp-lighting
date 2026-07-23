@@ -141,6 +141,17 @@ html{scroll-padding-top:130px}
 }
 
 </style>
+
+<style>
+/* Header and modal layering fix */
+:root{--company-header-height:120px}
+.filters-wrap{top:calc(var(--company-header-height) + 18px)}
+.modal{z-index:2000}
+.compare-modal{z-index:2100}
+.series-page .modal{inset:var(--company-header-height) 0 0;z-index:1100}
+.series-page .modal-panel{height:100%;margin:0 auto}
+@media(max-width:980px){:root{--company-header-height:114px}}
+</style>
 </head>
 <body>
 <header class="company-header" id="companyHeader">
@@ -271,5 +282,17 @@ try{const response=await fetch('catalog-data.json',{cache:'no-store'});if(!respo
 }
 window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('series');if(id&&DATA.some(x=>x.id===id))openSeries(id,false);else if($('modal').classList.contains('open')){$('modal').classList.remove('open');$('modal').setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');activeSeries=null}});
 initCatalog();
+</script>
+
+<script>
+// Synchronize the standalone series view with the two-level header height.
+(function(){
+  const header=document.getElementById('companyHeader');
+  if(!header)return;
+  const sync=()=>document.documentElement.style.setProperty('--company-header-height',header.offsetHeight+'px');
+  sync();
+  window.addEventListener('resize',sync,{passive:true});
+  if('ResizeObserver' in window)new ResizeObserver(sync).observe(header);
+})();
 </script>
 </body></html>
