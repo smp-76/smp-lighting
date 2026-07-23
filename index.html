@@ -447,6 +447,25 @@ footer p{font-size:12px;color:var(--gray)}
   .fgr{grid-template-columns:1fr}
   .atm-text{padding:0 24px}
 }
+@media(min-width:961px) and (max-height:760px){
+  .hero{align-items:flex-start}
+  .hero-content{
+    width:100%;
+    padding-top:clamp(92px,14vh,108px);
+  }
+  .eyebrow{margin-bottom:20px}
+  .hero h1{
+    font-size:clamp(42px,5.2vw,68px);
+    margin-bottom:20px;
+  }
+  .hero-sub{
+    max-width:620px;
+    font-size:15px;
+    line-height:1.55;
+    margin-bottom:26px;
+  }
+  .btn-p,.btn-g{padding:13px 26px}
+}
 @media(max-width:560px){.hero h1{font-size:38px}.snum{font-size:46px}}
 @media(prefers-reduced-motion:reduce){
   .fu,.fd{opacity:1;transform:none;transition:none}
