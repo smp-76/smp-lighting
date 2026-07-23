@@ -599,17 +599,17 @@ footer p,.flinks a{color:#5F6B7A}
 <style>
 
 /* Dual navigation: company directions + navigation of the selected direction */
-html{scroll-padding-top:118px}
+html{scroll-padding-top:130px}
 .company-header{position:sticky;top:0;z-index:1200;background:rgba(255,255,255,.98);color:#172231;border-top:4px solid #42464d;border-bottom:1px solid #dfe4ea;box-shadow:0 4px 18px rgba(19,37,58,.07);font-family:Inter,Arial,sans-serif}
 .company-header.company-header--fixed{position:fixed;left:0;right:0}
-.company-header-top{height:46px;padding:0 5vw;display:grid;grid-template-columns:minmax(190px,1fr) auto minmax(190px,1fr);align-items:center;border-bottom:1px solid #e5e9ee}
+.company-header-top{height:58px;padding:0 5vw;display:grid;grid-template-columns:minmax(190px,1fr) auto minmax(190px,1fr);align-items:center;border-bottom:1px solid #dfe5ec}
 .company-brand{display:flex;align-items:center;justify-self:start;text-decoration:none;min-width:0}
 .company-brand img{display:block;width:250px;max-width:26vw;height:36px;object-fit:contain;object-position:left center}
-.company-directions{height:100%;display:flex;align-items:stretch;background:#f1f4f7;border-left:1px solid #e1e6eb;border-right:1px solid #e1e6eb}
-.company-direction{position:relative;display:flex;align-items:center;justify-content:center;min-width:176px;padding:0 24px;text-decoration:none;color:#7b8796;font-size:11px;font-weight:750;letter-spacing:.09em;text-transform:uppercase;transition:color .2s,background .2s}
-.company-direction:hover{color:#164f9f;background:#f8fafc}
-.company-direction.active{color:#164f9f;background:#fff}
-.company-direction.active::after{content:'';position:absolute;left:18px;right:18px;bottom:-1px;height:3px;background:#245cc7}
+.company-directions{height:100%;display:flex;align-items:stretch;background:#eef1f5;border-left:1px solid #d9e0e8;border-right:1px solid #d9e0e8;box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
+.company-direction{position:relative;display:flex;align-items:center;justify-content:center;min-width:228px;padding:0 34px;text-decoration:none;color:#728094;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid #d9e0e8;transition:color .2s,background .2s,box-shadow .2s}
+.company-direction:last-child{border-right:0}.company-direction:hover{color:#164f9f;background:#f8fbff}
+.company-direction.active{color:#164f9f;background:#eaf2ff;box-shadow:inset 0 0 0 1px rgba(36,92,199,.08)}
+.company-direction.active::after{content:'';position:absolute;left:22px;right:22px;bottom:-1px;height:4px;background:#245cc7}
 .company-contact{justify-self:end;text-decoration:none;color:#5f6b7a;font-size:11px;font-weight:750;letter-spacing:.09em;text-transform:uppercase;transition:color .2s}
 .company-contact:hover{color:#164f9f}
 .company-menu-button{display:none;border:0;background:transparent;color:#172231;font-size:24px;line-height:1;cursor:pointer;padding:6px}
@@ -626,8 +626,8 @@ html{scroll-padding-top:118px}
   .company-brand img{width:190px;max-width:48vw;height:38px}
   .company-contact{grid-column:2;grid-row:1;font-size:10px}
   .company-menu-button{display:block;grid-column:3;grid-row:1;justify-self:end}
-  .company-directions{grid-column:1/-1;grid-row:2;width:calc(100% + 44px);height:42px;margin-left:-22px}
-  .company-direction{min-width:0;flex:1;padding:0 10px;font-size:10px}
+  .company-directions{grid-column:1/-1;grid-row:2;width:calc(100% + 44px);height:48px;margin-left:-22px}
+  .company-direction{min-width:0;flex:1;padding:0 10px;font-size:10.5px;letter-spacing:.075em}
   .company-subnav{display:none;height:auto;padding:18px 22px 22px;align-items:stretch;gap:18px;border-top:1px solid #e5e9ee}
   .company-header.open .company-subnav{display:flex;flex-direction:column}
   .company-sub-links{flex-direction:column;align-items:stretch;gap:0}
@@ -639,7 +639,7 @@ html{scroll-padding-top:118px}
   .company-brand img{width:160px;max-width:45vw}
   .company-contact{font-size:9px;letter-spacing:.055em}
   .company-directions{width:calc(100% + 32px);margin-left:-16px}
-  .company-direction{font-size:9px;letter-spacing:.055em}
+  .company-direction{font-size:9.5px;letter-spacing:.05em}
   .company-subnav{padding-left:16px;padding-right:16px}
 }
 
