@@ -596,23 +596,79 @@ footer p,.flinks a{color:#5F6B7A}
 <style>
 .electro-teaser{background:#eaf0f6;padding:72px 0;border-top:1px solid #d9e0ea;border-bottom:1px solid #d9e0ea}.electro-teaser-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}.electro-teaser h2{color:#172238;margin-bottom:18px}.electro-teaser p{color:#63708a;line-height:1.8;margin:0 0 26px}.electro-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.electro-point{background:#fff;border:1px solid #d9e0ea;padding:18px;color:#172238;font-size:13px;font-weight:600}.electro-point span{display:block;color:#1e5fd8;font-family:'Oswald',sans-serif;font-size:23px;margin-bottom:5px}.electro-teaser .btn-p{background:#1e5fd8;color:#fff}.electro-teaser .slabel{color:#9a7419}@media(max-width:800px){.electro-teaser-inner{grid-template-columns:1fr}.electro-points{grid-template-columns:1fr}}
 </style>
+<style>
+
+/* Dual navigation: company directions + navigation of the selected direction */
+html{scroll-padding-top:118px}
+.company-header{position:sticky;top:0;z-index:1200;background:rgba(255,255,255,.98);color:#172231;border-top:4px solid #42464d;border-bottom:1px solid #dfe4ea;box-shadow:0 4px 18px rgba(19,37,58,.07);font-family:Inter,Arial,sans-serif}
+.company-header.company-header--fixed{position:fixed;left:0;right:0}
+.company-header-top{height:46px;padding:0 5vw;display:grid;grid-template-columns:minmax(190px,1fr) auto minmax(190px,1fr);align-items:center;border-bottom:1px solid #e5e9ee}
+.company-brand{display:flex;align-items:center;justify-self:start;text-decoration:none;min-width:0}
+.company-brand img{display:block;width:250px;max-width:26vw;height:36px;object-fit:contain;object-position:left center}
+.company-directions{height:100%;display:flex;align-items:stretch;background:#f1f4f7;border-left:1px solid #e1e6eb;border-right:1px solid #e1e6eb}
+.company-direction{position:relative;display:flex;align-items:center;justify-content:center;min-width:176px;padding:0 24px;text-decoration:none;color:#7b8796;font-size:11px;font-weight:750;letter-spacing:.09em;text-transform:uppercase;transition:color .2s,background .2s}
+.company-direction:hover{color:#164f9f;background:#f8fafc}
+.company-direction.active{color:#164f9f;background:#fff}
+.company-direction.active::after{content:'';position:absolute;left:18px;right:18px;bottom:-1px;height:3px;background:#245cc7}
+.company-contact{justify-self:end;text-decoration:none;color:#5f6b7a;font-size:11px;font-weight:750;letter-spacing:.09em;text-transform:uppercase;transition:color .2s}
+.company-contact:hover{color:#164f9f}
+.company-menu-button{display:none;border:0;background:transparent;color:#172231;font-size:24px;line-height:1;cursor:pointer;padding:6px}
+.company-subnav{height:58px;padding:0 5vw;display:flex;align-items:center;gap:24px;background:#fff}
+.company-sub-links{display:flex;align-items:center;gap:30px;min-width:0}
+.company-sub-link{text-decoration:none;color:#657283;font-size:12px;font-weight:650;letter-spacing:.065em;text-transform:uppercase;white-space:nowrap;transition:color .2s}
+.company-sub-link:hover,.company-sub-link.active{color:#164f9f}
+.company-action{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 18px;border-radius:4px;background:#245cc7;color:#fff!important;text-decoration:none;font-size:11px;font-weight:750;letter-spacing:.075em;text-transform:uppercase;white-space:nowrap;transition:background .2s}
+.company-action:hover{background:#174aae}
+@media(max-width:980px){
+  html{scroll-padding-top:154px}
+  .company-header-top{height:auto;min-height:62px;padding:7px 22px 0;grid-template-columns:1fr auto auto;column-gap:14px;row-gap:7px}
+  .company-brand{grid-column:1;grid-row:1}
+  .company-brand img{width:190px;max-width:48vw;height:38px}
+  .company-contact{grid-column:2;grid-row:1;font-size:10px}
+  .company-menu-button{display:block;grid-column:3;grid-row:1;justify-self:end}
+  .company-directions{grid-column:1/-1;grid-row:2;width:calc(100% + 44px);height:42px;margin-left:-22px}
+  .company-direction{min-width:0;flex:1;padding:0 10px;font-size:10px}
+  .company-subnav{display:none;height:auto;padding:18px 22px 22px;align-items:stretch;gap:18px;border-top:1px solid #e5e9ee}
+  .company-header.open .company-subnav{display:flex;flex-direction:column}
+  .company-sub-links{flex-direction:column;align-items:stretch;gap:0}
+  .company-sub-link{padding:11px 2px;border-bottom:1px solid #edf0f3}
+  .company-action{width:100%;min-height:44px;margin-left:0}
+}
+@media(max-width:520px){
+  .company-header-top{padding-left:16px;padding-right:16px;column-gap:10px}
+  .company-brand img{width:160px;max-width:45vw}
+  .company-contact{font-size:9px;letter-spacing:.055em}
+  .company-directions{width:calc(100% + 32px);margin-left:-16px}
+  .company-direction{font-size:9px;letter-spacing:.055em}
+  .company-subnav{padding-left:16px;padding-right:16px}
+}
+
+</style>
 </head>
 <body>
 
 <div id="cursor-glow"></div>
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo"><img id="logo-img" src="" alt="СМП-76"></a>
-  <ul class="nl" id="navLinks">
-    <li><a href="#about">Опыт</a></li>
-    <li><a href="catalog.html">Каталог</a></li>
-    <li><a href="selection.html">Подбор оборудования</a></li>
-    <li><a href="#contact">Контакты</a></li>
-  </ul>
-  <a href="#contact" class="nc">Отправить техническое задание</a>
-  <div class="burger" id="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
-</nav>
+<!-- TWO-LEVEL COMPANY NAVIGATION -->
+<header class="company-header company-header--fixed" id="companyHeader">
+  <div class="company-header-top">
+    <a href="index.html" class="company-brand"><img id="logo-img" src="" alt="СМП-76"></a>
+    <div class="company-directions" aria-label="Направления компании">
+      <a class="company-direction active" href="index.html">Освещение</a>
+      <a class="company-direction" href="elektrosnabzhenie.html">Электроснабжение</a>
+    </div>
+    <a class="company-contact" href="#contact">Контакты</a>
+    <button class="company-menu-button" type="button" aria-label="Открыть меню" onclick="this.closest('.company-header').classList.toggle('open')">☰</button>
+  </div>
+  <div class="company-subnav">
+    <div class="company-sub-links">
+      <a class="company-sub-link active" href="#about">Опыт</a>
+      <a class="company-sub-link" href="catalog.html">Каталог</a>
+      <a class="company-sub-link" href="selection.html">Подбор оборудования</a>
+    </div>
+    <a class="company-action" href="#contact">Отправить техническое задание</a>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -933,7 +989,7 @@ document.addEventListener('mousemove',e=>{
 });
 
 // ── NAV ──────────────────────────────────────────────────
-function toggleNav(){document.getElementById('nav').classList.toggle('open')}
+function toggleNav(){document.getElementById('companyHeader')?.classList.toggle('open')}
 document.querySelectorAll('.nl a').forEach(a=>{
   a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open'))
 });
