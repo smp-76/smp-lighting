@@ -261,8 +261,12 @@ html{scroll-padding-top:130px}
     counter.textContent=String(current+1).padStart(2,'0');
     thumbs[current].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
   }
-  gallery.querySelector('.gallery-prev').addEventListener('click',()=>show(current-1));
-  gallery.querySelector('.gallery-next').addEventListener('click',()=>show(current+1));
+  const prevButton=gallery.querySelector('.gallery-prev');
+  const nextButton=gallery.querySelector('.gallery-next');
+  prevButton.addEventListener('pointerdown',e=>e.stopPropagation());
+  nextButton.addEventListener('pointerdown',e=>e.stopPropagation());
+  prevButton.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();show(current-1);});
+  nextButton.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();show(current+1);});
   thumbs.forEach(btn=>btn.addEventListener('click',()=>show(Number(btn.dataset.index))));
   slides.forEach(slide=>slide.querySelector('img').addEventListener('click',()=>{
     lightboxImg.src=slide.querySelector('img').src;
@@ -273,7 +277,12 @@ html{scroll-padding-top:130px}
   function closeLightbox(){lightbox.classList.remove('open');document.body.style.overflow='';}
   lightbox.querySelector('.gallery-lightbox-close').addEventListener('click',closeLightbox);
   lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
-  viewport.addEventListener('pointerdown',e=>{startX=e.clientX;deltaX=0;viewport.setPointerCapture(e.pointerId);});
+  viewport.addEventListener('pointerdown',e=>{
+    if(e.target.closest('.gallery-arrow'))return;
+    startX=e.clientX;
+    deltaX=0;
+    viewport.setPointerCapture(e.pointerId);
+  });
   viewport.addEventListener('pointermove',e=>{if(startX)deltaX=e.clientX-startX;});
   viewport.addEventListener('pointerup',()=>{if(Math.abs(deltaX)>55)show(current+(deltaX<0?1:-1));startX=0;deltaX=0;});
   document.addEventListener('keydown',e=>{
