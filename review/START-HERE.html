@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>СМП-76 — пакет для согласования</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f4f8ff;
+        color: #142238;
+        font:
+          16px/1.65 Arial,
+          sans-serif;
+      }
+      main {
+        max-width: 1080px;
+        margin: auto;
+        padding: 48px 24px 72px;
+      }
+      header {
+        padding-bottom: 32px;
+        border-bottom: 1px solid #cfd9e7;
+      }
+      img {
+        width: 146px;
+        height: auto;
+      }
+      h1 {
+        font-size: clamp(30px, 5vw, 48px);
+        line-height: 1.1;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+      }
+      h2 {
+        font-size: 26px;
+        line-height: 1.2;
+        font-weight: 500;
+        margin: 0 0 18px;
+      }
+      p {
+        margin: 12px 0;
+      }
+      section {
+        background: #fff;
+        border: 1px solid #cfd9e7;
+        border-radius: 12px;
+        padding: 28px;
+        margin-top: 24px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 22px 0;
+      }
+      .button {
+        padding: 12px 18px;
+        background: #00345f;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      a {
+        color: #005d96;
+      }
+      code {
+        background: #e9eff8;
+        padding: 3px 6px;
+        border-radius: 4px;
+        overflow-wrap: anywhere;
+      }
+      .muted {
+        color: #536581;
+        font-size: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      th,
+      td {
+        text-align: left;
+        border-bottom: 1px solid #cfd9e7;
+        padding: 12px 8px;
+      }
+      th {
+        color: #536581;
+        font-weight: 500;
+      }
+      ul {
+        padding-left: 22px;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding: 28px 18px;
+        }
+        section {
+          padding: 22px 18px;
+        }
+        h2 {
+          font-size: 23px;
+        }
+        .button {
+          width: 100%;
+        }
+        th,
+        td {
+          padding: 12px 4px;
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          src="../images/logo-footer-hd.png"
+          alt="СМП-76"
+          width="146"
+          height="38"
+        />
+        <h1>Версия сайта для согласования</h1>
+        <p>
+          Полный редизайн SMP: главная, каталог, технический подбор, страницы
+          серий и электроснабжение. Пакет содержит все страницы, изображения и
+          базу из 18 226 моделей.
+        </p>
+        <p class="muted">
+          Полностью распакуйте ZIP перед просмотром. Это отдельная версия для
+          проверки; рабочий сайт не обновлён.
+        </p>
+      </header>
+      <section>
+        <h2>Интерактивные демонстрации</h2>
+        <p>
+          Работают без сервера и установки программ. Откройте HTML в обычном
+          браузере.
+        </p>
+        <div class="actions">
+          <a class="button" href="../docs/preview-v2/smp-hero-interactive.html"
+            >Hero со светильником →</a
+          >
+          <a
+            class="button"
+            href="../docs/preview-v2/colour-lab-interactive.html"
+            >CRI и цветовая температура →</a
+          >
+        </div>
+        <p class="muted">
+          В hero двигайте мышью по всему блоку: под курсором проявляется склад,
+          луч идёт от оптики. Разверните окно компьютера шире 900 px. На
+          мобильном hero статичен.
+        </p>
+        <p class="muted">
+          В сцене контроля окраски переключайте CRI и температуру. Это наглядная
+          иллюстрация принципа, не точный светотехнический расчёт.
+        </p>
+      </section>
+      <section>
+        <h2>Полный сайт с работающим каталогом</h2>
+        <p>
+          Для полного просмотра нужен локальный HTTP-сервер: каталог и подбор
+          загружают базу данных. Нужен установленный <strong>Python 3</strong>;
+          дополнительные пакеты не требуются.
+        </p>
+        <ul>
+          <li>
+            <strong>Windows:</strong> в корне распакованной папки запустите
+            <code>START-SITE-WINDOWS.cmd</code>.
+          </li>
+          <li>
+            <strong>macOS:</strong> запустите
+            <code>START-SITE-MAC.command</code>.
+          </li>
+          <li>
+            <strong>Вручную:</strong> из папки сайта выполните
+            <code>python3 review/serve.py</code> (Windows:
+            <code>py -3 review/serve.py</code>).
+          </li>
+        </ul>
+        <p>
+          Браузер откроется автоматически. Оставьте окно запуска открытым во
+          время просмотра.
+        </p>
+        <p class="muted">
+          При полном запуске проверьте главную, каталог, фильтры, сравнение,
+          технический подбор, карточку серии и галерею электроснабжения. Двойной
+          щелчок по основному index.html не заменяет запуск HTTP-сервера.
+        </p>
+      </section>
+      <section>
+        <h2>Снимки страниц</h2>
+        <p class="muted">
+          Снимки статичны. Для движения и переключателей используйте
+          демонстрации выше или полный запуск.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Страница</th>
+              <th>1440 px</th>
+              <th>390 px</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Главная целиком</td>
+              <td>
+                <a href="../docs/preview-v2/home-1440-full.jpg">Desktop</a>
+              </td>
+              <td><a href="../docs/preview-v2/home-390-full.jpg">Mobile</a></td>
+            </tr>
+            <tr>
+              <td>Каталог, первый экран</td>
+              <td><a href="../docs/preview-v2/catalog-1440.jpg">Desktop</a></td>
+              <td><a href="../docs/preview-v2/catalog-390.jpg">Mobile</a></td>
+            </tr>
+            <tr>
+              <td>Технический подбор, первый экран</td>
+              <td>
+                <a href="../docs/preview-v2/selection-1440.jpg">Desktop</a>
+              </td>
+              <td><a href="../docs/preview-v2/selection-390.jpg">Mobile</a></td>
+            </tr>
+            <tr>
+              <td>Серия, первый экран</td>
+              <td><a href="../docs/preview-v2/series-1440.jpg">Desktop</a></td>
+              <td><a href="../docs/preview-v2/series-390.jpg">Mobile</a></td>
+            </tr>
+            <tr>
+              <td>Электроснабжение, первый экран</td>
+              <td>
+                <a href="../docs/preview-v2/elektrosnabzhenie-1440.jpg"
+                  >Desktop</a
+                >
+              </td>
+              <td>
+                <a href="../docs/preview-v2/elektrosnabzhenie-390.jpg"
+                  >Mobile</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <p class="muted">
+        Ветка: redesign-preview-v2. Публичные URL, исходные данные каталога и
+        бизнес-логика сохранены. Документация и проверки находятся в папках docs
+        и tests.
+      </p>
+    </main>
+  </body>
+</html>

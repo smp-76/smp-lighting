@@ -2,6 +2,8 @@
 
 Статический B2B-сайт светотехнической компании. Размещается на GitHub Pages с основным доменом **smp-76.ru**. Backend, сборщик, npm-зависимости приложения и внешние шрифты не нужны.
 
+Пакет для заказчика: начните с [review/START-HERE.html](review/START-HERE.html) или [CLIENT-REVIEW.txt](CLIENT-REVIEW.txt). Там доступны автономные демонстрации hero и CRI/CCT, снимки и запуск полной версии.
+
 ## Локальный запуск
 
 Из корня репозитория:
@@ -53,6 +55,7 @@ node tests/selection-regression.cjs
 ```sh
 node tests/browser.cjs
 node tests/presentation.cjs
+node tests/colour-lab.cjs
 ```
 
 Можно запустить отдельные группы: `layout home catalog comparison selection gallery fallback pages-path edge-cases`. Например:
@@ -66,3 +69,5 @@ node tests/browser.cjs catalog comparison
 Сведения о решениях и проверках: [docs/REDESIGN.md](docs/REDESIGN.md).
 
 Текущая creative direction, структура, motion system, токены и сохранность логики описаны в [docs/REDESIGN-V2.md](docs/REDESIGN-V2.md). Каталог поддерживает список и карточки; `js/presentation.js` и `css/engineering.css` отвечают за новую презентацию инженерных страниц.
+
+Образовательная демонстрация перед техническим подбором: [docs/COLOUR-LAB.md](docs/COLOUR-LAB.md). Она использует одну иллюстративную сцену контроля окраски и не изменяет данные или алгоритмы подбора.

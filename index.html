@@ -16,8 +16,10 @@
     <meta name="theme-color" content="#071426" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/colour-lab.css" />
     <script src="js/site.js" defer></script>
     <script src="js/home.js" defer></script>
+    <script src="js/colour-lab.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1011,6 +1013,296 @@
               <span>06</span><strong>Организуем поставку</strong>
               <p>Сопровождаем заказ до поставки оборудования.</p>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- LIGHT QUALITY DEMONSTRATOR -->
+      <section
+        class="colour-lab"
+        id="light-quality"
+        aria-labelledby="quality-title"
+      >
+        <div class="container">
+          <div class="quality-heading">
+            <div>
+              <div class="slabel">
+                Параметры света / На примере производства
+              </div>
+              <h2 id="quality-title">
+                Как освещение влияет на контроль качества
+              </h2>
+            </div>
+            <p>
+              На посту контроля окраски важно видеть различия оттенков и
+              характер отражений. Сравните одну сцену при разных параметрах
+              света.
+            </p>
+          </div>
+          <div class="quality-workspace">
+            <figure class="quality-visual">
+              <div
+                class="quality-scene"
+                aria-describedby="quality-illustration-note"
+              >
+                <svg
+                  class="quality-filter-defs"
+                  width="0"
+                  height="0"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <defs>
+                    <filter
+                      id="quality-cri-70"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feColorMatrix
+                        type="matrix"
+                        values=".57 .35 .08 0 0 .18 .75 .07 0 0 .14 .30 .56 0 0 0 0 0 1 0"
+                      />
+                    </filter>
+                    <filter
+                      id="quality-cri-80"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feColorMatrix
+                        type="matrix"
+                        values=".78 .18 .04 0 0 .07 .90 .03 0 0 .04 .16 .80 0 0 0 0 0 1 0"
+                      />
+                    </filter>
+                    <filter
+                      id="quality-cri-90"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feColorMatrix
+                        type="matrix"
+                        values=".94 .05 .01 0 0 .025 .97 .005 0 0 .01 .04 .95 0 0 0 0 0 1 0"
+                      />
+                    </filter>
+                    <filter
+                      id="quality-cct-3000"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feColorMatrix
+                        type="matrix"
+                        values="1.08 0 0 0 0 0 .87 0 0 0 0 0 .68 0 0 0 0 0 1 0"
+                      />
+                    </filter>
+                    <filter
+                      id="quality-cct-4000"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feColorMatrix
+                        type="matrix"
+                        values="1.04 0 0 0 0 0 .96 0 0 0 0 0 .88 0 0 0 0 0 1 0"
+                      />
+                    </filter>
+                    <filter
+                      id="quality-cct-6500"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feColorMatrix
+                        type="matrix"
+                        values=".88 0 0 0 0 0 .95 0 0 0 0 0 1.08 0 0 0 0 0 1 0"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <img
+                  class="quality-scene-image"
+                  data-quality-layer="0"
+                  src="images/paint-inspection-scene.webp"
+                  width="1586"
+                  height="992"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Иллюстрация поста контроля окраски: синяя дверь, две красные кузовные панели и серебристое крыло под контрольными световыми полосами"
+                  style="filter: url(#quality-cri-90)"
+                />
+                <img
+                  class="quality-scene-image"
+                  data-quality-layer="1"
+                  src="images/paint-inspection-scene.webp"
+                  width="1586"
+                  height="992"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="quality-scene-label">
+                  <span>Контроль окраски</span
+                  ><strong id="quality-scene-value">CRI 90</strong>
+                </div>
+              </div>
+              <figcaption>
+                Пост визуального осмотра кузовных деталей · иллюстрация
+              </figcaption>
+            </figure>
+            <div class="quality-controls">
+              <div
+                class="quality-tabs"
+                role="tablist"
+                aria-label="Параметр света"
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  id="quality-tab-cri"
+                  aria-controls="quality-panel-cri"
+                  aria-selected="true"
+                  tabindex="0"
+                  data-quality-mode="cri"
+                >
+                  CRI
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  id="quality-tab-cct"
+                  aria-controls="quality-panel-cct"
+                  aria-selected="false"
+                  tabindex="-1"
+                  data-quality-mode="cct"
+                >
+                  Цветовая температура
+                </button>
+              </div>
+              <div
+                id="quality-panel-cri"
+                class="quality-panel"
+                role="tabpanel"
+                aria-labelledby="quality-tab-cri"
+              >
+                <h3>Точность передачи оттенков</h3>
+                <p class="quality-explanation">
+                  CRI — индекс цветопередачи. Чем он выше, тем точнее
+                  воспринимаются реальные оттенки материалов и покрытий.
+                </p>
+                <fieldset class="quality-values">
+                  <legend>Выберите CRI</legend>
+                  <label
+                    ><input type="radio" name="quality-cri" value="70" /><span
+                      >CRI 70</span
+                    ></label
+                  >
+                  <label
+                    ><input type="radio" name="quality-cri" value="80" /><span
+                      >CRI 80</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="quality-cri"
+                      value="90"
+                      checked
+                    /><span>CRI 90</span></label
+                  >
+                  <label
+                    ><input type="radio" name="quality-cri" value="95" /><span
+                      >CRI 95</span
+                    ></label
+                  >
+                </fieldset>
+                <div
+                  class="quality-reading"
+                  role="status"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
+                  <strong class="quality-reading-number" data-quality-number
+                    >90<span>Ra / CRI</span></strong
+                  >
+                  <h4 data-quality-heading>Тонкие оттенки заметнее</h4>
+                  <p data-quality-description>
+                    Цветовые различия читаются лучше. Это помогает визуально
+                    сопоставлять окрашенные детали.
+                  </p>
+                </div>
+                <p class="quality-context">
+                  Сравните две красные панели. Для выявления рельефных дефектов
+                  важны также направление света и рисунок отражений.
+                </p>
+              </div>
+              <div
+                id="quality-panel-cct"
+                class="quality-panel"
+                role="tabpanel"
+                aria-labelledby="quality-tab-cct"
+                hidden
+              >
+                <h3>Оттенок белого света</h3>
+                <p class="quality-explanation">
+                  Цветовая температура меняет восприятие пространства и
+                  поверхностей. Выбор тёплого, нейтрального или холодного света
+                  зависит от задачи.
+                </p>
+                <fieldset class="quality-values">
+                  <legend>Выберите температуру</legend>
+                  <label
+                    ><input type="radio" name="quality-cct" value="3000" /><span
+                      >3000 K</span
+                    ></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="quality-cct"
+                      value="4000"
+                      checked
+                    /><span>4000 K</span></label
+                  >
+                  <label
+                    ><input type="radio" name="quality-cct" value="5000" /><span
+                      >5000 K</span
+                    ></label
+                  >
+                  <label
+                    ><input type="radio" name="quality-cct" value="6500" /><span
+                      >6500 K</span
+                    ></label
+                  >
+                </fieldset>
+                <div
+                  class="quality-reading"
+                  role="status"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
+                  <strong class="quality-reading-number" data-quality-number
+                    >4000<span>K / температура</span></strong
+                  >
+                  <h4 data-quality-heading>Нейтральный белый</h4>
+                  <p data-quality-description>
+                    Сдержанная световая среда. Сравните восприятие серого
+                    металла и красного покрытия с тёплым вариантом.
+                  </p>
+                </div>
+                <p class="quality-context">
+                  Холоднее не значит точнее: цветовая температура и
+                  цветопередача — разные параметры света.
+                </p>
+              </div>
+              <noscript
+                ><p class="quality-context">
+                  Показан статичный пример CRI 90. Для переключения режимов
+                  нужен JavaScript.
+                </p></noscript
+              >
+            </div>
+          </div>
+          <div class="quality-footnote">
+            <p class="quality-observe" id="quality-observe">
+              Цветовая температура не меняется. Следите за оттенками красных
+              панелей.
+            </p>
+            <p id="quality-illustration-note">
+              Иллюстрация демонстрирует общий принцип влияния CRI и цветовой
+              температуры на восприятие объекта. Для точного подбора
+              оборудования используются реальные технические параметры и
+              расчёты.
+            </p>
           </div>
         </div>
       </section>
