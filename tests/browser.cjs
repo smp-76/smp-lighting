@@ -459,7 +459,7 @@ async function compareOpen() {
     assert.ok(await rp.locator(".hero-fixture img").isVisible());
     assert.equal(
       await rp
-        .locator(".hero-fixture")
+        .locator(".hero-fixture-pivot")
         .evaluate((el) => getComputedStyle(el).transform),
       "none",
     );

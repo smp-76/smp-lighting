@@ -73,6 +73,70 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       aim.some((value) => value !== 0),
       "Aim did not change",
     );
+    assert.equal(
+      await page
+        .locator(".hero-room")
+        .evaluate((el) => getComputedStyle(el).opacity),
+      "0",
+      "Warehouse remains visible outside the projected light",
+    );
+    const heroBounds = await page.locator(".home-hero").boundingBox();
+    for (const [horizontal, vertical] of [
+      [0.2, 0.3],
+      [0.88, 0.58],
+    ]) {
+      const target = {
+        x: heroBounds.x + heroBounds.width * horizontal,
+        y: heroBounds.y + heroBounds.height * vertical,
+      };
+      await page.mouse.move(target.x, target.y);
+      await page.waitForTimeout(800);
+      const projection = await page.locator(".home-hero").evaluate((el) => {
+        const rect = el.getBoundingClientRect();
+        const gradient = el.querySelector("#fhbBeam");
+        const emitter = el
+          .querySelector(".hero-emitter")
+          .getBoundingClientRect();
+        return {
+          x:
+            (Number.parseFloat(el.style.getPropertyValue("--spot-x")) / 100) *
+            rect.width,
+          y:
+            (Number.parseFloat(el.style.getPropertyValue("--spot-y")) / 100) *
+            rect.height,
+          sourceX: (Number(gradient.getAttribute("x1")) / 1000) * rect.width,
+          sourceY: (Number(gradient.getAttribute("y1")) / 1000) * rect.height,
+          opticX: emitter.left - rect.left,
+          opticY: emitter.top - rect.top,
+        };
+      });
+      assert.ok(
+        Math.abs(projection.x - heroBounds.width * horizontal) < 2,
+        "Spot does not follow cursor across entire hero",
+      );
+      assert.ok(
+        Math.abs(projection.y - heroBounds.height * vertical) < 2,
+        "Spot vertical position misses cursor",
+      );
+      assert.ok(
+        Math.abs(projection.sourceX - projection.opticX) < 2 &&
+          Math.abs(projection.sourceY - projection.opticY) < 2,
+        "Beam origin detached from real optic",
+      );
+    }
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.waitForFunction(
+      () =>
+        getComputedStyle(document.querySelector(".hero-fixture-pivot"))
+          .transform === "none",
+    );
+    assert.equal(
+      await page
+        .locator(".hero-fixture-pivot")
+        .evaluate((el) => getComputedStyle(el).transform),
+      "none",
+    );
+    await page.emulateMedia({ reducedMotion: "no-preference" });
     await page.evaluate(() => window.scrollTo(0, 240));
     assert.equal(
       await page.evaluate(() => scrollY),
@@ -97,7 +161,7 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
     assert.equal(await mobile.locator(".light-stage.is-ready").count(), 0);
     assert.equal(
       await mobile
-        .locator(".hero-fixture")
+        .locator(".hero-fixture-pivot")
         .evaluate((el) => getComputedStyle(el).transform),
       "none",
     );
@@ -110,7 +174,7 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
     assert.equal(await page.locator(".task-scene[open]").count(), 1);
     assert.equal(await scenes.nth(2).getAttribute("open"), "");
     console.log(
-      "PASS idle light, pointer response, native scroll, offscreen stop, keyboard narrative",
+      "PASS idle light, whole-hero cursor spotlight, attached beam, reduced motion, native scroll, offscreen stop, keyboard narrative",
     );
 
     await page.locator("#industry-industrial").click();

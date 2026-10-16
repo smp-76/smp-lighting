@@ -21,6 +21,10 @@
 .home .home-hero {
   --hero-x: 0;
   --hero-y: 0;
+  --spot-x: 77%;
+  --spot-y: 80%;
+  --spot-width: 18%;
+  --spot-height: 23%;
   position: relative;
   isolation: isolate;
   padding: 0;
@@ -45,33 +49,33 @@
 .hero-room {
   object-fit: cover;
   object-position: 65% 50%;
-  opacity: 0.2;
-  filter: saturate(0.35);
+  opacity: 0;
 }
 .hero-room-lit {
   background: url("../images/reference-logistics.webp") 65% 50% / cover;
-  opacity: 0.8;
+  opacity: 0.78;
+  filter: saturate(0.5);
   mask-image: radial-gradient(
-    ellipse 27% 36% at calc(78% + var(--hero-x) * 2.5%)
-      calc(83% + var(--hero-y) * 1%),
-    #000 8%,
-    transparent 85%
+    ellipse var(--spot-width) var(--spot-height) at var(--spot-x) var(--spot-y),
+    #000 5%,
+    rgb(0 0 0 / 85%) 25%,
+    transparent 78%
   );
   -webkit-mask-image: radial-gradient(
-    ellipse 27% 36% at calc(78% + var(--hero-x) * 2.5%)
-      calc(83% + var(--hero-y) * 1%),
-    #000 8%,
-    transparent 85%
+    ellipse var(--spot-width) var(--spot-height) at var(--spot-x) var(--spot-y),
+    #000 5%,
+    rgb(0 0 0 / 85%) 25%,
+    transparent 78%
   );
 }
 .hero-room-shade {
   background:
     linear-gradient(
       90deg,
-      #071426 2%,
-      rgba(7, 20, 38, 0.94) 28%,
-      rgba(7, 20, 38, 0.56) 54%,
-      rgba(7, 20, 38, 0.12) 100%
+      rgba(7, 20, 38, 0.62) 0%,
+      rgba(7, 20, 38, 0.5) 44%,
+      rgba(7, 20, 38, 0.08) 70%,
+      transparent 100%
     ),
     linear-gradient(0deg, #071426, transparent 30%, rgba(7, 20, 38, 0.3));
 }
@@ -148,35 +152,51 @@
 }
 .hero-fixture {
   position: absolute;
-  inset: 72px 8% auto;
+  inset: 0 8% auto;
   margin: 0;
+  transform-style: preserve-3d;
+}
+.hero-fixture-pivot {
+  position: relative;
+  width: 50%;
+  margin-inline: auto;
   transform-origin: 50% 30%;
   transform: translate3d(
-      calc(var(--hero-x) * 6px),
-      calc(var(--hero-y) * -3px),
+      calc(var(--hero-x) * 12px),
+      calc(var(--hero-y) * -6px),
       0
     )
-    rotateX(calc(var(--hero-y) * 1.8deg)) rotateY(calc(var(--hero-x) * 2.8deg))
-    rotateZ(calc(var(--hero-x) * -0.8deg));
+    rotateX(calc(var(--hero-y) * 12deg)) rotateY(calc(var(--hero-x) * 20deg))
+    rotateZ(calc(var(--hero-x) * -6deg));
 }
-.hero-fixture > img {
+.hero-fixture-pivot > img {
   display: block;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 24px rgba(0, 0, 0, 0.3));
+  filter: brightness(0.7) contrast(1.04)
+    drop-shadow(0 12px 20px rgba(0, 0, 0, 0.4));
+}
+.hero-emitter {
+  position: absolute;
+  left: 48%;
+  top: 74%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 .hero-fixture figcaption {
-  margin: 30px 8% 0;
-  padding-top: 14px;
-  border-top: 1px solid #58697f;
+  margin: 22px 24% 0;
+  padding: 10px;
+  border-top: 1px solid #35445e;
+  background: rgb(7 20 38 / 88%);
 }
 .hero-fixture figcaption a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 10px;
   color: #d8e5f7;
-  font: 10px/1.5 var(--mono);
+  font: 9px/1.5 var(--mono);
   text-decoration: none;
 }
 .hero-fixture figcaption a > span:first-child {
@@ -192,23 +212,9 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  transform-origin: 47% 50%;
-  transform: rotate(calc(var(--hero-x) * -4deg))
-    scaleY(calc(1 + var(--hero-y) * 0.025));
 }
-.hero-floor-light {
-  position: absolute;
-  width: 88%;
-  height: 14%;
-  left: 8%;
-  top: 80%;
-  background: radial-gradient(
-    ellipse,
-    rgba(211, 229, 255, 0.15),
-    transparent 70%
-  );
-  transform: translate(calc(var(--hero-x) * 32px), calc(var(--hero-y) * 8px));
-  pointer-events: none;
+.hero-beam-mobile {
+  display: none;
 }
 .hero-base {
   position: relative;
@@ -237,13 +243,19 @@
     padding-block: 50px;
   }
   .hero-fixture {
-    top: 68px;
+    top: 0;
   }
   .light-stage {
     min-height: 590px;
   }
 }
 @media (max-width: 900px) {
+  .home .home-hero {
+    --spot-x: 50%;
+    --spot-y: 84%;
+    --spot-width: 60%;
+    --spot-height: 14%;
+  }
   .home .hero-layout {
     min-height: 0;
     grid-template-columns: 1fr;
@@ -279,38 +291,31 @@
     margin-top: 22px;
   }
   .hero-fixture {
-    inset: 0 0 auto;
+    inset: -20px 0 auto;
+  }
+  .hero-fixture-pivot {
+    width: 44%;
     transform: none;
   }
-  .hero-fixture > img {
-    width: 88%;
-    margin-inline: auto;
-  }
   .hero-fixture figcaption {
-    margin: 8px 0 0;
+    margin: 14px 20% 0;
   }
   .hero-environment {
-    top: 42%;
+    top: 0;
   }
   .hero-room-shade {
     background: linear-gradient(
       #071426 0%,
-      rgba(7, 20, 38, 0.3) 35%,
-      rgba(7, 20, 38, 0.1) 75%,
+      rgba(7, 20, 38, 0.35) 35%,
+      rgba(7, 20, 38, 0.2) 75%,
       #071426 100%
     );
   }
-  .hero-room-lit {
-    mask-image: radial-gradient(
-      ellipse 60% 45% at 50% 82%,
-      #000 8%,
-      transparent 85%
-    );
-    -webkit-mask-image: radial-gradient(
-      ellipse 60% 45% at 50% 82%,
-      #000 8%,
-      transparent 85%
-    );
+  .hero-beam-desktop {
+    display: none;
+  }
+  .hero-beam-mobile {
+    display: block;
   }
   .hero-base {
     min-height: 64px;
@@ -349,9 +354,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .home-hero .hero-fixture,
-  .home-hero .hero-light-volume,
-  .home-hero .hero-floor-light {
+  .home-hero .hero-fixture-pivot {
     transform: none;
   }
 }

@@ -85,6 +85,53 @@
             fetchpriority="low"
           />
           <div class="hero-room-lit"></div>
+          <svg
+            class="hero-light-volume"
+            viewBox="0 0 1000 1000"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient
+                id="fhbBeam"
+                gradientUnits="userSpaceOnUse"
+                x1="740"
+                y1="220"
+                x2="770"
+                y2="800"
+              >
+                <stop offset="0" stop-color="#e4efff" stop-opacity=".2" />
+                <stop offset=".48" stop-color="#d8e8ff" stop-opacity=".075" />
+                <stop offset="1" stop-color="#d8e8ff" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="fhbBeamMobile" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e4efff" stop-opacity=".16" />
+                <stop offset=".48" stop-color="#d8e8ff" stop-opacity=".06" />
+                <stop offset="1" stop-color="#d8e8ff" stop-opacity="0" />
+              </linearGradient>
+              <filter
+                id="fhbSoftEdge"
+                x="-20%"
+                y="-20%"
+                width="140%"
+                height="140%"
+              >
+                <feGaussianBlur stdDeviation="9" />
+              </filter>
+            </defs>
+            <path
+              class="hero-beam-desktop"
+              d="M725 220 L900 800 Q770 860 640 800 L755 220Z"
+              fill="url(#fhbBeam)"
+              filter="url(#fhbSoftEdge)"
+            />
+            <path
+              class="hero-beam-mobile"
+              d="M465 610 L770 850 Q500 910 230 850 L535 610Z"
+              fill="url(#fhbBeamMobile)"
+              filter="url(#fhbSoftEdge)"
+            />
+          </svg>
           <div class="hero-room-shade"></div>
         </div>
         <div class="container hero-layout">
@@ -121,45 +168,19 @@
             </div>
           </div>
           <div class="light-stage" data-hero-renderer="photo">
-            <svg
-              class="hero-light-volume"
-              viewBox="0 0 1000 1000"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient id="fhbBeam" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#e4efff" stop-opacity=".2" />
-                  <stop offset=".48" stop-color="#d8e8ff" stop-opacity=".075" />
-                  <stop offset="1" stop-color="#d8e8ff" stop-opacity="0" />
-                </linearGradient>
-                <filter
-                  id="fhbSoftEdge"
-                  x="-20%"
-                  y="-20%"
-                  width="140%"
-                  height="140%"
-                >
-                  <feGaussianBlur stdDeviation="9" />
-                </filter>
-              </defs>
-              <path
-                d="M330 470 Q480 530 630 470 L990 980 Q470 1100 -40 980Z"
-                fill="url(#fhbBeam)"
-                filter="url(#fhbSoftEdge)"
-              />
-            </svg>
-            <div class="hero-floor-light" aria-hidden="true"></div>
             <figure class="hero-fixture">
-              <img
-                src="images/fereks-fhb.webp"
-                width="566"
-                height="450"
-                alt="Промышленный светильник FEREKS FHB: оптика, ребристый корпус и поворотная лира, ракурс снизу три четверти"
-                fetchpriority="high"
-                loading="eager"
-                decoding="async"
-              />
+              <div class="hero-fixture-pivot">
+                <img
+                  src="images/fereks-fhb.webp"
+                  width="566"
+                  height="450"
+                  alt="Промышленный светильник FEREKS FHB: оптика, ребристый корпус и поворотная лира, ракурс снизу три четверти"
+                  fetchpriority="high"
+                  loading="eager"
+                  decoding="async"
+                />
+                <span class="hero-emitter" aria-hidden="true"></span>
+              </div>
               <figcaption>
                 <a href="series.html?series=fereks-fhb"
                   ><span>FEREKS / FHB</span
