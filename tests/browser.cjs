@@ -456,6 +456,13 @@ async function compareOpen() {
     await rp.goto(base + "/", { waitUntil: "networkidle" });
     assert.ok(await rp.locator("h1").isVisible());
     assert.equal(await rp.locator(".light-stage.is-ready").count(), 0);
+    assert.ok(await rp.locator(".hero-fixture img").isVisible());
+    assert.equal(
+      await rp
+        .locator(".hero-fixture")
+        .evaluate((el) => getComputedStyle(el).transform),
+      "none",
+    );
     await reduced.close();
     const noGl = await browser.newContext();
     const gp = await noGl.newPage();
@@ -468,12 +475,14 @@ async function compareOpen() {
     });
     await gp.goto(base + "/", { waitUntil: "networkidle" });
     assert.ok(await gp.locator("h1").isVisible());
-    assert.equal(await gp.locator(".light-stage.is-ready").count(), 0);
+    assert.ok(await gp.locator(".hero-fixture img").isVisible());
+    assert.equal(await gp.locator(".home-hero canvas").count(), 0);
     await noGl.close();
     const noJs = await browser.newContext({ javaScriptEnabled: false });
     const np = await noJs.newPage();
     await np.goto(base + "/", { waitUntil: "networkidle" });
     assert.ok(await np.locator("h1").isVisible());
+    assert.ok(await np.locator(".hero-fixture img").isVisible());
     assert.equal(await np.locator("#industry-projects li").count(), 5);
     assert.ok((await np.locator('a[href="catalog.html"]').count()) > 0);
     await noJs.close();

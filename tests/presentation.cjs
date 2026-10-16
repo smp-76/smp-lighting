@@ -13,24 +13,30 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
     });
     const errors = [];
     page.on("pageerror", (error) => errors.push(error.message));
-    await page.addInitScript(() => {
-      window.qaDraws = 0;
-      const original = WebGLRenderingContext.prototype.drawArrays;
-      WebGLRenderingContext.prototype.drawArrays = function (...args) {
-        window.qaDraws++;
-        return original.apply(this, args);
-      };
-    });
     await page.goto(base + "/", { waitUntil: "networkidle" });
     await page.waitForSelector(".light-stage.is-ready");
-    await page.waitForTimeout(1600);
-    const draws = await page.evaluate(() => window.qaDraws);
+    await page.locator(".hero-fixture img").evaluate((img) => img.decode());
+    await page.waitForTimeout(1200);
+    const heroPhoto = await page
+      .locator(".hero-fixture img")
+      .getAttribute("src");
+    assert.equal(await page.locator(".home-hero canvas").count(), 0);
+    await page.evaluate(() => {
+      window.qaUpdates = 0;
+      new MutationObserver(
+        (records) => (window.qaUpdates += records.length),
+      ).observe(document.querySelector(".home-hero"), {
+        attributes: true,
+        attributeFilter: ["style"],
+      });
+    });
+    const draws = await page.evaluate(() => window.qaUpdates);
     const still = await page.screenshot();
     await page.waitForTimeout(500);
     assert.equal(
-      await page.evaluate(() => window.qaDraws),
+      await page.evaluate(() => window.qaUpdates),
       draws,
-      "Hero continuously redraws without input",
+      "Hero keeps updating without input",
     );
     assert.deepEqual(
       await page.screenshot(),
@@ -38,15 +44,34 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       "Hero pixels change without input",
     );
     await page.mouse.move(1200, 250);
-    await page.waitForTimeout(3500);
+    await page.waitForTimeout(2400);
     assert.ok(
-      (await page.evaluate(() => window.qaDraws)) > draws,
+      (await page.evaluate(() => window.qaUpdates)) > draws,
       "Light does not react to pointer",
     );
     assert.notDeepEqual(
       await page.screenshot(),
       still,
-      "Pointer does not affect architecture scene",
+      "Pointer does not affect photo and light scene",
+    );
+    assert.equal(
+      await page.locator(".hero-fixture img").getAttribute("src"),
+      heroPhoto,
+    );
+    const aim = await page
+      .locator(".home-hero")
+      .evaluate((el) =>
+        ["--hero-x", "--hero-y"].map((name) =>
+          Number(el.style.getPropertyValue(name)),
+        ),
+      );
+    assert.ok(
+      aim.every((value) => value >= -1 && value <= 1),
+      "Aim exceeds bounded photo angles",
+    );
+    assert.ok(
+      aim.some((value) => value !== 0),
+      "Aim did not change",
     );
     await page.evaluate(() => window.scrollTo(0, 240));
     assert.equal(
@@ -56,13 +81,28 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
     );
     await page.locator("#tasks").scrollIntoViewIfNeeded();
     await page.waitForTimeout(200);
-    const offscreen = await page.evaluate(() => window.qaDraws);
+    const offscreen = await page.evaluate(() => window.qaUpdates);
     await page.waitForTimeout(500);
     assert.equal(
-      await page.evaluate(() => window.qaDraws),
+      await page.evaluate(() => window.qaUpdates),
       offscreen,
       "Offscreen hero still renders",
     );
+    const mobile = await browser.newPage({
+      viewport: { width: 390, height: 844 },
+      hasTouch: true,
+      isMobile: true,
+    });
+    await mobile.goto(base + "/", { waitUntil: "networkidle" });
+    assert.equal(await mobile.locator(".light-stage.is-ready").count(), 0);
+    assert.equal(
+      await mobile
+        .locator(".hero-fixture")
+        .evaluate((el) => getComputedStyle(el).transform),
+      "none",
+    );
+    assert.ok(await mobile.locator(".hero-fixture img").isVisible());
+    await mobile.close();
     const scenes = page.locator(".task-scene");
     assert.equal(await scenes.count(), 6);
     await scenes.nth(2).locator("summary").focus();

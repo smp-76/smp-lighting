@@ -74,25 +74,33 @@
       <!-- TWO-LEVEL COMPANY NAVIGATION -->
       <!-- HERO -->
       <section class="home-hero" id="home" aria-labelledby="homeTitle">
-        <div class="light-stage" aria-hidden="true">
-          <div class="light-fallback">
-            <i class="architecture-floor"></i><i class="architecture-wall"></i
-            ><i class="architecture-column"></i><i class="architecture-fin"></i>
-          </div>
-          <canvas id="lightCanvas"></canvas>
-          <div class="light-shade"></div>
+        <div class="hero-environment" aria-hidden="true">
+          <img
+            class="hero-room"
+            src="images/reference-logistics.webp"
+            alt=""
+            width="1800"
+            height="1020"
+            decoding="async"
+            fetchpriority="low"
+          />
+          <div class="hero-room-lit"></div>
+          <div class="hero-room-shade"></div>
         </div>
         <div class="container hero-layout">
           <div class="hero-topline">
-            <span>СМП-76 / Светодиодное освещение</span
-            ><span>15 лет в профессиональном освещении</span>
+            <span>СМП-76 / Промышленное освещение</span>
+            <span>От требований проекта к работающему свету</span>
           </div>
           <div class="hero-copy">
-            <h1 id="homeTitle">Свет создаёт<br /><em>пространство.</em></h1>
+            <h1 id="homeTitle">
+              Профессиональное освещение для промышленных и инфраструктурных
+              объектов
+            </h1>
             <div class="hero-lower">
               <p class="hero-sub">
-                Промышленность. Архитектура. Инфраструктура.<br />От требований
-                проекта — к работающему свету.
+                Подбор оборудования, светотехнический расчёт и сопровождение
+                проекта.
               </p>
               <div class="hero-actions">
                 <a href="catalog.html" class="btn-p"
@@ -112,15 +120,60 @@
               </div>
             </div>
           </div>
-          <div class="hero-scene-note">
-            <span class="scene-index">01 / СВЕТ КАК МАТЕРИАЛ</span>
-            <p>Объём. Поверхность.<br />Новое восприятие.</p>
+          <div class="light-stage" data-hero-renderer="photo">
+            <svg
+              class="hero-light-volume"
+              viewBox="0 0 1000 1000"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="fhbBeam" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#e4efff" stop-opacity=".2" />
+                  <stop offset=".48" stop-color="#d8e8ff" stop-opacity=".075" />
+                  <stop offset="1" stop-color="#d8e8ff" stop-opacity="0" />
+                </linearGradient>
+                <filter
+                  id="fhbSoftEdge"
+                  x="-20%"
+                  y="-20%"
+                  width="140%"
+                  height="140%"
+                >
+                  <feGaussianBlur stdDeviation="9" />
+                </filter>
+              </defs>
+              <path
+                d="M270 430 Q470 510 670 430 L990 980 Q470 1100 -40 980Z"
+                fill="url(#fhbBeam)"
+                filter="url(#fhbSoftEdge)"
+              />
+            </svg>
+            <div class="hero-floor-light" aria-hidden="true"></div>
+            <figure class="hero-fixture">
+              <img
+                src="images/fereks-fhb.webp"
+                width="566"
+                height="450"
+                alt="Промышленный светильник FEREKS FHB: оптика, ребристый корпус и поворотная лира, ракурс снизу три четверти"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+              />
+              <figcaption>
+                <a href="series.html?series=fereks-fhb"
+                  ><span>FEREKS / FHB</span
+                  ><span
+                    >Светильник на лире <span aria-hidden="true">→</span></span
+                  ></a
+                >
+              </figcaption>
+            </figure>
           </div>
         </div>
         <div class="container hero-base">
           <span>Профессиональное освещение</span
-          ><a href="#tasks"
-            >От пространства к задаче <span aria-hidden="true">↓</span></a
+          ><a href="#tasks">Задачи проекта <span aria-hidden="true">↓</span></a
           ><span>СМП / 76</span>
         </div>
       </section>
