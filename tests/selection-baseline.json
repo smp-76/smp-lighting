@@ -1,0 +1,1059 @@
+[
+  {
+    "name": "ordinary",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 18093,
+      "sha256": "1bad7f3537841e654e12bf7e8282209017353750f3dfedd59be9cdfe49c478d4"
+    },
+    "close": {
+      "count": 18093,
+      "sha256": "1bad7f3537841e654e12bf7e8282209017353750f3dfedd59be9cdfe49c478d4"
+    }
+  },
+  {
+    "name": "explosion",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": true
+    },
+    "exact": {
+      "count": 133,
+      "sha256": "80696e38ea8f5c00d88d3acc9f35e6669962ad1ce02ed8875ed02c2466c24040"
+    },
+    "close": {
+      "count": 133,
+      "sha256": "80696e38ea8f5c00d88d3acc9f35e6669962ad1ce02ed8875ed02c2466c24040"
+    }
+  },
+  {
+    "name": "brand FEREKS",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "FEREKS",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 5746,
+      "sha256": "87c7fd71951fc7839ab5625c40b18c1d1d26bbe0f486392663e2810ced4ce3c9"
+    },
+    "close": {
+      "count": 5746,
+      "sha256": "87c7fd71951fc7839ab5625c40b18c1d1d26bbe0f486392663e2810ced4ce3c9"
+    }
+  },
+  {
+    "name": "brand LEDEL",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "LEDEL",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 4601,
+      "sha256": "2c44404e6f08604363bbda39651a28161fcae3d063548a9e72f2a2ec4cfb2d95"
+    },
+    "close": {
+      "count": 4601,
+      "sha256": "2c44404e6f08604363bbda39651a28161fcae3d063548a9e72f2a2ec4cfb2d95"
+    }
+  },
+  {
+    "name": "brand ARUNA",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "ARUNA",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 4864,
+      "sha256": "299bdca730d29914ab61a39da54f4a12469c155dec7fe6db4f8af542c2f53125"
+    },
+    "close": {
+      "count": 4864,
+      "sha256": "299bdca730d29914ab61a39da54f4a12469c155dec7fe6db4f8af542c2f53125"
+    }
+  },
+  {
+    "name": "brand PLG",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "PLG",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 215,
+      "sha256": "cd7d253f6bdb7e4ad50a5541854118d2d37039051f95269405251e86798837a0"
+    },
+    "close": {
+      "count": 215,
+      "sha256": "cd7d253f6bdb7e4ad50a5541854118d2d37039051f95269405251e86798837a0"
+    }
+  },
+  {
+    "name": "brand LUXCORE",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "LUXCORE",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 2667,
+      "sha256": "f93267dc1710926d1b5578228174bdf360739bb2ccbe51fa3f3196c6f9c08be2"
+    },
+    "close": {
+      "count": 2667,
+      "sha256": "f93267dc1710926d1b5578228174bdf360739bb2ccbe51fa3f3196c6f9c08be2"
+    }
+  },
+  {
+    "name": "section Промышленное",
+    "query": {
+      "section": "Промышленное",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 6290,
+      "sha256": "d250ddbf25fbcd461b8dbf25021937d102558548b7759d68dcb123056369ea5f"
+    },
+    "close": {
+      "count": 6290,
+      "sha256": "d250ddbf25fbcd461b8dbf25021937d102558548b7759d68dcb123056369ea5f"
+    }
+  },
+  {
+    "name": "section Внутреннее",
+    "query": {
+      "section": "Внутреннее",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 4964,
+      "sha256": "8272dcefda5f7338fc7a72e400667ebe18ab38299bc4c128955ce9c617a8d63f"
+    },
+    "close": {
+      "count": 4964,
+      "sha256": "8272dcefda5f7338fc7a72e400667ebe18ab38299bc4c128955ce9c617a8d63f"
+    }
+  },
+  {
+    "name": "section Наружное",
+    "query": {
+      "section": "Наружное",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 1365,
+      "sha256": "106d301d36b24128ed4fe65ee4ad868b2685f42b14d1c8b8f6f47d43b289d928"
+    },
+    "close": {
+      "count": 1365,
+      "sha256": "106d301d36b24128ed4fe65ee4ad868b2685f42b14d1c8b8f6f47d43b289d928"
+    }
+  },
+  {
+    "name": "section Архитектурно-парковое",
+    "query": {
+      "section": "Архитектурно-парковое",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 5634,
+      "sha256": "cc52bf79442cd8f5b9902db7ac57875273c1f304136e76c774048de43f3bedd5"
+    },
+    "close": {
+      "count": 5634,
+      "sha256": "cc52bf79442cd8f5b9902db7ac57875273c1f304136e76c774048de43f3bedd5"
+    }
+  },
+  {
+    "name": "power 10",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": 10,
+      "powerMax": 10,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 263,
+      "sha256": "c6969b56fac1c5fd38cbd1bc8935d457c117287df8d3336d9847fb4a195bc437"
+    },
+    "close": {
+      "count": 493,
+      "sha256": "f922ca7ae4f83af71a82e5ea34ea587a44e7c05e1b6fa9308a3acc32c4d1f9fd"
+    }
+  },
+  {
+    "name": "power 50",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": 50,
+      "powerMax": 50,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 652,
+      "sha256": "7a6b07e8c6989382ee7e321bc92ae046a50fcd0f9e1376a66d318651cab6324d"
+    },
+    "close": {
+      "count": 1988,
+      "sha256": "068d4ead1c1f03278607d10c2c64d404264bebe59d01e78a4112901d1a0cb6a6"
+    }
+  },
+  {
+    "name": "power 135",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": 135,
+      "powerMax": 135,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 35,
+      "sha256": "b525bb2108768887d0983c18331bc6c5482cf2e072db5034f98acd8d198b79a2"
+    },
+    "close": {
+      "count": 1359,
+      "sha256": "0079f1e2fdcb52c9e920d7e72400d61134b8064222aad5156b48fd1ee1436056"
+    }
+  },
+  {
+    "name": "power 500",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": 500,
+      "powerMax": 500,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "close": {
+      "count": 40,
+      "sha256": "a7ef2e994d00ed21bbe51397df741197d8dbf44b43821e474e91eae84365916a"
+    }
+  },
+  {
+    "name": "flux 1000",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": 1000,
+      "fluxMax": 1000,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 9,
+      "sha256": "2e0690235bb5a1cf63e963693dba5a2640a3f6be05fdec55413cb6702b2e7610"
+    },
+    "close": {
+      "count": 715,
+      "sha256": "e012cab0b08b8666472fc72163b2a05d0ba907f3274469140dccb5d56bee925e"
+    }
+  },
+  {
+    "name": "flux 10000",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": 10000,
+      "fluxMax": 10000,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 19,
+      "sha256": "b6b6c47ab39142d96fac232d8dcad759940b5e9f7f8ea19e60c80f0abbda830d"
+    },
+    "close": {
+      "count": 1166,
+      "sha256": "f3dc67d374364f154b133785e2653b6536ddc79f684467ddadd79dd2bbe87bea"
+    }
+  },
+  {
+    "name": "flux 17550",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": 17550,
+      "fluxMax": 17550,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 10,
+      "sha256": "8216ee914aa739d2af5b1c4c481b64a712c86941e7a65d5622a4614161b0b072"
+    },
+    "close": {
+      "count": 1180,
+      "sha256": "bf7b402f6752c0787b83799cfe2adca28af5017dc768cfa45773952c663932d5"
+    }
+  },
+  {
+    "name": "ip 20",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": 20,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 18093,
+      "sha256": "1bad7f3537841e654e12bf7e8282209017353750f3dfedd59be9cdfe49c478d4"
+    },
+    "close": {
+      "count": 18093,
+      "sha256": "1bad7f3537841e654e12bf7e8282209017353750f3dfedd59be9cdfe49c478d4"
+    }
+  },
+  {
+    "name": "ip 54",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": 54,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 15250,
+      "sha256": "520ce5600461a72a259f0c8e60e72cb689497b4e9f2d0927f659d88340071bf3"
+    },
+    "close": {
+      "count": 15250,
+      "sha256": "520ce5600461a72a259f0c8e60e72cb689497b4e9f2d0927f659d88340071bf3"
+    }
+  },
+  {
+    "name": "ip 65",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": 65,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 14593,
+      "sha256": "c077dda9d244f38759d40ab1e71e2810722ffd95226f7e93f9eb1e51e1ba177a"
+    },
+    "close": {
+      "count": 14593,
+      "sha256": "c077dda9d244f38759d40ab1e71e2810722ffd95226f7e93f9eb1e51e1ba177a"
+    }
+  },
+  {
+    "name": "ip 66",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": 66,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 9623,
+      "sha256": "0456734b06b25e628e4da3a00fb71e606a8e1a5f3e97c8c73c53a71b21459aaa"
+    },
+    "close": {
+      "count": 9623,
+      "sha256": "0456734b06b25e628e4da3a00fb71e606a8e1a5f3e97c8c73c53a71b21459aaa"
+    }
+  },
+  {
+    "name": "ip 67",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": 67,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 937,
+      "sha256": "d85fda8c9ccffc3b802eee613bb612042426ae32146f75af104b05ea208bfe18"
+    },
+    "close": {
+      "count": 937,
+      "sha256": "d85fda8c9ccffc3b802eee613bb612042426ae32146f75af104b05ea208bfe18"
+    }
+  },
+  {
+    "name": "cri 70",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": 70,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 17762,
+      "sha256": "663953a27cd99657df1db0569d494d08d93acc14672ff629b4c75c8fc518c077"
+    },
+    "close": {
+      "count": 17762,
+      "sha256": "663953a27cd99657df1db0569d494d08d93acc14672ff629b4c75c8fc518c077"
+    }
+  },
+  {
+    "name": "cri 80",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": 80,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 13207,
+      "sha256": "c5bb3cdcecd6e22cda7dfa9f5fb42ca7fe6b5149f6508e68ea2b8e4a649e19e3"
+    },
+    "close": {
+      "count": 13207,
+      "sha256": "c5bb3cdcecd6e22cda7dfa9f5fb42ca7fe6b5149f6508e68ea2b8e4a649e19e3"
+    }
+  },
+  {
+    "name": "cri 90",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": 90,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 1500,
+      "sha256": "6d5ff6580f2e14d8750968f7792ea37992b731b6d465e6edd9e97cc3e59683d0"
+    },
+    "close": {
+      "count": 1500,
+      "sha256": "6d5ff6580f2e14d8750968f7792ea37992b731b6d465e6edd9e97cc3e59683d0"
+    }
+  },
+  {
+    "name": "cct 3000",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": 3000,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 3478,
+      "sha256": "a8c1c891df075a9ecd2cec744d0faa4f0b09daa442a77c141f0a5695fc4991c8"
+    },
+    "close": {
+      "count": 3478,
+      "sha256": "a8c1c891df075a9ecd2cec744d0faa4f0b09daa442a77c141f0a5695fc4991c8"
+    }
+  },
+  {
+    "name": "cct 4000",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": 4000,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 6778,
+      "sha256": "c32d64a75777a56084f0600f1ebf4a58f9f7ae84bc433c94047cf836abde2ae3"
+    },
+    "close": {
+      "count": 6778,
+      "sha256": "c32d64a75777a56084f0600f1ebf4a58f9f7ae84bc433c94047cf836abde2ae3"
+    }
+  },
+  {
+    "name": "cct 5000",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": 5000,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 7100,
+      "sha256": "cd2f6158e5b51f51eebdd96fa147ffbe91351e5143a05a17d936cc8566c76776"
+    },
+    "close": {
+      "count": 7100,
+      "sha256": "cd2f6158e5b51f51eebdd96fa147ffbe91351e5143a05a17d936cc8566c76776"
+    }
+  },
+  {
+    "name": "optics narrow",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [
+        "narrow"
+      ],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 4206,
+      "sha256": "3fd7439b63f06eef9f17e2520b96fd5daa1880c6d44d863e88d82baf7c815087"
+    },
+    "close": {
+      "count": 4206,
+      "sha256": "3fd7439b63f06eef9f17e2520b96fd5daa1880c6d44d863e88d82baf7c815087"
+    }
+  },
+  {
+    "name": "optics medium",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [
+        "medium"
+      ],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 3549,
+      "sha256": "0fd7a08325831dc02b78172b89dc9bf5909a47bc2a5f0d1d757102ec02d24d28"
+    },
+    "close": {
+      "count": 3549,
+      "sha256": "0fd7a08325831dc02b78172b89dc9bf5909a47bc2a5f0d1d757102ec02d24d28"
+    }
+  },
+  {
+    "name": "optics wide",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [
+        "wide"
+      ],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 8580,
+      "sha256": "fe51233a5148d7d28250e86631f614288531f47263244f9af4c4493c6d191bcc"
+    },
+    "close": {
+      "count": 8580,
+      "sha256": "fe51233a5148d7d28250e86631f614288531f47263244f9af4c4493c6d191bcc"
+    }
+  },
+  {
+    "name": "optics asym",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [
+        "asym"
+      ],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 592,
+      "sha256": "842cd489cdb1a4f43efe5dc7b35f011d4b7734c506d97d7eef6599745eb571e1"
+    },
+    "close": {
+      "count": 592,
+      "sha256": "842cd489cdb1a4f43efe5dc7b35f011d4b7734c506d97d7eef6599745eb571e1"
+    }
+  },
+  {
+    "name": "optics special",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [
+        "special"
+      ],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 1160,
+      "sha256": "301b34cfe8d6d2f1bbd8026fa4b33405f6d0828a97d784db08514010abaece34"
+    },
+    "close": {
+      "count": 1160,
+      "sha256": "301b34cfe8d6d2f1bbd8026fa4b33405f6d0828a97d784db08514010abaece34"
+    }
+  },
+  {
+    "name": "optics none",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [
+        "none"
+      ],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "close": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "name": "LEDEL engineering",
+    "query": {
+      "section": "Промышленное",
+      "subsection": "",
+      "brand": "LEDEL",
+      "powerMin": 135,
+      "powerMax": 135,
+      "fluxMin": 17550,
+      "fluxMax": 17550,
+      "ip": 66,
+      "kss": [
+        "narrow"
+      ],
+      "cct": 4000,
+      "cri": 70,
+      "mounting": "поворотное крепление",
+      "explosion": false
+    },
+    "exact": {
+      "count": 1,
+      "sha256": "ee75b11510e0306efed4724db9a60222b8e8c24c29ef7ca3e2c28bddb0bf8b8e"
+    },
+    "close": {
+      "count": 8,
+      "sha256": "980f3d33c1aeb5ded3e1b4ea466832204b21972395f0fc3b3212793e47486b7d"
+    }
+  },
+  {
+    "name": "no match",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": 9999999,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "close": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "name": "subsection",
+    "query": {
+      "section": "",
+      "subsection": "Общепромышленные",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 5689,
+      "sha256": "126f0d35822e20786316b622c0ee53d7bafa7def70a3bc565251c5c9c5b57c13"
+    },
+    "close": {
+      "count": 5689,
+      "sha256": "126f0d35822e20786316b622c0ee53d7bafa7def70a3bc565251c5c9c5b57c13"
+    }
+  },
+  {
+    "name": "mounting",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [],
+      "cct": null,
+      "cri": null,
+      "mounting": "подвесное крепление",
+      "explosion": false
+    },
+    "exact": {
+      "count": 3066,
+      "sha256": "19953089d66222f153c9da74868e991ac596ae74c7d6e0855db9dd12c372c309"
+    },
+    "close": {
+      "count": 3066,
+      "sha256": "19953089d66222f153c9da74868e991ac596ae74c7d6e0855db9dd12c372c309"
+    }
+  },
+  {
+    "name": "multiple optics",
+    "query": {
+      "section": "",
+      "subsection": "",
+      "brand": "",
+      "powerMin": null,
+      "powerMax": null,
+      "fluxMin": null,
+      "fluxMax": null,
+      "ip": null,
+      "kss": [
+        "narrow",
+        "medium"
+      ],
+      "cct": null,
+      "cri": null,
+      "mounting": "",
+      "explosion": false
+    },
+    "exact": {
+      "count": 7755,
+      "sha256": "30c2176273c43a5cfd159f66b228f4bfdfdb7de4a526fa7c5267c88ae476c2d5"
+    },
+    "close": {
+      "count": 7755,
+      "sha256": "30c2176273c43a5cfd159f66b228f4bfdfdb7de4a526fa7c5267c88ae476c2d5"
+    }
+  }
+]

@@ -1,417 +1,884 @@
 <!doctype html>
 <html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<title>Электроснабжение объектов до 35 кВ | СМП-76</title>
-<meta name="description" content="Проектирование, строительство, реконструкция и обслуживание систем электроснабжения до 35 кВ. Технические условия, проект, монтаж, ввод и эксплуатация объектов.">
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#172231;background:#f3f5f7;line-height:1.6}a{color:inherit}button,input,select,textarea{font:inherit}
-:root{--blue:#1758ad;--blue2:#0c3e75;--ink:#172231;--muted:#677487;--line:#d9e0e9;--paper:#fff;--soft:#edf2f7;--gold:#b4892e}
-.nav{position:sticky;top:0;z-index:100;height:72px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.96);border-top:5px solid #42464d;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.brand img{display:block;width:282px;max-width:28vw;height:auto}.links{display:flex;align-items:center;gap:28px}.links a{text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:600;letter-spacing:.08em;color:#627085}.links a:hover,.links a.active{color:var(--blue)}.nav-cta{background:var(--blue)!important;color:#fff!important;padding:11px 18px;border-radius:3px}.menu-btn{display:none;border:0;background:transparent;font-size:24px;color:var(--ink)}
-.container{width:min(1180px,calc(100% - 48px));margin:0 auto}.hero{min-height:620px;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden;background:linear-gradient(90deg,rgba(4,17,33,.92) 0%,rgba(7,31,61,.82) 42%,rgba(9,48,95,.64) 100%),url('electro-hero-powerlines.png') center/cover no-repeat}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,12,22,.35) 0%,rgba(3,12,22,.12) 45%,rgba(3,12,22,0) 100%)}.hero:after{content:none}.hero-inner{position:relative;z-index:2;padding:90px 0;max-width:850px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f0c45c;margin-bottom:22px}h1,h2,h3{font-family:'Arial Narrow',Arial,sans-serif;line-height:1.1;margin-top:0}h1{font-size:clamp(44px,6vw,78px);margin-bottom:24px;max-width:950px}.hero p{font-size:18px;max-width:700px;color:#c9d5e4;margin:0 0 34px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid transparent;border-radius:4px;padding:14px 24px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}.btn-primary{background:#2b67c9;color:#fff}.btn-primary:hover{background:#174fae}.btn-outline{border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.03)}
-.proof{background:#fff;border-bottom:1px solid var(--line)}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}.proof-item{padding:30px;border-right:1px solid var(--line)}.proof-item:last-child{border-right:0}.proof-item strong{display:block;font:600 25px Oswald;color:var(--blue);margin-bottom:4px}.proof-item span{font-size:13px;color:var(--muted)}
-section{padding:92px 0}.section-label{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}h2{font-size:clamp(32px,4vw,52px);margin-bottom:16px}.lead{font-size:16px;color:var(--muted);max-width:720px;margin:0 0 42px}.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.service-card{background:#fff;border:1px solid var(--line);padding:32px;border-radius:5px}.service-card .num{font:700 13px Oswald;color:var(--gold);letter-spacing:.1em}.service-card h3{font-size:25px;margin:13px 0 16px}.service-card ul{margin:0;padding-left:19px;color:var(--muted);font-size:14px}.service-card li+li{margin-top:8px}
-.objects{background:#e9eef4}.object-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.object-card{background:#fff;border:1px solid var(--line);padding:24px;min-height:135px}.object-card b{display:block;font-size:16px;margin-bottom:7px}.object-card span{font-size:13px;color:var(--muted)}
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.project-card{background:#fff;border:1px solid var(--line);padding:25px;border-left:4px solid var(--blue)}.project-card small{display:block;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}.project-card h3{font-size:22px;margin-bottom:9px}.project-card p{margin:0;color:var(--muted);font-size:14px}.project-note{margin-top:20px;color:var(--muted);font-size:13px}
-.process{background:#0b2746;color:#fff}.process .lead{color:#b9c6d5}.steps{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid rgba(255,255,255,.15)}.step{padding:24px 18px;border-right:1px solid rgba(255,255,255,.15);min-height:190px}.step:last-child{border-right:0}.step span{display:block;color:#f0c45c;font:700 13px Oswald;margin-bottom:20px}.step b{display:block;font-size:14px;margin-bottom:8px}.step p{font-size:12px;color:#b9c6d5;margin:0}
-.contact{background:#fff}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}.contact-info{padding-top:18px}.contact-info p{color:var(--muted)}.contact-fact{padding:16px 0;border-bottom:1px solid var(--line)}.contact-fact b{display:block;font-size:13px;margin-bottom:3px}.contact-fact span,.contact-fact a{font-size:14px;color:var(--muted);text-decoration:none}.form-card{border:1px solid var(--line);background:#f7f9fb;padding:30px;border-radius:6px}.form-card h3{font-size:28px;margin-bottom:22px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:14px}.field label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#637085;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd5e1;background:#fff;border-radius:3px;padding:13px 14px;color:var(--ink)}.field textarea{min-height:125px;resize:vertical}.submit{width:100%;border:0;background:var(--blue);color:#fff;padding:15px;border-radius:3px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;cursor:pointer}.submit:disabled{opacity:.65;cursor:wait}.form-note{font-size:11px;color:var(--muted);text-align:center;margin:12px 0 0}.hp-field{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}.success{display:none;background:#e9f6ed;border:1px solid #b6dfc2;color:#246a38;padding:14px;margin-top:15px;border-radius:4px}
-footer{background:#081c32;color:#c4cfdb;padding:34px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.footer-inner img{width:230px;filter:brightness(0) invert(1);opacity:.9}.footer-inner p{font-size:12px;margin:0;text-align:right}
-@media(max-width:1050px){.links{gap:17px}.steps{grid-template-columns:repeat(2,1fr)}.step{border-bottom:1px solid rgba(255,255,255,.15)}}
-@media(max-width:820px){.nav{height:auto;min-height:68px;flex-wrap:wrap}.brand img{max-width:220px;width:48vw}.menu-btn{display:block}.links{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;padding:16px 0 22px;gap:0}.links.open{display:flex}.links a{padding:11px 4px}.nav-cta{text-align:center;margin-top:7px}.proof-grid,.services-grid,.object-grid,.projects-grid,.contact-grid{grid-template-columns:1fr}.proof-item{border-right:0;border-bottom:1px solid var(--line)}.steps{grid-template-columns:1fr}.step{border-right:0}.hero{min-height:570px}section{padding:72px 0}}
-@media(max-width:540px){.container{width:min(100% - 28px,1180px)}.hero-inner{padding:72px 0}h1{font-size:38px;overflow-wrap:anywhere}.hero p{font-size:16px}.form-row{grid-template-columns:1fr}.footer-inner{align-items:flex-start;flex-direction:column}.footer-inner p{text-align:left}}
-
-/* Qualifications and project gallery */
-.qualifications{background:#fff}
-.qualifications-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:54px;align-items:start}
-.qualifications-intro{position:sticky;top:150px}
-.qualifications-intro .lead{margin-bottom:0}
-.qualification-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.qualification-item{position:relative;min-height:142px;padding:24px 22px 22px 56px;background:#f6f8fb;border:1px solid var(--line);border-radius:6px}
-.qualification-item::before{content:'✓';position:absolute;left:20px;top:22px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#e7f0ff;color:var(--blue);font-weight:800}
-.qualification-item b{display:block;margin-bottom:7px;font-size:15px}
-.qualification-item span{display:block;color:var(--muted);font-size:13px;line-height:1.55}
-.gallery-section{background:#e9eef4;overflow:hidden}
-.gallery-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:28px}
-.gallery-head .lead{margin:0;max-width:640px}
-.gallery-counter{flex:0 0 auto;font:700 13px Arial;color:var(--blue);letter-spacing:.08em;text-transform:uppercase}
-.electro-gallery{position:relative;background:#0b1d31;border-radius:8px;overflow:hidden;box-shadow:0 18px 46px rgba(12,31,52,.16)}
-.gallery-viewport{position:relative;height:min(68vw,660px);min-height:430px;touch-action:pan-y;user-select:none}
-.gallery-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;background:#0b1d31;display:flex;align-items:center;justify-content:center}
-.gallery-slide.active{opacity:1;visibility:visible}
-.gallery-slide img{width:100%;height:100%;object-fit:contain;display:block;cursor:zoom-in}
-.gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:52px 86px 22px 24px;background:linear-gradient(0deg,rgba(4,15,27,.92),rgba(4,15,27,0));color:#fff}
-.gallery-caption b{display:block;font-size:18px;margin-bottom:4px}
-.gallery-caption span{font-size:13px;color:#d6e0ec}
-.gallery-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid rgba(255,255,255,.42);border-radius:50%;background:rgba(6,23,40,.62);color:#fff;font-size:27px;line-height:1;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(5px)}
-.gallery-arrow:hover{background:rgba(27,88,173,.92)}
-.gallery-prev{left:18px}.gallery-next{right:18px}
-.gallery-thumbs{display:flex;gap:9px;padding:12px;overflow-x:auto;scrollbar-width:thin;background:#fff}
-.gallery-thumb{flex:0 0 104px;height:70px;padding:0;border:2px solid transparent;border-radius:4px;overflow:hidden;background:#dfe5ec;cursor:pointer;opacity:.72}
-.gallery-thumb.active{border-color:var(--blue);opacity:1}
-.gallery-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.gallery-lightbox{position:fixed;inset:0;z-index:5000;display:none;align-items:center;justify-content:center;padding:32px;background:rgba(3,10,18,.94)}
-.gallery-lightbox.open{display:flex}
-.gallery-lightbox img{max-width:calc(100vw - 80px);max-height:calc(100vh - 80px);object-fit:contain}
-.gallery-lightbox-close{position:fixed;right:24px;top:20px;width:46px;height:46px;border:1px solid rgba(255,255,255,.45);border-radius:50%;background:rgba(255,255,255,.09);color:#fff;font-size:30px;line-height:1;cursor:pointer}
-@media(max-width:900px){.qualifications-grid{grid-template-columns:1fr}.qualifications-intro{position:static}.gallery-viewport{height:72vw;min-height:390px}.gallery-caption{padding-right:70px}}
-@media(max-width:620px){.qualification-list{grid-template-columns:1fr}.gallery-head{display:block}.gallery-counter{margin-top:14px}.gallery-viewport{height:112vw;min-height:420px;max-height:620px}.gallery-arrow{width:42px;height:42px}.gallery-prev{left:9px}.gallery-next{right:9px}.gallery-caption{padding:48px 58px 18px 16px}.gallery-caption b{font-size:16px}.gallery-thumb{flex-basis:82px;height:58px}.gallery-lightbox{padding:12px}.gallery-lightbox img{max-width:100%;max-height:calc(100vh - 42px)}.gallery-lightbox-close{right:10px;top:10px}}
-
-.cicon{width:18px;height:18px;flex:none;color:var(--blue);margin-top:3px}.contact-fact{display:flex;gap:12px;align-items:flex-start}.contact-fact div{display:flex;flex-direction:column}.contact-fact b{font-size:13px;margin-bottom:3px}.contact-fact a{color:var(--blue);text-decoration:none}.contact-fact small{font-size:12px;color:var(--muted)}\n
-/* Contact block unified with lighting page */
-.crow{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
-.cicon{color:var(--gold);flex-shrink:0;margin-top:2px}
-.contact-caption{display:block;color:#0b2340;font-size:16px;font-weight:500;line-height:1.4;margin-bottom:3px}
-.crow a{color:#0b2340;text-decoration:none;font-size:16px;font-weight:700;display:block;margin-bottom:3px;transition:color .2s}
-.crow a:hover{color:var(--blue2)}
-.crow small{color:var(--muted);font-size:12px}
-</style>
-<style>
-
-/* Dual navigation: company directions + navigation of the selected direction */
-html{scroll-padding-top:130px}
-.company-header{position:sticky;top:0;z-index:1200;background:rgba(255,255,255,.98);color:#172231;border-top:4px solid #42464d;border-bottom:1px solid #dfe4ea;box-shadow:0 4px 18px rgba(19,37,58,.07);font-family:Arial,Helvetica,sans-serif}
-.company-header.company-header--fixed{position:fixed;left:0;right:0}
-.company-header-top{height:58px;padding:0 5vw;display:grid;grid-template-columns:minmax(190px,1fr) auto minmax(190px,1fr);align-items:center;border-bottom:1px solid #dfe5ec}
-.company-brand{display:flex;align-items:center;justify-self:start;text-decoration:none;min-width:0}
-.company-brand img{display:block;width:250px;max-width:26vw;height:36px;object-fit:contain;object-position:left center}
-.company-directions{height:100%;display:flex;align-items:stretch;background:#eef1f5;border-left:1px solid #d9e0e8;border-right:1px solid #d9e0e8;box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
-.company-direction{position:relative;display:flex;align-items:center;justify-content:center;min-width:228px;padding:0 34px;text-decoration:none;color:#728094;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid #d9e0e8;transition:color .2s,background .2s,box-shadow .2s}
-.company-direction:last-child{border-right:0}.company-direction:hover{color:#164f9f;background:#f8fbff}
-.company-direction.active{color:#164f9f;background:#eaf2ff;box-shadow:inset 0 0 0 1px rgba(36,92,199,.08)}
-.company-direction.active::after{content:'';position:absolute;left:22px;right:22px;bottom:-1px;height:4px;background:#245cc7}
-.company-contact{justify-self:end;text-decoration:none;color:#5f6b7a;font-size:11px;font-weight:750;letter-spacing:.09em;text-transform:uppercase;transition:color .2s}
-.company-contact:hover{color:#164f9f}
-.company-menu-button{display:none;border:0;background:transparent;color:#172231;font-size:24px;line-height:1;cursor:pointer;padding:6px}
-.company-subnav{height:58px;padding:0 5vw;display:flex;align-items:center;gap:24px;background:#fff}
-.company-sub-links{display:flex;align-items:center;gap:30px;min-width:0}
-.company-sub-link{text-decoration:none;color:#657283;font-size:12px;font-weight:650;letter-spacing:.065em;text-transform:uppercase;white-space:nowrap;transition:color .2s}
-.company-sub-link:hover,.company-sub-link.active{color:#164f9f}
-.company-action{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 18px;border-radius:4px;background:#245cc7;color:#fff!important;text-decoration:none;font-size:11px;font-weight:750;letter-spacing:.075em;text-transform:uppercase;white-space:nowrap;transition:background .2s}
-.company-action:hover{background:#174aae}
-@media(max-width:980px){
-  html{scroll-padding-top:154px}
-  .company-header-top{height:auto;min-height:62px;padding:7px 22px 0;grid-template-columns:1fr auto auto;column-gap:14px;row-gap:7px}
-  .company-brand{grid-column:1;grid-row:1}
-  .company-brand img{width:190px;max-width:48vw;height:38px}
-  .company-contact{grid-column:2;grid-row:1;font-size:10px}
-  .company-menu-button{display:block;grid-column:3;grid-row:1;justify-self:end}
-  .company-directions{grid-column:1/-1;grid-row:2;width:calc(100% + 44px);height:48px;margin-left:-22px}
-  .company-direction{min-width:0;flex:1;padding:0 10px;font-size:10.5px;letter-spacing:.075em}
-  .company-subnav{display:none;height:auto;padding:18px 22px 22px;align-items:stretch;gap:18px;border-top:1px solid #e5e9ee}
-  .company-header.open .company-subnav{display:flex;flex-direction:column}
-  .company-sub-links{flex-direction:column;align-items:stretch;gap:0}
-  .company-sub-link{padding:11px 2px;border-bottom:1px solid #edf0f3}
-  .company-action{width:100%;min-height:44px;margin-left:0}
-}
-@media(max-width:520px){
-  .company-header-top{padding-left:16px;padding-right:16px;column-gap:10px}
-  .company-brand img{width:160px;max-width:45vw}
-  .company-contact{font-size:9px;letter-spacing:.055em}
-  .company-directions{width:calc(100% + 32px);margin-left:-16px}
-  .company-direction{font-size:9.5px;letter-spacing:.05em}
-  .company-subnav{padding-left:16px;padding-right:16px}
-}
-
-.cicon{width:18px;height:18px;flex:none;color:var(--blue);margin-top:3px}.contact-fact{display:flex;gap:12px;align-items:flex-start}.contact-fact div{display:flex;flex-direction:column}.contact-fact b{font-size:13px;margin-bottom:3px}.contact-fact a{color:var(--blue);text-decoration:none}.contact-fact small{font-size:12px;color:var(--muted)}\n</style>
-
-<style id="electro-contact-match-lighting">
-/* Contact block: match the working Lighting page */
-.contact .slabel{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:var(--gold);
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  margin-bottom:20px;
-}
-.contact .slabel::before{
-  content:'';
-  width:28px;
-  height:1px;
-  background:var(--gold);
-}
-.contact .ci h2{margin-bottom:18px}
-.contact .ci>p{
-  font-size:14px;
-  color:var(--muted);
-  line-height:1.85;
-  margin-bottom:40px;
-}
-.contact .crow{
-  display:flex;
-  align-items:flex-start;
-  gap:16px;
-  margin-bottom:24px;
-}
-.contact .cicon{
-  width:18px;
-  height:18px;
-  flex:none;
-  color:var(--gold)!important;
-  flex-shrink:0;
-  margin-top:2px;
-}
-.contact .contact-caption{
-  display:block;
-  color:#0b2340;
-  font-size:16px;
-  font-weight:500;
-  line-height:1.4;
-  margin-bottom:3px;
-}
-.contact .crow a{
-  color:#0b2340;
-  text-decoration:none!important;
-  font-size:16px;
-  font-weight:600;
-  line-height:1.4;
-  display:block;
-  margin-bottom:3px;
-  transition:color .2s;
-}
-.contact .crow a[href^="tel:"]{font-weight:700}
-.contact .crow a:hover{color:var(--blue2)}
-.contact .crow small{
-  display:block;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.4;
-}
-/* Footer: use the actual color logo, without monochrome filter */
-.footer-inner img{
-  filter:none!important;
-  opacity:1!important;
-}
-</style>
-
-</head>
-<body>
-<header class="company-header" id="companyHeader">
-  <div class="company-header-top">
-    <a href="/" class="company-brand"><img src="data:image/png;base64,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" alt="СМП-76"></a>
-    <div class="company-directions" aria-label="Направления компании">
-      <a class="company-direction" href="/">Освещение</a>
-      <a class="company-direction active" href="elektrosnabzhenie.html">Электроснабжение</a>
-    </div>
-    <a class="company-contact" href="#contact">Контакты</a>
-    <button class="company-menu-button" type="button" aria-label="Открыть меню" onclick="this.closest('.company-header').classList.toggle('open')">☰</button>
-  </div>
-  <div class="company-subnav">
-    <div class="company-sub-links">
-      <a class="company-sub-link active" href="#services">Услуги</a>
-      <a class="company-sub-link" href="#objects">Объекты</a>
-      <a class="company-sub-link" href="#projects">Проекты</a>
-      <a class="company-sub-link" href="#gallery">Фото</a>
-      <a class="company-sub-link" href="#process">Как работаем</a>
-    </div>
-    <a class="company-action" href="#contact">Написать нам</a>
-  </div>
-</header>
-<main>
-<section class="hero">
-<div class="container hero-inner">
-<div class="eyebrow">ПРОЕКТИРОВАНИЕ И СТРОИТЕЛЬСТВО ЭЛЕКТРОСЕТЕЙ</div>
-<h1>Электроснабжение объектов под ключ до 35 кВ</h1>
-<p>Сопровождаем получение технических условий, проектируем, строим и реконструируем электрические сети и трансформаторные подстанции. Выполняем ввод в эксплуатацию и последующее обслуживание.</p>
-<div class="actions"><a class="btn btn-primary" href="#contact">Написать нам</a><a class="btn btn-outline" href="#projects">Посмотреть выполненные работы</a></div>
-</div>
-</section>
-<div class="proof"><div class="container proof-grid">
-<div class="proof-item"><strong>С 2007 года</strong><span>опыт комплексной электрификации объектов</span></div>
-<div class="proof-item"><strong>До 35 кВ</strong><span>сети, сооружения и трансформаторные подстанции</span></div>
-<div class="proof-item"><strong>Полный цикл</strong><span>от технических условий до включения объекта</span></div>
-<div class="proof-item"><strong>Обслуживание</strong><span>эксплуатация и аварийно-восстановительные работы</span></div>
-</div></div>
-
-<section id="services"><div class="container">
-<div class="section-label">Комплекс работ</div><h2>Одна команда на всех этапах электроснабжения</h2><p class="lead">Берём на себя проектную, монтажную и организационную часть. Формат работ зависит от стадии объекта: от сопровождения технических условий до реконструкции действующих сетей.</p>
-<div class="services-grid">
-<article class="service-card"><span class="num">01</span><h3>Технологическое присоединение</h3><ul><li>Сопровождение получения технических условий</li><li>Проверка и оптимизация выделяемой мощности</li><li>Взаимодействие с сетевыми организациями</li><li>Подготовка документов для передачи объектов на баланс</li></ul></article>
-<article class="service-card"><span class="num">02</span><h3>Проектирование</h3><ul><li>Наружное и внутреннее электроснабжение</li><li>Сети и сооружения до 35 кВ</li><li>Трансформаторные подстанции</li><li>Механизация строительных площадок</li></ul></article>
-<article class="service-card"><span class="num">03</span><h3>Строительство и реконструкция</h3><ul><li>Кабельные и воздушные линии электропередачи</li><li>Распределительные и питающие центры</li><li>Трансформаторные подстанции любой сложности</li><li>Внутренние электрические сети и освещение</li></ul></article>
-<article class="service-card"><span class="num">04</span><h3>Эксплуатация и обслуживание</h3><ul><li>Техническое обслуживание сетей и сооружений</li><li>Поиск и устранение неисправностей</li><li>Аварийно-восстановительные работы</li><li>Обслуживание объектов после ввода</li></ul></article>
-</div></div></section>
-
-<section class="objects" id="objects"><div class="container"><div class="section-label">Типы объектов</div><h2>Работаем с действующими и строящимися объектами</h2><p class="lead">Компетенции компании охватывают коммерческую недвижимость, жилые комплексы, логистику, производство и временное электроснабжение строительных площадок.</p>
-<div class="object-grid">
-<div class="object-card"><b>Жилые комплексы</b><span>Встроенные ТП, питающие линии, внутренние сети и освещение.</span></div>
-<div class="object-card"><b>Торговые и бизнес-центры</b><span>Подстанции, РУ, ГРЩ, ВРУ и кабельные линии.</span></div>
-<div class="object-card"><b>Логистические комплексы</b><span>Электроснабжение складских и распределительных объектов.</span></div>
-<div class="object-card"><b>Промышленные объекты</b><span>РТП, КТПН, сети 0,4–35 кВ и резервирование мощности.</span></div>
-<div class="object-card"><b>Строительные площадки</b><span>Проектирование и монтаж механизации строительства.</span></div>
-<div class="object-card"><b>Объекты на обслуживании</b><span>Регламентные работы, диагностика и восстановление сетей.</span></div>
-</div></div></section>
-
-<section class="qualifications" id="qualifications"><div class="container qualifications-grid">
-<div class="qualifications-intro"><div class="section-label">Допуски и квалификация</div><h2>Работаем на основании действующих требований</h2><p class="lead">Компетенции компании подтверждены членством в профильных СРО, квалификацией специалистов и документами на применяемое оборудование.</p></div>
-<div class="qualification-list">
-<div class="qualification-item"><b>СРО на проектирование</b><span>Членство в саморегулируемой организации для выполнения проектных работ.</span></div>
-<div class="qualification-item"><b>СРО на строительство</b><span>Членство в саморегулируемой организации для выполнения строительно-монтажных работ.</span></div>
-<div class="qualification-item"><b>Аттестованные специалисты</b><span>Работы выполняют специалисты с необходимой квалификацией и действующими аттестациями.</span></div>
-<div class="qualification-item"><b>Электробезопасность</b><span>Персонал имеет требуемые группы допуска для выполнения работ на электроустановках.</span></div>
-<div class="qualification-item"><b>Проектная документация</b><span>Работаем по проектной и исполнительной документации с оформлением результатов выполненных работ.</span></div>
-<div class="qualification-item"><b>Сертифицированное оборудование</b><span>На применяемое оборудование предоставляются необходимые сертификаты и подтверждающие документы.</span></div>
-</div></div></section>
-
-<section id="projects"><div class="container"><div class="section-label">Опыт</div><h2>Примеры выполненных работ</h2>
-<div class="projects-grid">
-<article class="project-card"><small>Жилой комплекс</small><h3>ЖК «Софийский»</h3><p>Встроенная трансформаторная подстанция 2 × 2000 кВА.</p></article>
-<article class="project-card"><small>Бизнес-центр</small><h3>БЦ «ЛА-5»</h3><p>Встроенная ТП 2 × 2500 кВА и две кабельные линии 10 кВ.</p></article>
-<article class="project-card"><small>Торговый объект</small><h3>ТЦ «Три Кита»</h3><p>Кабельные линии, трансформаторы, РУ 10 кВ и секционные перемычки.</p></article>
-<article class="project-card"><small>Механизация строительства</small><h3>ЖК «Строгино Парк»</h3><p>Комплекс временного электроснабжения строительной площадки.</p></article>
-<article class="project-card"><small>Логистический объект</small><h3>ОРЦ «Радумля»</h3><p>Подстанции, кабельные линии 10 кВ, РУ и распределительное оборудование.</p></article>
-<article class="project-card"><small>Торговый комплекс</small><h3>«Синдика-МКАД»</h3><p>Трансформаторные подстанции, линии 10 кВ и сети 0,4 кВ.</p></article>
-<article class="project-card"><small>Загородный объект</small><h3>ДКП «Мещерское полесье»</h3><p>Комплектные подстанции, воздушная линия и пункт коммерческого учёта.</p></article>
-<article class="project-card"><small>Научно-производственный объект</small><h3>Центр в Черноголовке</h3><p>Распределительная и комплектные трансформаторные подстанции.</p></article>
-</div></div></section>
-
-<section class="gallery-section" id="gallery"><div class="container">
-<div class="gallery-head"><div><div class="section-label">Работы на объектах</div><h2>Электроснабжение в деталях</h2><p class="lead">Монтаж кабельных и воздушных линий, трансформаторных подстанций и распределительного оборудования.</p></div><div class="gallery-counter"><span id="galleryCurrent">01</span> / 08</div></div>
-<div class="electro-gallery" id="electroGallery">
-<div class="gallery-viewport">
-<figure class="gallery-slide active" data-index="0"><img src="images/electro-gallery-01.webp" alt="Распределительное устройство 10 кВ" loading="eager"><figcaption class="gallery-caption"><b>Распределительное устройство 10 кВ</b><span>Монтаж и коммутация оборудования трансформаторной подстанции.</span></figcaption></figure>
-<figure class="gallery-slide" data-index="1"><img src="images/electro-gallery-02.webp" alt="Комплектная трансформаторная подстанция" loading="lazy"><figcaption class="gallery-caption"><b>Комплектная трансформаторная подстанция</b><span>Подключение кабельных линий и подготовка оборудования к вводу.</span></figcaption></figure>
-<figure class="gallery-slide" data-index="2"><img src="images/electro-gallery-03.webp" alt="Кабельные вводы и изоляторы" loading="lazy"><figcaption class="gallery-caption"><b>Кабельные вводы и изоляторы</b><span>Работы внутри распределительного шкафа на объекте.</span></figcaption></figure>
-<figure class="gallery-slide" data-index="3"><img src="images/electro-gallery-04.webp" alt="Электроснабжение объекта под ключ" loading="lazy"><figcaption class="gallery-caption"><b>Электроснабжение объекта под ключ</b><span>Прокладка кабельных линий, монтаж подстанции и подключение оборудования.</span></figcaption></figure>
-<figure class="gallery-slide" data-index="4"><img src="images/electro-gallery-05.webp" alt="Трансформаторная камера" loading="lazy"><figcaption class="gallery-caption"><b>Трансформаторная камера</b><span>Монтаж силового оборудования и подготовка подстанции к эксплуатации.</span></figcaption></figure>
-<figure class="gallery-slide" data-index="5"><img src="images/electro-gallery-06.webp" alt="Работы на трансформаторной подстанции" loading="lazy"><figcaption class="gallery-caption"><b>Работы на трансформаторной подстанции</b><span>Обслуживание и подключение силовых кабельных линий.</span></figcaption></figure>
-<figure class="gallery-slide" data-index="6"><img src="images/electro-gallery-07.webp" alt="Монтаж воздушной линии" loading="lazy"><figcaption class="gallery-caption"><b>Монтаж воздушной линии</b><span>Работы на опоре электроснабжения строительного объекта.</span></figcaption></figure>
-<figure class="gallery-slide" data-index="7"><img src="images/electro-gallery-08.webp" alt="Обслуживание высоковольтной линии" loading="lazy"><figcaption class="gallery-caption"><b>Обслуживание высоковольтной линии</b><span>Работы с применением подъёмной техники на воздушной линии.</span></figcaption></figure>
-<button class="gallery-arrow gallery-prev" type="button" aria-label="Предыдущая фотография">‹</button>
-<button class="gallery-arrow gallery-next" type="button" aria-label="Следующая фотография">›</button>
-</div>
-<div class="gallery-thumbs" aria-label="Миниатюры фотографий"><button class="gallery-thumb active" type="button" data-index="0" aria-label="Открыть фотографию 1"><img src="images/electro-gallery-01.webp" alt="" loading="lazy"></button>
-<button class="gallery-thumb" type="button" data-index="1" aria-label="Открыть фотографию 2"><img src="images/electro-gallery-02.webp" alt="" loading="lazy"></button>
-<button class="gallery-thumb" type="button" data-index="2" aria-label="Открыть фотографию 3"><img src="images/electro-gallery-03.webp" alt="" loading="lazy"></button>
-<button class="gallery-thumb" type="button" data-index="3" aria-label="Открыть фотографию 4"><img src="images/electro-gallery-04.webp" alt="" loading="lazy"></button>
-<button class="gallery-thumb" type="button" data-index="4" aria-label="Открыть фотографию 5"><img src="images/electro-gallery-05.webp" alt="" loading="lazy"></button>
-<button class="gallery-thumb" type="button" data-index="5" aria-label="Открыть фотографию 6"><img src="images/electro-gallery-06.webp" alt="" loading="lazy"></button>
-<button class="gallery-thumb" type="button" data-index="6" aria-label="Открыть фотографию 7"><img src="images/electro-gallery-07.webp" alt="" loading="lazy"></button>
-<button class="gallery-thumb" type="button" data-index="7" aria-label="Открыть фотографию 8"><img src="images/electro-gallery-08.webp" alt="" loading="lazy"></button></div>
-</div></div></section>
-<div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии"><button class="gallery-lightbox-close" type="button" aria-label="Закрыть">×</button><img src="" alt=""></div>
-
-<section class="process" id="process"><div class="container"><div class="section-label">Порядок работы</div><h2>От исходных данных до работающего объекта</h2><p class="lead">Состав этапов уточняется после знакомства с объектом и техническими условиями.</p>
-<div class="steps">
-<div class="step"><span>01</span><b>Исходные данные</b><p>Получаем задачу, документы и сведения об объекте.</p></div>
-<div class="step"><span>02</span><b>Аудит</b><p>Проверяем технические условия и существующие решения.</p></div>
-<div class="step"><span>03</span><b>Концепция</b><p>Формируем решение, объём работ и бюджет.</p></div>
-<div class="step"><span>04</span><b>Проект</b><p>Разрабатываем и согласовываем документацию.</p></div>
-<div class="step"><span>05</span><b>Строительство</b><p>Выполняем монтаж или реконструкцию сетей.</p></div>
-<div class="step"><span>06</span><b>Ввод</b><p>Проводим испытания и готовим исполнительную документацию.</p></div>
-<div class="step"><span>07</span><b>Обслуживание</b><p>При необходимости принимаем объект в эксплуатацию.</p></div>
-</div></div></section>
-
-<section class="contact" id="contact"><div class="container contact-grid">
-<div class="ci fu">
-        <div class="slabel">Контакты</div>
-        <h2>Обсудим ваш проект</h2>
-        <p>Пришлите техническое задание, спецификацию или перечень оборудования. Проверим исходные данные и подготовим подбор оборудования и коммерческое предложение.</p>
-        <div class="crow">
-          <svg class="cicon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <div>
-            <span class="contact-caption">По вопросам электроснабжения:</span>
-            <a href="tel:+79859919138">+7 (985) 991 91 38</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>Электроснабжение объектов до 35 кВ | СМП-76</title>
+    <meta
+      name="description"
+      content="Проектирование, строительство, реконструкция и обслуживание систем электроснабжения до 35 кВ. Технические условия, проект, монтаж, ввод и эксплуатация объектов."
+    />
+    <link rel="canonical" href="https://smp-76.ru/elektrosnabzhenie.html" />
+    <meta name="theme-color" content="#0a202a" />
+    <link rel="stylesheet" href="css/electro.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="js/site.js" defer></script>
+    <script src="js/electro.js" defer></script>
+  </head>
+  <body class="electro-page">
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <header class="smp-header" id="companyHeader">
+      <div class="smp-header-inner">
+        <a class="smp-brand" href="/" aria-label="СМП-76 — главная"
+          ><img
+            src="images/logo-footer-hd.png"
+            width="146"
+            height="38"
+            alt="СМП-76"
+            decoding="async"
+            loading="lazy"
+        /></a>
+        <nav class="smp-nav" id="siteNav" aria-label="Основная навигация">
+          <a href="/">Освещение</a><a href="catalog.html">Каталог</a
+          ><a href="selection.html">Техподбор</a><a href="/#about">Опыт</a
+          ><a
+            href="elektrosnabzhenie.html"
+            class="nav-secondary"
+            aria-current="page"
+            >Электроснабжение</a
+          ><a href="/#contact">Контакты</a>
+        </nav>
+        <a class="smp-contact" href="mailto:svet@smp-76.ru"
+          >Обсудить проект <span aria-hidden="true">→</span></a
+        ><button
+          class="smp-menu"
+          type="button"
+          aria-controls="siteNav"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="eyebrow">ПРОЕКТИРОВАНИЕ И СТРОИТЕЛЬСТВО ЭЛЕКТРОСЕТЕЙ</div>
+          <h1>Электроснабжение объектов под ключ до 35 кВ</h1>
+          <p>
+            Сопровождаем получение технических условий, проектируем, строим и
+            реконструируем электрические сети и трансформаторные подстанции.
+            Выполняем ввод в эксплуатацию и последующее обслуживание.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Написать нам</a
+            ><a class="btn btn-outline" href="#projects"
+              >Посмотреть выполненные работы</a
+            >
           </div>
         </div>
-        <div class="crow">
-          <svg class="cicon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <div>
-            <span class="contact-caption">По вопросам бухгалтерии:</span>
-            <a href="tel:+79264316250">+7 (926) 431-62-50</a>
+      </section>
+      <div class="proof">
+        <div class="container proof-grid">
+          <div class="proof-item">
+            <strong>С 2007 года</strong
+            ><span>опыт комплексной электрификации объектов</span>
           </div>
-        </div>
-        <div class="crow">
-          <svg class="cicon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <div>
-            <a href="mailto:svet@smp-76.ru">svet@smp-76.ru</a>
-            <small>Ответим в течение рабочего дня</small>
+          <div class="proof-item">
+            <strong>До 35 кВ</strong
+            ><span>сети, сооружения и трансформаторные подстанции</span>
           </div>
-        </div>
-        <div class="crow">
-          <svg class="cicon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.198 2.433a2.242 2.242 0 00-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 01-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.895 1.973 4.369 2.598 5.748.35.594.756 1.17 1.379 1.17h.012c.48-.01.9-.37 1.198-.836.443-.64.784-1.267 1.177-1.896l4.22-6.21 4.474 3.29c1.095.724 1.79.25 2.033-.468.53-1.548 1.001-4.437 1.43-6.622.43-2.183.857-4.423 1.199-6.28.199-1.077-.175-1.909-.917-2.275a2.25 2.25 0 00-1.075-.152z"/></svg>
-          <div>
-            <a href="https://t.me/svet_smp76" target="_blank">@svet_smp76</a>
-            <small>Telegram: для быстрой связи</small>
+          <div class="proof-item">
+            <strong>Полный цикл</strong
+            ><span>от технических условий до включения объекта</span>
           </div>
-        </div>
-        <div class="crow">
-          <svg class="cicon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 15V9l4 4 4-4v6"/></svg>
-          <div>
-            <a href="https://max.ru/u/f9LHodD0cOJLgYsDxzcNb7U6JhurbgSbknIGhqsuqGY9LowukjlMbb6f2s4" target="_blank" rel="noopener">Написать в MAX</a>
-            <small>Откроется профиль в MAX</small>
+          <div class="proof-item">
+            <strong>Обслуживание</strong
+            ><span>эксплуатация и аварийно-восстановительные работы</span>
           </div>
         </div>
       </div>
-<div class="form-card">
-<h3>Связаться со специалистом</h3>
-<p style="color:var(--muted);font-size:14px;line-height:1.75;margin:0 0 24px">Кнопка откроет вашу почтовую программу с готовой темой письма. Вы сами решаете, какие сведения указать, и подтверждаете отправку в своём почтовом приложении.</p>
-<a class="submit" style="display:block;text-align:center;text-decoration:none" href="mailto:svet@smp-76.ru?subject=%5B%D0%A1%D0%90%D0%99%D0%A2%20SMP%5D%20%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%BD%D0%B0%D0%B1%D0%B6%D0%B5%D0%BD%D0%B8%D1%8E&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9D%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%BD%D0%B0%D0%B1%D0%B6%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0.%0A%0A%D0%A7%D1%82%D0%BE%20%D1%82%D1%80%D0%B5%D0%B1%D1%83%D0%B5%D1%82%D1%81%D1%8F%3A%0A%D0%9C%D0%B5%D1%81%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%3A%0A%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5%20%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A%0A%0A">Написать на почту</a>
-<a href="https://max.ru/u/f9LHodD0cOJLgYsDxzcNb7U6JhurbgSbknIGhqsuqGY9LowukjlMbb6f2s4" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:14px;color:var(--blue);text-decoration:none;font-weight:700">Написать в MAX</a>
-<a href="tel:+79859919138" style="display:block;text-align:center;margin-top:14px;color:var(--blue);text-decoration:none;font-weight:700">Позвонить: +7 (985) 991-91-38</a>
-<p class="form-note">Данные не передаются через сайт и сторонние формы.</p>
-</div>
-</div></section>
-</main>
-<footer><div class="container footer-inner"><img src="images/logo-footer-hd.png" alt="СМП-76"><p>© 2026 ООО «СМП-76». Электроснабжение, строительство и обслуживание электрических сетей до 35 кВ.<br><a href="privacy.html" style="color:#c4cfdb;text-decoration:underline">Конфиденциальность</a></p></div></footer>
 
-<script>
-(function(){
-  const gallery=document.getElementById('electroGallery');
-  if(!gallery)return;
-  const slides=[...gallery.querySelectorAll('.gallery-slide')];
-  const thumbs=[...gallery.querySelectorAll('.gallery-thumb')];
-  const counter=document.getElementById('galleryCurrent');
-  const viewport=gallery.querySelector('.gallery-viewport');
-  const lightbox=document.getElementById('galleryLightbox');
-  const lightboxImg=lightbox.querySelector('img');
-  let current=0,startX=0,deltaX=0;
-  function show(index){
-    current=(index+slides.length)%slides.length;
-    slides.forEach((el,i)=>el.classList.toggle('active',i===current));
-    thumbs.forEach((el,i)=>el.classList.toggle('active',i===current));
-    counter.textContent=String(current+1).padStart(2,'0');
-    thumbs[current].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-  }
-  const prevButton=gallery.querySelector('.gallery-prev');
-  const nextButton=gallery.querySelector('.gallery-next');
-  prevButton.addEventListener('pointerdown',e=>e.stopPropagation());
-  nextButton.addEventListener('pointerdown',e=>e.stopPropagation());
-  prevButton.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();show(current-1);});
-  nextButton.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();show(current+1);});
-  thumbs.forEach(btn=>btn.addEventListener('click',()=>show(Number(btn.dataset.index))));
-  slides.forEach(slide=>slide.querySelector('img').addEventListener('click',()=>{
-    lightboxImg.src=slide.querySelector('img').src;
-    lightboxImg.alt=slide.querySelector('img').alt;
-    lightbox.classList.add('open');
-    document.body.style.overflow='hidden';
-  }));
-  function closeLightbox(){lightbox.classList.remove('open');document.body.style.overflow='';}
-  lightbox.querySelector('.gallery-lightbox-close').addEventListener('click',closeLightbox);
-  lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
-  viewport.addEventListener('pointerdown',e=>{
-    if(e.target.closest('.gallery-arrow'))return;
-    startX=e.clientX;
-    deltaX=0;
-    viewport.setPointerCapture(e.pointerId);
-  });
-  viewport.addEventListener('pointermove',e=>{if(startX)deltaX=e.clientX-startX;});
-  viewport.addEventListener('pointerup',()=>{if(Math.abs(deltaX)>55)show(current+(deltaX<0?1:-1));startX=0;deltaX=0;});
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'&&lightbox.classList.contains('open'))closeLightbox();
-    else if(e.key==='ArrowLeft')show(current-1);
-    else if(e.key==='ArrowRight')show(current+1);
-  });
-})();
-</script>
+      <section id="services">
+        <div class="container">
+          <div class="section-label">Комплекс работ</div>
+          <h2>Одна команда на всех этапах электроснабжения</h2>
+          <p class="lead">
+            Берём на себя проектную, монтажную и организационную часть. Формат
+            работ зависит от стадии объекта: от сопровождения технических
+            условий до реконструкции действующих сетей.
+          </p>
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="num">01</span>
+              <h3>Технологическое присоединение</h3>
+              <ul>
+                <li>Сопровождение получения технических условий</li>
+                <li>Проверка и оптимизация выделяемой мощности</li>
+                <li>Взаимодействие с сетевыми организациями</li>
+                <li>Подготовка документов для передачи объектов на баланс</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <span class="num">02</span>
+              <h3>Проектирование</h3>
+              <ul>
+                <li>Наружное и внутреннее электроснабжение</li>
+                <li>Сети и сооружения до 35 кВ</li>
+                <li>Трансформаторные подстанции</li>
+                <li>Механизация строительных площадок</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <span class="num">03</span>
+              <h3>Строительство и реконструкция</h3>
+              <ul>
+                <li>Кабельные и воздушные линии электропередачи</li>
+                <li>Распределительные и питающие центры</li>
+                <li>Трансформаторные подстанции любой сложности</li>
+                <li>Внутренние электрические сети и освещение</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <span class="num">04</span>
+              <h3>Эксплуатация и обслуживание</h3>
+              <ul>
+                <li>Техническое обслуживание сетей и сооружений</li>
+                <li>Поиск и устранение неисправностей</li>
+                <li>Аварийно-восстановительные работы</li>
+                <li>Обслуживание объектов после ввода</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
 
-</body></html>
+      <section class="objects" id="objects">
+        <div class="container">
+          <div class="section-label">Типы объектов</div>
+          <h2>Работаем с действующими и строящимися объектами</h2>
+          <p class="lead">
+            Компетенции компании охватывают коммерческую недвижимость, жилые
+            комплексы, логистику, производство и временное электроснабжение
+            строительных площадок.
+          </p>
+          <div class="object-grid">
+            <div class="object-card">
+              <b>Жилые комплексы</b
+              ><span
+                >Встроенные ТП, питающие линии, внутренние сети и
+                освещение.</span
+              >
+            </div>
+            <div class="object-card">
+              <b>Торговые и бизнес-центры</b
+              ><span>Подстанции, РУ, ГРЩ, ВРУ и кабельные линии.</span>
+            </div>
+            <div class="object-card">
+              <b>Логистические комплексы</b
+              ><span
+                >Электроснабжение складских и распределительных объектов.</span
+              >
+            </div>
+            <div class="object-card">
+              <b>Промышленные объекты</b
+              ><span>РТП, КТПН, сети 0,4–35 кВ и резервирование мощности.</span>
+            </div>
+            <div class="object-card">
+              <b>Строительные площадки</b
+              ><span>Проектирование и монтаж механизации строительства.</span>
+            </div>
+            <div class="object-card">
+              <b>Объекты на обслуживании</b
+              ><span
+                >Регламентные работы, диагностика и восстановление сетей.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="qualifications" id="qualifications">
+        <div class="container qualifications-grid">
+          <div class="qualifications-intro">
+            <div class="section-label">Допуски и квалификация</div>
+            <h2>Работаем на основании действующих требований</h2>
+            <p class="lead">
+              Компетенции компании подтверждены членством в профильных СРО,
+              квалификацией специалистов и документами на применяемое
+              оборудование.
+            </p>
+          </div>
+          <div class="qualification-list">
+            <div class="qualification-item">
+              <b>СРО на проектирование</b
+              ><span
+                >Членство в саморегулируемой организации для выполнения
+                проектных работ.</span
+              >
+            </div>
+            <div class="qualification-item">
+              <b>СРО на строительство</b
+              ><span
+                >Членство в саморегулируемой организации для выполнения
+                строительно-монтажных работ.</span
+              >
+            </div>
+            <div class="qualification-item">
+              <b>Аттестованные специалисты</b
+              ><span
+                >Работы выполняют специалисты с необходимой квалификацией и
+                действующими аттестациями.</span
+              >
+            </div>
+            <div class="qualification-item">
+              <b>Электробезопасность</b
+              ><span
+                >Персонал имеет требуемые группы допуска для выполнения работ на
+                электроустановках.</span
+              >
+            </div>
+            <div class="qualification-item">
+              <b>Проектная документация</b
+              ><span
+                >Работаем по проектной и исполнительной документации с
+                оформлением результатов выполненных работ.</span
+              >
+            </div>
+            <div class="qualification-item">
+              <b>Сертифицированное оборудование</b
+              ><span
+                >На применяемое оборудование предоставляются необходимые
+                сертификаты и подтверждающие документы.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="section-label">Опыт</div>
+          <h2>Примеры выполненных работ</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <small>Жилой комплекс</small>
+              <h3>ЖК «Софийский»</h3>
+              <p>Встроенная трансформаторная подстанция 2 × 2000 кВА.</p>
+            </article>
+            <article class="project-card">
+              <small>Бизнес-центр</small>
+              <h3>БЦ «ЛА-5»</h3>
+              <p>Встроенная ТП 2 × 2500 кВА и две кабельные линии 10 кВ.</p>
+            </article>
+            <article class="project-card">
+              <small>Торговый объект</small>
+              <h3>ТЦ «Три Кита»</h3>
+              <p>
+                Кабельные линии, трансформаторы, РУ 10 кВ и секционные
+                перемычки.
+              </p>
+            </article>
+            <article class="project-card">
+              <small>Механизация строительства</small>
+              <h3>ЖК «Строгино Парк»</h3>
+              <p>Комплекс временного электроснабжения строительной площадки.</p>
+            </article>
+            <article class="project-card">
+              <small>Логистический объект</small>
+              <h3>ОРЦ «Радумля»</h3>
+              <p>
+                Подстанции, кабельные линии 10 кВ, РУ и распределительное
+                оборудование.
+              </p>
+            </article>
+            <article class="project-card">
+              <small>Торговый комплекс</small>
+              <h3>«Синдика-МКАД»</h3>
+              <p>Трансформаторные подстанции, линии 10 кВ и сети 0,4 кВ.</p>
+            </article>
+            <article class="project-card">
+              <small>Загородный объект</small>
+              <h3>ДКП «Мещерское полесье»</h3>
+              <p>
+                Комплектные подстанции, воздушная линия и пункт коммерческого
+                учёта.
+              </p>
+            </article>
+            <article class="project-card">
+              <small>Научно-производственный объект</small>
+              <h3>Центр в Черноголовке</h3>
+              <p>
+                Распределительная и комплектные трансформаторные подстанции.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="container">
+          <div class="gallery-head">
+            <div>
+              <div class="section-label">Работы на объектах</div>
+              <h2>Электроснабжение в деталях</h2>
+              <p class="lead">
+                Монтаж кабельных и воздушных линий, трансформаторных подстанций
+                и распределительного оборудования.
+              </p>
+            </div>
+            <div class="gallery-counter">
+              <span id="galleryCurrent">01</span> / 08
+            </div>
+          </div>
+          <div class="electro-gallery" id="electroGallery">
+            <div class="gallery-viewport">
+              <figure class="gallery-slide active" data-index="0">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Распределительное устройство 10 кВ"
+                >
+                  <img
+                    src="images/electro-gallery-01.webp"
+                    alt="Распределительное устройство 10 кВ"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Распределительное устройство 10 кВ</b
+                  ><span
+                    >Монтаж и коммутация оборудования трансформаторной
+                    подстанции.</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-index="1">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Комплектная трансформаторная подстанция"
+                >
+                  <img
+                    src="images/electro-gallery-02.webp"
+                    alt="Комплектная трансформаторная подстанция"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Комплектная трансформаторная подстанция</b
+                  ><span
+                    >Подключение кабельных линий и подготовка оборудования к
+                    вводу.</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-index="2">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Кабельные вводы и изоляторы"
+                >
+                  <img
+                    src="images/electro-gallery-03.webp"
+                    alt="Кабельные вводы и изоляторы"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Кабельные вводы и изоляторы</b
+                  ><span
+                    >Работы внутри распределительного шкафа на объекте.</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-index="3">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Электроснабжение объекта под ключ"
+                >
+                  <img
+                    src="images/electro-gallery-04.webp"
+                    alt="Электроснабжение объекта под ключ"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Электроснабжение объекта под ключ</b
+                  ><span
+                    >Прокладка кабельных линий, монтаж подстанции и подключение
+                    оборудования.</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-index="4">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Трансформаторная камера"
+                >
+                  <img
+                    src="images/electro-gallery-05.webp"
+                    alt="Трансформаторная камера"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Трансформаторная камера</b
+                  ><span
+                    >Монтаж силового оборудования и подготовка подстанции к
+                    эксплуатации.</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-index="5">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Работы на трансформаторной подстанции"
+                >
+                  <img
+                    src="images/electro-gallery-06.webp"
+                    alt="Работы на трансформаторной подстанции"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Работы на трансформаторной подстанции</b
+                  ><span
+                    >Обслуживание и подключение силовых кабельных линий.</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-index="6">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Монтаж воздушной линии"
+                >
+                  <img
+                    src="images/electro-gallery-07.webp"
+                    alt="Монтаж воздушной линии"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Монтаж воздушной линии</b
+                  ><span
+                    >Работы на опоре электроснабжения строительного
+                    объекта.</span
+                  >
+                </figcaption>
+              </figure>
+              <figure class="gallery-slide" data-index="7">
+                <button
+                  type="button"
+                  class="gallery-zoom"
+                  aria-label="Увеличить: Обслуживание высоковольтной линии"
+                >
+                  <img
+                    src="images/electro-gallery-08.webp"
+                    alt="Обслуживание высоковольтной линии"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption class="gallery-caption">
+                  <b>Обслуживание высоковольтной линии</b
+                  ><span
+                    >Работы с применением подъёмной техники на воздушной
+                    линии.</span
+                  >
+                </figcaption>
+              </figure>
+              <button
+                class="gallery-arrow gallery-prev"
+                type="button"
+                aria-label="Предыдущая фотография"
+              >
+                ‹
+              </button>
+              <button
+                class="gallery-arrow gallery-next"
+                type="button"
+                aria-label="Следующая фотография"
+              >
+                ›
+              </button>
+            </div>
+            <div class="gallery-thumbs" aria-label="Показать фотографию 1">
+              <button
+                class="gallery-thumb active"
+                type="button"
+                data-index="0"
+                aria-label="Показать фотографию 1"
+              >
+                <img
+                  src="images/electro-gallery-01.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-index="1"
+                aria-label="Показать фотографию 2"
+              >
+                <img
+                  src="images/electro-gallery-02.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-index="2"
+                aria-label="Показать фотографию 3"
+              >
+                <img
+                  src="images/electro-gallery-03.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-index="3"
+                aria-label="Показать фотографию 4"
+              >
+                <img
+                  src="images/electro-gallery-04.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-index="4"
+                aria-label="Показать фотографию 5"
+              >
+                <img
+                  src="images/electro-gallery-05.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-index="5"
+                aria-label="Показать фотографию 6"
+              >
+                <img
+                  src="images/electro-gallery-06.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-index="6"
+                aria-label="Показать фотографию 7"
+              >
+                <img
+                  src="images/electro-gallery-07.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <button
+                class="gallery-thumb"
+                type="button"
+                data-index="7"
+                aria-label="Показать фотографию 8"
+              >
+                <img
+                  src="images/electro-gallery-08.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="gallery-lightbox"
+        id="galleryLightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Фотография выполненных работ"
+        tabindex="-1"
+      >
+        <button
+          class="gallery-lightbox-close"
+          type="button"
+          aria-label="Закрыть"
+        >
+          ×</button
+        ><img src="" alt="" decoding="async" loading="lazy" />
+      </div>
+
+      <section class="process" id="process">
+        <div class="container">
+          <div class="section-label">Порядок работы</div>
+          <h2>От исходных данных до работающего объекта</h2>
+          <p class="lead">
+            Состав этапов уточняется после знакомства с объектом и техническими
+            условиями.
+          </p>
+          <div class="steps">
+            <div class="step">
+              <span>01</span><b>Исходные данные</b>
+              <p>Получаем задачу, документы и сведения об объекте.</p>
+            </div>
+            <div class="step">
+              <span>02</span><b>Аудит</b>
+              <p>Проверяем технические условия и существующие решения.</p>
+            </div>
+            <div class="step">
+              <span>03</span><b>Концепция</b>
+              <p>Формируем решение, объём работ и бюджет.</p>
+            </div>
+            <div class="step">
+              <span>04</span><b>Проект</b>
+              <p>Разрабатываем и согласовываем документацию.</p>
+            </div>
+            <div class="step">
+              <span>05</span><b>Строительство</b>
+              <p>Выполняем монтаж или реконструкцию сетей.</p>
+            </div>
+            <div class="step">
+              <span>06</span><b>Ввод</b>
+              <p>Проводим испытания и готовим исполнительную документацию.</p>
+            </div>
+            <div class="step">
+              <span>07</span><b>Обслуживание</b>
+              <p>При необходимости принимаем объект в эксплуатацию.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container contact-grid">
+          <div class="ci fu">
+            <div class="slabel">Контакты</div>
+            <h2>Обсудим ваш проект</h2>
+            <p>
+              Пришлите техническое задание, спецификацию или перечень
+              оборудования. Проверим исходные данные и подготовим подбор
+              оборудования и коммерческое предложение.
+            </p>
+            <div class="crow">
+              <svg
+                class="cicon"
+                width="18"
+                height="18"
+                viewbox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                ></path>
+              </svg>
+              <div>
+                <span class="contact-caption"
+                  >По вопросам электроснабжения:</span
+                >
+                <a href="tel:+79859919138">+7 (985) 991 91 38</a>
+              </div>
+            </div>
+            <div class="crow">
+              <svg
+                class="cicon"
+                width="18"
+                height="18"
+                viewbox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 010 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                ></path>
+              </svg>
+              <div>
+                <span class="contact-caption">По вопросам бухгалтерии:</span>
+                <a href="tel:+79264316250">+7 (926) 431-62-50</a>
+              </div>
+            </div>
+            <div class="crow">
+              <svg
+                class="cicon"
+                width="18"
+                height="18"
+                viewbox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <div>
+                <a href="mailto:svet@smp-76.ru">svet@smp-76.ru</a>
+                <small>Ответим в течение рабочего дня</small>
+              </div>
+            </div>
+            <div class="crow">
+              <svg
+                class="cicon"
+                width="18"
+                height="18"
+                viewbox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M21.198 2.433a2.242 2.242 0 00-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 01-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.846 1.895 1.973 4.369 2.598 5.748.35.594.756 1.17 1.379 1.17h.012c.48-.01.9-.37 1.198-.836.443-.64.784-1.267 1.177-1.896l4.22-6.21 4.474 3.29c1.095.724 1.79.25 2.033-.468.53-1.548 1.001-4.437 1.43-6.622.43-2.183.857-4.423 1.199-6.28.199-1.077-.175-1.909-.917-2.275a2.25 2.25 0 00-1.075-.152z"
+                ></path>
+              </svg>
+              <div>
+                <a
+                  href="https://t.me/svet_smp76"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@svet_smp76</a
+                >
+                <small>Telegram: для быстрой связи</small>
+              </div>
+            </div>
+            <div class="crow">
+              <svg
+                class="cicon"
+                width="18"
+                height="18"
+                viewbox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M8 15V9l4 4 4-4v6"></path>
+              </svg>
+              <div>
+                <a
+                  href="https://max.ru/u/f9LHodD0cOJLgYsDxzcNb7U6JhurbgSbknIGhqsuqGY9LowukjlMbb6f2s4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Написать в MAX</a
+                >
+                <small>Откроется профиль в MAX</small>
+              </div>
+            </div>
+          </div>
+          <div class="form-card">
+            <h3>Связаться со специалистом</h3>
+            <p
+              style="
+                color: var(--muted);
+                font-size: 14px;
+                line-height: 1.75;
+                margin: 0 0 24px;
+              "
+            >
+              Кнопка откроет вашу почтовую программу с готовой темой письма. Вы
+              сами решаете, какие сведения указать, и подтверждаете отправку в
+              своём почтовом приложении.
+            </p>
+            <a
+              class="submit"
+              style="display: block; text-align: center; text-decoration: none"
+              href="mailto:svet@smp-76.ru?subject=%5B%D0%A1%D0%90%D0%99%D0%A2%20SMP%5D%20%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%BD%D0%B0%D0%B1%D0%B6%D0%B5%D0%BD%D0%B8%D1%8E&amp;body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9D%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%BD%D0%B0%D0%B1%D0%B6%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0.%0A%0A%D0%A7%D1%82%D0%BE%20%D1%82%D1%80%D0%B5%D0%B1%D1%83%D0%B5%D1%82%D1%81%D1%8F%3A%0A%D0%9C%D0%B5%D1%81%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0%3A%0A%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5%20%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A%0A%0A"
+              >Написать на почту</a
+            >
+            <a
+              href="https://max.ru/u/f9LHodD0cOJLgYsDxzcNb7U6JhurbgSbknIGhqsuqGY9LowukjlMbb6f2s4"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                display: block;
+                text-align: center;
+                margin-top: 14px;
+                color: var(--blue);
+                text-decoration: none;
+                font-weight: 700;
+              "
+              >Написать в MAX</a
+            >
+            <a
+              href="tel:+79859919138"
+              style="
+                display: block;
+                text-align: center;
+                margin-top: 14px;
+                color: var(--blue);
+                text-decoration: none;
+                font-weight: 700;
+              "
+              >Позвонить: +7 (985) 991-91-38</a
+            >
+            <p class="form-note">
+              Данные не передаются через сайт и сторонние формы.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="smp-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="footer-brand" href="/" aria-label="СМП-76 — главная"
+              ><img
+                src="images/logo-footer-hd.png"
+                width="145"
+                height="36"
+                alt="СМП-76"
+                loading="lazy"
+                decoding="async"
+            /></a>
+            <p>
+              Инженерный подход к свету.<br />От требований проекта — к
+              работающему решению.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="catalog.html">Каталог оборудования</a
+            ><a href="tel:+79262846454">+7 (926) 284-64-54</a
+            ><a href="selection.html">Технический подбор</a
+            ><a href="tel:+79872353367">+7 (987) 235-33-67</a
+            ><a href="elektrosnabzhenie.html">Электроснабжение</a
+            ><a href="mailto:svet@smp-76.ru">svet@smp-76.ru</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 ООО «СМП-76» · Москва</span
+          ><a href="privacy.html">Конфиденциальность</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

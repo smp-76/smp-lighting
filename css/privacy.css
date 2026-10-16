@@ -1,0 +1,47 @@
+.privacy-page .hero {
+  padding: 70px 0 44px;
+  border-bottom: 1px solid var(--line);
+}
+.privacy-page .wrap {
+  width: min(1000px, calc(100% - 80px));
+  margin: auto;
+}
+.privacy-page .hero h1 {
+  font-size: clamp(34px, 5vw, 64px);
+  overflow-wrap: anywhere;
+}
+.privacy-page .hero p {
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 15px;
+}
+.privacy-page .content {
+  padding: 48px 0 80px;
+}
+.privacy-page .card {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+}
+.privacy-page .card h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.privacy-page .card p {
+  color: var(--muted);
+  max-width: 850px;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.privacy-page .back {
+  display: inline-flex;
+  margin-top: 28px;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .privacy-page .wrap {
+    width: calc(100% - 40px);
+  }
+  .privacy-page .hero {
+    padding-top: 48px;
+  }
+}
