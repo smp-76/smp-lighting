@@ -1,0 +1,191 @@
+/* V2 interaction contracts: presentation must not alter engineering state. */
+const assert = require("node:assert/strict");
+const { chromium } = require("playwright");
+const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
+(async () => {
+  const browser = await chromium.launch({
+    headless: true,
+    executablePath: process.env.SMP_QA_CHROMIUM || "/usr/bin/chromium",
+  });
+  try {
+    const page = await browser.newPage({
+      viewport: { width: 1440, height: 1000 },
+    });
+    const errors = [];
+    page.on("pageerror", (error) => errors.push(error.message));
+    await page.addInitScript(() => {
+      window.qaDraws = 0;
+      const original = WebGLRenderingContext.prototype.drawArrays;
+      WebGLRenderingContext.prototype.drawArrays = function (...args) {
+        window.qaDraws++;
+        return original.apply(this, args);
+      };
+    });
+    await page.goto(base + "/", { waitUntil: "networkidle" });
+    await page.waitForSelector(".light-stage.is-ready");
+    await page.waitForTimeout(1600);
+    const draws = await page.evaluate(() => window.qaDraws);
+    const still = await page.screenshot();
+    await page.waitForTimeout(500);
+    assert.equal(
+      await page.evaluate(() => window.qaDraws),
+      draws,
+      "Hero continuously redraws without input",
+    );
+    assert.deepEqual(
+      await page.screenshot(),
+      still,
+      "Hero pixels change without input",
+    );
+    await page.mouse.move(1200, 250);
+    await page.waitForTimeout(3500);
+    assert.ok(
+      (await page.evaluate(() => window.qaDraws)) > draws,
+      "Light does not react to pointer",
+    );
+    assert.notDeepEqual(
+      await page.screenshot(),
+      still,
+      "Pointer does not affect architecture scene",
+    );
+    await page.evaluate(() => window.scrollTo(0, 240));
+    assert.equal(
+      await page.evaluate(() => scrollY),
+      240,
+      "Native scrolling was intercepted",
+    );
+    await page.locator("#tasks").scrollIntoViewIfNeeded();
+    await page.waitForTimeout(200);
+    const offscreen = await page.evaluate(() => window.qaDraws);
+    await page.waitForTimeout(500);
+    assert.equal(
+      await page.evaluate(() => window.qaDraws),
+      offscreen,
+      "Offscreen hero still renders",
+    );
+    const scenes = page.locator(".task-scene");
+    assert.equal(await scenes.count(), 6);
+    await scenes.nth(2).locator("summary").focus();
+    await page.keyboard.press("Enter");
+    assert.equal(await page.locator(".task-scene[open]").count(), 1);
+    assert.equal(await scenes.nth(2).getAttribute("open"), "");
+    console.log(
+      "PASS idle light, pointer response, native scroll, offscreen stop, keyboard narrative",
+    );
+
+    await page.locator("#industry-industrial").click();
+    await page.locator("#industry-roads").click();
+    await page.locator("#industry-sports").click();
+    await page.waitForTimeout(1400);
+    assert.equal(
+      await page.locator("#industry-sports").getAttribute("aria-selected"),
+      "true",
+    );
+    assert.match(
+      await page.locator("#industry-title").innerText(),
+      /Спортивные/,
+    );
+    assert.equal(await page.locator("#industry-projects li").count(), 4);
+    assert.ok(
+      (await page.locator("#industry-description").innerText()).length > 30,
+    );
+    const background = await page
+      .locator("#industry-bg")
+      .evaluate((el) => el.style.backgroundImage);
+    assert.ok(
+      background.includes("reference-sports.webp"),
+      "Rapid selections left a stale background",
+    );
+    await page.locator("[data-brand-preview=LEDEL]").focus();
+    await page.waitForFunction(() =>
+      document
+        .querySelector("#brand-preview-image")
+        .getAttribute("src")
+        .includes("ledel-l-lego"),
+    );
+    await page.locator("[data-brand-preview=PLG]").focus();
+    assert.ok(await page.locator("#brand-preview-placeholder").isVisible());
+    assert.ok(await page.locator("#brand-preview-image").isHidden());
+    console.log(
+      "PASS industry race handling, project lists, keyboard brand composition and honest PLG placeholder",
+    );
+
+    await page.goto(base + "/catalog.html", { waitUntil: "networkidle" });
+    await page.waitForFunction(
+      () => document.querySelectorAll("#grid .card").length === 174,
+    );
+    await page.selectOption("#brand", "LEDEL");
+    await page.waitForFunction(
+      () => document.querySelectorAll("#grid .card").length === 35,
+    );
+    await page.locator("[data-compare]").first().click();
+    const selected = await page
+      .locator(".card.is-compared")
+      .getAttribute("data-id");
+    await page.locator("[data-catalog-view=cards]").click();
+    assert.equal(
+      await page.locator("#grid").getAttribute("data-view"),
+      "cards",
+    );
+    assert.equal(await page.locator("#grid .card").count(), 35);
+    assert.equal(await page.locator("#brand").inputValue(), "LEDEL");
+    assert.equal(
+      await page.locator(".card.is-compared").getAttribute("data-id"),
+      selected,
+    );
+    await page.locator("[data-catalog-view=list]").click();
+    assert.equal(await page.locator("#grid").getAttribute("data-view"), "list");
+    assert.equal(
+      await page
+        .locator("[data-catalog-view=list]")
+        .getAttribute("aria-pressed"),
+      "true",
+    );
+    console.log(
+      "PASS view changes preserve filters, complete results and comparison selection",
+    );
+
+    await page.goto(base + "/series.html?series=ledel-l-lego-ii", {
+      waitUntil: "networkidle",
+    });
+    const photo = page.locator(".series-photo"),
+      image = photo.locator("img");
+    const src = await image.getAttribute("src");
+    const rect = await photo.boundingBox();
+    await page.mouse.move(
+      rect.x + rect.width * 0.8,
+      rect.y + rect.height * 0.3,
+    );
+    await page.waitForTimeout(300);
+    assert.notEqual(
+      await photo.evaluate((el) => el.style.getPropertyValue("--tilt-y")),
+      "",
+    );
+    assert.equal(
+      await image.getAttribute("src"),
+      src,
+      "Tilt substitutes a fabricated product image",
+    );
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    assert.equal(
+      await image.evaluate((el) => getComputedStyle(el).transform),
+      "none",
+    );
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto(base + "/selection.html", { waitUntil: "networkidle" });
+    await page.fill("#powerMin", "100");
+    assert.equal(await page.locator("#requirementCount").innerText(), "1");
+    await page.locator("#reset").click();
+    assert.equal(await page.locator("#requirementCount").innerText(), "0");
+    console.log(
+      "PASS real-photo tilt, reduced motion and read-only requirement summary",
+    );
+    assert.deepEqual(errors, [], "Uncaught browser exceptions");
+    await page.close();
+  } finally {
+    await browser.close();
+  }
+})().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

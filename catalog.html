@@ -13,10 +13,12 @@
       content="Каталог светодиодного оборудования FEREKS, LEDEL, ARUNA, LUXCORE и PLG по производителю, сфере применения и типу изделия."
     />
     <link rel="canonical" href="https://smp-76.ru/catalog.html" />
-    <meta name="theme-color" content="#0a202a" />
+    <meta name="theme-color" content="#071426" />
     <link rel="stylesheet" href="css/catalog.css" />
     <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/engineering.css" />
     <script src="js/site.js" defer></script>
+    <script src="js/presentation.js" defer></script>
     <script src="js/catalog.js" defer></script>
   </head>
   <body class="catalog-page">
@@ -62,10 +64,14 @@
         <div class="eyebrow">Инженерный каталог</div>
         <h1>Каталог оборудования</h1>
         <p>
-          Серии светотехнического оборудования распределены по производителям,
-          типам изделий и сферам применения. Выберите производителя или
-          воспользуйтесь поиском для быстрого подбора серии и подходящей
-          модификации.
+          <span class="catalog-intro-long">
+            Серии светотехнического оборудования распределены по производителям,
+            типам изделий и сферам применения. Выберите производителя или
+            воспользуйтесь поиском для быстрого подбора серии и подходящей
+            модификации. </span
+          ><span class="catalog-intro-short"
+            >Серии, характеристики и все модификации оборудования.</span
+          >
         </p>
         <div class="stats">
           <div class="stat"><strong id="seriesStat">174</strong> серий</div>
@@ -187,31 +193,50 @@
         </button>
       </aside>
       <div class="catalog-content">
-        <div class="catalog-selector-link">
-          <a href="selection.html">Подобрать по параметрам</a>
-        </div>
-        <div class="search">
-          <input
-            id="q"
-            placeholder="Поиск по серии, производителю, артикулу или области применения"
-            aria-label="Поиск по серии, производителю или артикулу"
-          /><button id="clear" aria-label="Очистить">×</button>
-        </div>
         <main class="main" id="main-content">
-          <div class="result-head">
-            <div>
-              <h2>Серии оборудования</h2>
-              <p id="resultText" role="status"></p>
+          <div class="workspace-toolbar">
+            <div class="catalog-selector-link">
+              <a href="selection.html">Подобрать по параметрам</a>
             </div>
-            <div class="view-note">
-              Нажмите на серию, чтобы выбрать модификацию
+            <div class="search">
+              <input
+                id="q"
+                placeholder="Поиск по серии, производителю, артикулу или области применения"
+                aria-label="Поиск по серии, производителю или артикулу"
+              /><button id="clear" aria-label="Очистить">×</button>
             </div>
+
+            <div class="result-head">
+              <div>
+                <h2>Серии оборудования</h2>
+                <p id="resultText" role="status"></p>
+              </div>
+              <div
+                class="catalog-view-controls"
+                role="group"
+                aria-label="Представление каталога"
+              >
+                <button
+                  type="button"
+                  data-catalog-view="list"
+                  aria-pressed="true"
+                >
+                  Список</button
+                ><button
+                  type="button"
+                  data-catalog-view="cards"
+                  aria-pressed="false"
+                >
+                  Карточки
+                </button>
+              </div>
+            </div>
+            <div
+              class="active-filter-strip"
+              id="activeFilters"
+              aria-live="polite"
+            ></div>
           </div>
-          <div
-            class="active-filter-strip"
-            id="activeFilters"
-            aria-live="polite"
-          ></div>
           <div id="grid" class="grid" aria-busy="true">
             <div class="catalog-loading" role="status">
               Загружаем оборудование…

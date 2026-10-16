@@ -13,10 +13,12 @@
       name="description"
       content="Технический подбор светильников по мощности, световому потоку, IP, КСС, CRI, цветовой температуре и типу монтажа. Полная база из 18 226 модификаций."
     />
-    <meta name="theme-color" content="#0a202a" />
+    <meta name="theme-color" content="#071426" />
     <link rel="stylesheet" href="css/selection.css" />
     <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/engineering.css" />
     <script src="js/site.js" defer></script>
+    <script src="js/presentation.js" defer></script>
     <script src="js/selection.js" defer></script>
   </head>
   <body class="selection-page">
@@ -57,8 +59,21 @@
       <a href="/">Главная</a><span>›</span>Подбор оборудования
     </div>
     <section class="hero">
+      <div class="optical-mark" aria-hidden="true">
+        <svg viewBox="0 0 400 200">
+          <path d="M200 24L50 170H350Z" fill="currentColor" opacity=".08" />
+          <path d="M200 24L145 170H255Z" fill="currentColor" opacity=".14" />
+          <path
+            d="M35 170H365M200 18V186"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+          />
+          <circle cx="200" cy="24" r="7" fill="currentColor" /></svg
+        ><span>КСС / IP / CCT / CRI</span>
+      </div>
       <div class="hero-inner">
-        <div class="eyebrow">Инженерный подбор</div>
+        <div class="eyebrow">SMP / Инженерный конфигуратор</div>
         <h1>Подбор оборудования по параметрам</h1>
         <p>
           Заполните только известные требования. Сначала система покажет точные
@@ -90,7 +105,11 @@
         id="selectionForm"
         aria-label="Технические требования к оборудованию"
       >
+        <div class="workspace-label">01 / Входные требования</div>
         <h2>Параметры подбора</h2>
+        <div class="requirement-state" role="status">
+          <span id="requirementCount">0</span> требований задано
+        </div>
         <p class="hint">
           Чем больше полей заполнено, тем точнее результат. Пустые поля не
           участвуют в отборе.

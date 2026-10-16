@@ -1234,7 +1234,7 @@ html {
   max-width: 740px;
 }
 .electro-page .hero .eyebrow {
-  color: #bdd4de;
+  color: #bdcff0;
 }
 .electro-page .proof {
   background: white;
@@ -1371,19 +1371,19 @@ html {
 }
 .electro-page #process .step {
   background: transparent;
-  border-color: #37505c;
+  border-color: #344c70;
 }
 .electro-page #process .steps {
-  border-color: #37505c;
+  border-color: #344c70;
 }
 .electro-page #process .step span {
   font-family: var(--font);
-  color: #c6b580;
+  color: #bcd3ff;
 }
 .electro-page #process .step p,
 .electro-page #process .lead {
-  color: #b9cbd3;
+  color: #b9ccec;
 }
 .electro-page #process .section-label {
-  color: #b8d0d8;
+  color: #c0d4f4;
 }
