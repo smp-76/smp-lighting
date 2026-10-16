@@ -148,7 +148,7 @@
 }
 .hero-fixture {
   position: absolute;
-  inset: 16px -7% auto;
+  inset: 72px 8% auto;
   margin: 0;
   transform-origin: 50% 30%;
   transform: translate3d(
@@ -192,7 +192,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  transform-origin: 47% 45%;
+  transform-origin: 47% 50%;
   transform: rotate(calc(var(--hero-x) * -4deg))
     scaleY(calc(1 + var(--hero-y) * 0.025));
 }
