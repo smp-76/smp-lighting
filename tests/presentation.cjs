@@ -38,9 +38,8 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       draws,
       "Hero keeps updating without input",
     );
-    assert.deepEqual(
-      await page.screenshot(),
-      still,
+    assert.ok(
+      (await page.screenshot()).equals(still),
       "Hero pixels change without input",
     );
     await page.mouse.move(1200, 250);
@@ -49,9 +48,8 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       (await page.evaluate(() => window.qaUpdates)) > draws,
       "Light does not react to pointer",
     );
-    assert.notDeepEqual(
-      await page.screenshot(),
-      still,
+    assert.ok(
+      !(await page.screenshot()).equals(still),
       "Pointer does not affect photo and light scene",
     );
     assert.equal(
@@ -73,12 +71,14 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       aim.some((value) => value !== 0),
       "Aim did not change",
     );
-    assert.equal(
+    const ambient = Number(
       await page
         .locator(".hero-room")
         .evaluate((el) => getComputedStyle(el).opacity),
-      "0",
-      "Warehouse remains visible outside the projected light",
+    );
+    assert.ok(
+      ambient > 0 && ambient <= 0.18,
+      "Warehouse needs a restrained ambient layer outside the lit area",
     );
     const heroBounds = await page.locator(".home-hero").boundingBox();
     for (const [horizontal, vertical] of [
@@ -90,12 +90,29 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
         y: heroBounds.y + heroBounds.height * vertical,
       };
       await page.mouse.move(target.x, target.y);
-      await page.waitForTimeout(800);
+      await page.waitForFunction(
+        ({ horizontal, vertical }) => {
+          const style = document.querySelector(".home-hero").style;
+          return (
+            Math.abs(
+              parseFloat(style.getPropertyValue("--spot-x")) - horizontal * 100,
+            ) < 0.05 &&
+            Math.abs(
+              parseFloat(style.getPropertyValue("--spot-y")) - vertical * 100,
+            ) < 0.05
+          );
+        },
+        { horizontal, vertical },
+      );
       const projection = await page.locator(".home-hero").evaluate((el) => {
         const rect = el.getBoundingClientRect();
         const gradient = el.querySelector("#fhbBeam");
         const emitter = el
           .querySelector(".hero-emitter")
+          .getBoundingClientRect();
+        const mount = el.querySelector(".hero-mount").getBoundingClientRect();
+        const mountingHole = el
+          .querySelector(".hero-mount-point")
           .getBoundingClientRect();
         return {
           x:
@@ -108,6 +125,10 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
           sourceY: (Number(gradient.getAttribute("y1")) / 1000) * rect.height,
           opticX: emitter.left - rect.left,
           opticY: emitter.top - rect.top,
+          mountError: Math.hypot(
+            mountingHole.left - (mount.left + mount.width / 2),
+            mountingHole.top - mount.bottom,
+          ),
         };
       });
       assert.ok(
@@ -122,6 +143,10 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
         Math.abs(projection.sourceX - projection.opticX) < 2 &&
           Math.abs(projection.sourceY - projection.opticY) < 2,
         "Beam origin detached from real optic",
+      );
+      assert.ok(
+        projection.mountError < 1,
+        "Fixture drifts away from its fixed mounting point",
       );
     }
     await page.emulateMedia({ reducedMotion: "reduce" });
@@ -166,6 +191,20 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       "none",
     );
     assert.ok(await mobile.locator(".hero-fixture img").isVisible());
+    const mobileProjection = await mobile.locator(".home-hero").evaluate((el) => {
+      const rect = el.getBoundingClientRect();
+      const emitter = el
+        .querySelector(".hero-emitter")
+        .getBoundingClientRect();
+      const gradient = el.querySelector("#fhbBeamMobile");
+      return Math.hypot(
+        (Number(gradient.getAttribute("x1")) / 1000) * rect.width -
+          (emitter.left - rect.left),
+        (Number(gradient.getAttribute("y1")) / 1000) * rect.height -
+          (emitter.top - rect.top),
+      );
+    });
+    assert.ok(mobileProjection < 1, "Static mobile beam detached from optic");
     await mobile.close();
     const scenes = page.locator(".task-scene");
     assert.equal(await scenes.count(), 6);

@@ -98,17 +98,26 @@
                 id="fhbBeam"
                 gradientUnits="userSpaceOnUse"
                 x1="740"
-                y1="220"
+                y1="320"
                 x2="770"
                 y2="800"
               >
-                <stop offset="0" stop-color="#e4efff" stop-opacity=".2" />
-                <stop offset=".48" stop-color="#d8e8ff" stop-opacity=".075" />
+                <stop offset="0" stop-color="#e4efff" stop-opacity=".13" />
+                <stop offset=".2" stop-color="#d8e8ff" stop-opacity=".09" />
+                <stop offset=".65" stop-color="#d8e8ff" stop-opacity=".045" />
                 <stop offset="1" stop-color="#d8e8ff" stop-opacity="0" />
               </linearGradient>
-              <linearGradient id="fhbBeamMobile" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#e4efff" stop-opacity=".16" />
-                <stop offset=".48" stop-color="#d8e8ff" stop-opacity=".06" />
+              <linearGradient
+                id="fhbBeamMobile"
+                gradientUnits="userSpaceOnUse"
+                x1="490"
+                y1="707"
+                x2="500"
+                y2="840"
+              >
+                <stop offset="0" stop-color="#e4efff" stop-opacity=".12" />
+                <stop offset=".25" stop-color="#d8e8ff" stop-opacity=".08" />
+                <stop offset=".65" stop-color="#d8e8ff" stop-opacity=".035" />
                 <stop offset="1" stop-color="#d8e8ff" stop-opacity="0" />
               </linearGradient>
               <filter
@@ -123,13 +132,13 @@
             </defs>
             <path
               class="hero-beam-desktop"
-              d="M725 220 L900 800 Q770 860 640 800 L755 220Z"
+              d="M701 326 L653 818 Q773 855 887 782 L779 314Z"
               fill="url(#fhbBeam)"
               filter="url(#fhbSoftEdge)"
             />
             <path
               class="hero-beam-mobile"
-              d="M465 610 L770 850 Q500 910 230 850 L535 610Z"
+              d="M403 708 L385 842 Q501 855 615 838 L577 706Z"
               fill="url(#fhbBeamMobile)"
               filter="url(#fhbSoftEdge)"
             />
@@ -139,7 +148,7 @@
         <div class="container hero-layout">
           <div class="hero-topline">
             <span>СМП-76 / Промышленное освещение</span>
-            <span>От требований проекта к работающему свету</span>
+            <span>Подбор под задачу</span>
           </div>
           <div class="hero-copy">
             <h1 id="homeTitle">
@@ -171,17 +180,21 @@
           </div>
           <div class="light-stage" data-hero-renderer="photo">
             <figure class="hero-fixture">
-              <div class="hero-fixture-pivot">
-                <img
-                  src="images/fereks-fhb.webp"
-                  width="566"
-                  height="450"
-                  alt="Промышленный светильник FEREKS FHB: оптика, ребристый корпус и поворотная лира, ракурс снизу три четверти"
-                  fetchpriority="high"
-                  loading="eager"
-                  decoding="async"
-                />
-                <span class="hero-emitter" aria-hidden="true"></span>
+              <div class="hero-fixture-rig">
+                <span class="hero-mount" aria-hidden="true"></span>
+                <div class="hero-fixture-pivot">
+                  <img
+                    src="images/fereks-fhb.webp"
+                    width="566"
+                    height="450"
+                    alt="Промышленный светильник FEREKS FHB: оптика, ребристый корпус и поворотная лира, ракурс снизу три четверти"
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <span class="hero-emitter" aria-hidden="true"></span>
+                  <span class="hero-mount-point" aria-hidden="true"></span>
+                </div>
               </div>
               <figcaption>
                 <a href="series.html?series=fereks-fhb"
