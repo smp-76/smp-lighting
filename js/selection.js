@@ -276,9 +276,17 @@ function fallbackSelectionCopy(text, done) {
   done();
 }
 function isExplosion(x) {
-  return (
-    norm(x.explosion_marking) !== "" && norm(x.explosion_marking) !== "нет"
+  // Require an Ex marking with protection type(s) and an equipment group.
+  // A name/category, "Нет", a placeholder or an absent value is not evidence.
+  return /(?:^|[\s/;])(?:[012]\s*)?ex\s+(?:[a-z]{1,3}\s+)+i{1,3}[abc]?(?=\s|$)/i.test(
+    norm(x.explosion_marking),
   );
+}
+function isExplosionSubcategory(value) {
+  return norm(value) === "взрывозащита";
+}
+function requiresExplosion(q) {
+  return q.explosion || isExplosionSubcategory(q.subsection);
 }
 function canonicalSection(v) {
   return String(v || "").trim();
@@ -297,13 +305,15 @@ function hasCategory(x, v) {
   return !v || categoryPaths(x).some((p) => p.section === v);
 }
 function hasSubcategory(x, v) {
+  // This subcategory expresses a technical requirement, not a series label.
+  if (isExplosionSubcategory(v)) return isExplosion(x);
   return !v || categoryPaths(x).some((p) => p.subsection === v);
 }
 function strictBase(x, q) {
   if (!hasCategory(x, q.section) || !hasSubcategory(x, q.subsection))
     return false;
   if (q.brand && x.brand !== q.brand) return false;
-  if (q.explosion ? !isExplosion(x) : isExplosion(x)) return false;
+  if (requiresExplosion(q) ? !isExplosion(x) : isExplosion(x)) return false;
   if (q.ip !== null && (ipn(x.ip) === null || ipn(x.ip) < q.ip)) return false;
   if (q.kss.length && !matchesOptics(x.kss, q.kss)) return false;
   if (
@@ -422,7 +432,7 @@ function selectionRequirements(q) {
   if (q.cct !== null) rows.push(["Цветовая температура", cctText(q.cct)]);
   if (q.cri !== null) rows.push(["CRI", `не ниже ${q.cri}`]);
   if (q.mounting) rows.push(["Тип монтажа", q.mounting]);
-  if (q.explosion) rows.push(["Взрывозащита", "требуется"]);
+  if (requiresExplosion(q)) rows.push(["Взрывозащита", "требуется"]);
   return rows;
 }
 function emptyState(q) {

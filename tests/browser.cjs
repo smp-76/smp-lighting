@@ -425,7 +425,52 @@ async function compareOpen() {
     await navigate("/selection.html");
     await page.check("#explosion");
     await page.click("#find");
-    assert.ok((await page.locator("#output .card.exact").count()) > 0);
+    const marked = data.series.flatMap((s) =>
+      s.models
+        .filter((m) => m.explosion_marking !== "Нет")
+        .map((m) => ({ ...m, seriesId: s.id })),
+    );
+    const expectedSeries = [...new Set(marked.map((m) => m.seriesId))].sort();
+    assert.equal(marked.length, 133);
+    assert.equal(expectedSeries.length, 11);
+    const verifyExplosionResults = async () => {
+      const cards = page.locator("#output .card.exact");
+      const ids = await cards
+        .locator("[data-selection-compare]")
+        .evaluateAll((buttons) =>
+          buttons.map((b) => b.dataset.selectionCompare).sort(),
+        );
+      assert.deepEqual(ids, expectedSeries);
+      assert.equal(await page.locator("#output .card.close").count(), 0);
+      const counts = await cards.locator(".series-summary b").allTextContents();
+      assert.equal(counts.reduce((sum, value) => sum + Number(value), 0), 133);
+    };
+    await verifyExplosionResults();
+    await page.click("#reset");
+    await page.selectOption("#subsection", "Взрывозащита");
+    assert.equal(await page.locator("#explosion").isChecked(), false);
+    await page.click("#find");
+    await verifyExplosionResults();
+    const explosionUrl = page.url();
+    await page.reload({ waitUntil: "networkidle" });
+    assert.equal(page.url(), explosionUrl);
+    await verifyExplosionResults();
+    const actualVariants = [];
+    for (const card of await page.locator("#output .card.exact").all()) {
+      const id = await card
+        .locator("[data-selection-compare]")
+        .getAttribute("data-selection-compare");
+      await card.locator(".variant-toggle").click();
+      for (const sku of await card.locator(".variant-row b").allTextContents())
+        actualVariants.push(`${id}::${sku}`);
+    }
+    assert.deepEqual(
+      actualVariants.sort(),
+      marked.map((m) => `${m.seriesId}::${m.sku}`).sort(),
+    );
+    await page.check("#explosion");
+    await page.click("#find");
+    await verifyExplosionResults();
     await page.click("#reset");
     await page.fill("#powerMin", "9999999");
     await page.click("#find");
