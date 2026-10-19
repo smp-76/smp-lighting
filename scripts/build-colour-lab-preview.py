@@ -2,6 +2,7 @@
 import base64
 import mimetypes
 import re
+import zipfile
 from pathlib import Path
 
 root = Path(__file__).resolve().parent.parent
@@ -33,3 +34,17 @@ document += section + "</main><script>" + script + "</script></body></html>\n"
 target = root / "docs/preview-v2/colour-lab-interactive.html"
 target.write_text(document)
 print(f"Built {target.relative_to(root)}: {target.stat().st_size:,} bytes")
+
+archive = target.with_suffix(".zip")
+with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as package:
+    package.write(target, target.name)
+    package.writestr("START-HERE.txt", """SMP — CRI и цветовая температура
+
+Распакуйте архив и откройте colour-lab-interactive.html в браузере.
+Переключайте CRI / Цветовая температура и выбирайте одно из четырёх значений.
+На компьютере и телефоне используются одинаковые сцена и параметры.
+Установка, сервер и интернет для просмотра не нужны.
+
+Это наглядная иллюстрация общего принципа, не фотометрическая симуляция.
+""")
+print(f"Built {archive.relative_to(root)}: {archive.stat().st_size:,} bytes")

@@ -21,6 +21,18 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       "Below-fold scene fetched before needed",
     );
     const lab = page.locator("#light-quality");
+    assert.equal(await lab.count(), 1, "Educational block is duplicated");
+    assert.ok(
+      await lab.evaluate((el) => {
+        const tasks = document.querySelector("#tasks");
+        const selection = document.querySelector(".selector-section");
+        return (
+          Boolean(tasks.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING) &&
+          Boolean(el.compareDocumentPosition(selection) & Node.DOCUMENT_POSITION_FOLLOWING)
+        );
+      }),
+      "Educational block must follow the tasks and precede selection",
+    );
     await lab.scrollIntoViewIfNeeded();
     await page
       .locator(".quality-scene-image")
@@ -80,7 +92,10 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
         )
           snapshots[`${mode}-${value}`] = await page
             .locator(".quality-scene")
-            .screenshot();
+            .screenshot({
+              mask: [page.locator(".quality-scene-label")],
+              maskColor: "#071426",
+            });
       }
     }
     assert.ok(
@@ -140,7 +155,7 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
       "false",
     );
     for (const width of [375, 390, 768, 1024, 1440, 1920]) {
-      await page.setViewportSize({ width, height: 1000 });
+      await page.setViewportSize({ width, height: width <= 390 ? 844 : 1000 });
       await lab.scrollIntoViewIfNeeded();
       assert.ok(
         await page.evaluate(
@@ -158,6 +173,38 @@ const base = process.env.SMP_QA_BASE_URL || "http://127.0.0.1:8000";
         targets.every((height) => height >= 44),
         "Touch targets too small",
       );
+      if (width <= 800) {
+        for (const mode of ["cri", "cct"]) {
+          await page.locator(`#quality-tab-${mode}`).click();
+          const layout = await lab.evaluate((el) => {
+            const scene = el
+              .querySelector(".quality-scene")
+              .getBoundingClientRect();
+            const panel = el.querySelector(".quality-panel:not([hidden])");
+            const values = panel
+              .querySelector(".quality-values")
+              .getBoundingClientRect();
+            const explanation = panel
+              .querySelector(".quality-explanation")
+              .getBoundingClientRect();
+            return {
+              sceneAndControls: values.bottom - scene.top,
+              available: innerHeight - document
+                .querySelector(".smp-header").getBoundingClientRect().height,
+              controlsFirst: values.bottom <= explanation.top,
+            };
+          });
+          assert.ok(
+            layout.controlsFirst,
+            "Mobile choices are buried below explanatory text",
+          );
+          assert.ok(
+            layout.sceneAndControls <= layout.available,
+            `Scene and controls cannot be viewed together at ${width}px`,
+          );
+        }
+        await page.locator("#quality-tab-cri").click();
+      }
     }
     assert.deepEqual(errors, []);
     console.log(
